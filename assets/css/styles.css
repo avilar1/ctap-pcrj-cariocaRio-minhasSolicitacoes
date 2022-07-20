@@ -1,0 +1,7 @@
+@import url(base.css);
+@import url(cabecalho.css);
+@import url(corpo.css);
+@import url(filtro.css);
+
+@import url(tabela/tabela.css);
+@import url(tabela/linhas.css);

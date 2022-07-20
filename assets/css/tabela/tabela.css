@@ -1,0 +1,101 @@
+@import url(../base.css);
+
+.__card-linha{
+    border-top: 5px solid rgba(0,0,0,.125) !important;
+}
+
+.__card-corpo-titulo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px;
+    grid-template-areas:
+    "nsoT dsoT srvT orgT utaT sitT";
+    align-items: center;
+    justify-items: center;
+    background-color: var(--azul-turquesa-variante);
+    color: var(--branco);
+}
+
+
+
+.__card-titulo-1{
+    grid-area: nsoT;
+    
+}
+.__card-titulo-2{
+    grid-area: dsoT; 
+
+}
+.__card-titulo-3{
+    grid-area: srvT;
+    
+}
+.__card-titulo-4{
+    grid-area: orgT;
+    
+}
+.__card-titulo-5{
+    grid-area: utaT;
+    
+}
+.__card-titulo-6{
+    grid-area: sitT;
+    
+}
+
+
+
+
+@media (min-width: 780px){
+    .__card-titulo-1-inline{
+        display: none;
+        
+    }
+    .__card-titulo-2-inline{
+        display: none;
+    
+    }
+    .__card-titulo-3-inline{
+        display: none;
+        
+    }
+    .__card-titulo-4-inline{
+        display: none;
+        
+    }
+    .__card-titulo-5-inline{
+        display: none;
+        
+    }
+    .__card-titulo-6-inline{
+        display: none;
+        
+    }
+}
+
+@media (max-width: 780px){
+    .__card-titulo-1-inline{
+        grid-area: nsoT;
+        
+    }
+    .__card-titulo-2-inline{
+        grid-area: dsoT; 
+    
+    }
+    .__card-titulo-3-inline{
+        grid-area: srvT;
+        
+    }
+    .__card-titulo-4-inline{
+        grid-area: orgT;
+        
+    }
+    .__card-titulo-5-inline{
+        grid-area: utaT;
+        
+    }
+    .__card-titulo-6-inline{
+        grid-area: sitT;
+        
+    }
+}

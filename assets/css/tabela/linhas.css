@@ -1,0 +1,56 @@
+@import url(../base.css);
+@import url(tabela.css);
+
+.__card-corpo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px;
+    grid-template-areas:
+    "nso dso srv org uta sit";
+    align-items: center;
+    justify-items: center;
+}
+
+.__card-item-1{
+    grid-area: nso;
+    
+}
+.__card-item-2{
+    grid-area: dso; 
+
+}
+.__card-item-3{
+    grid-area: srv;
+    
+}
+.__card-item-4{
+    grid-area: org;
+    
+}
+.__card-item-5{
+    grid-area: uta;
+    
+}
+.__card-item-6{
+    grid-area: sit;
+    
+}
+
+@media (max-width: 780px) {
+
+    .__card-corpo{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "nsoT nso"
+        "dsoT dso"
+        "srvT srv"
+        "orgT org"
+        "utaT uta"
+        "sitT sit";
+        align-items: center;
+        justify-items: center;
+    }
+
+}
