@@ -35,7 +35,7 @@
     <main class="__main">
 
         <div class="__filtro-base">
-            <p style="margin-right: 12px; align-self: center; padding-top: 12px;">Últimos:</p>
+            <p class="__filtro-p">Últimos:</p>
             <div class="btn-toolbar __filtro-grupo" role="toolbar" aria-label="Toolbar with button groups">
 
                 <div class="btn-group btn-group-sm" role="group" aria-label="grupo um">
@@ -66,7 +66,7 @@
         </div>
         <div class="__container">
 
-            <div class="card __card-linha" data-linha="linha">
+            <div class="card __card-linha">
                 <div class="card-body __card-corpo-titulo" data-corpo="linhacorpo">
 
                     <div class="__card-titulo-1">Número da solicitação</div>
@@ -79,33 +79,8 @@
                 </div>
               </div>
 
-            <div class="card __card-linha">
-                <div class="card-body __card-corpo">
 
-                    <div class="__card-item-1">CID-REQ-2022/1211</div>
-                    <div class="__card-item-2">17/12/2022</div>
-                    <div class="__card-item-3">Instalação de caçamba</div>
-                    <div class="__card-item-4">COMLURB</div>
-                    <div class="__card-item-5">30/12/2022</div>
-                    <div class="__card-item-6">Em andamento</div>
-
-                </div>
-              </div>
-
-              <div class="card __card-linha">
-                <div class="card-body __card-corpo">
-
-                    <div class="__card-item-1">CID-REQ-2022/1211</div>
-                    <div class="__card-item-2">17/12/2022</div>
-                    <div class="__card-item-3">Instalação de caçamba</div>
-                    <div class="__card-item-4">COMLURB</div>
-                    <div class="__card-item-5">30/12/2022</div>
-                    <div class="__card-item-6">Em andamento</div>
-
-                </div>
-              </div>
-
-              <div class="card __card-linha" data-linha>
+              <!-- <div class="card __card-linha" data-linha>
 
                 <div class="accordion accordion-flush" id="accordionFlushExample">
                   <div class="accordion-item" id="accordionitem">
@@ -116,26 +91,109 @@
                     </h2>
                     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                       <div class="accordion-body" id="accordionbody">
-                          <div class="card-body __card-corpo">
+                          <div class="card-body __card-corpo" id="cardbody">
   
-                            <div class="__card-titulo-1-inline">Número da solicitação</div><div class="__card-item-1">CID-REQ-2022/1211</div>
+                            <div class="__card-titulo-1-inline">Número da solicitação</div><div class="__card-item-1"><a href="#"> CID-REQ-2022/1211</a></div>
                             <div class="__card-titulo-2-inline">Data da solicitação</div><div class="__card-item-2">17/12/2022</div>
                             <div class="__card-titulo-3-inline">Serviço</div><div class="__card-item-3">Instalação de caçamba</div>
                             <div class="__card-titulo-4-inline">Órgão</div><div class="__card-item-4">COMLURB</div>
                             <div class="__card-titulo-5-inline">Última atualização</div><div class="__card-item-5">30/12/2022</div>
                             <div class="__card-titulo-6-inline">Situação</div><div class="__card-item-6">Em andamento</div>
-          
+
                           </div>
                       </div>
                     </div>
                   </div>
-                  
                 </div>
+            </div> -->
 
+            <div class="card __card-linha" data-linha>
+
+                <div class="accordion accordion-flush" id="accordionFlushExample" data-acc="aflush">
+                  <div class="accordion-item" id="accordionitem" data-acc="aitem">
+                    <h2 class="accordion-header" id="" data-acc="ahone">
+                      <button class="accordion-button collapsed" id="accordionbutton" type="button" data-bs-toggle="collapse" data-bs-target="" aria-expanded="false" aria-controls="" data-acc="abutton">
+                        Accordion Item #1
+                      </button>
+                    </h2>
+                    <div id="" class="accordion-collapse collapse" aria-labelledby="" data-bs-parent="#accordionFlushExample" data-acc="acone">
+                      <div class="accordion-body" id="accordionbody" data-acc="abody">
+                          <div class="card-body __card-corpo" id="cardbody" data-acc="acardb">
+  
+                            <div class="__card-titulo-1-inline">Número da solicitação</div><div class="__card-item-1"><a href="#"> CID-REQ-2022/1211</a></div>
+                            <div class="__card-titulo-2-inline">Data da solicitação</div><div class="__card-item-2">17/12/2022</div>
+                            <div class="__card-titulo-3-inline">Serviço</div><div class="__card-item-3">Instalação de caçamba</div>
+                            <div class="__card-titulo-4-inline">Órgão</div><div class="__card-item-4">COMLURB</div>
+                            <div class="__card-titulo-5-inline">Última atualização</div><div class="__card-item-5">30/12/2022</div>
+                            <div class="__card-titulo-6-inline">Situação</div><div class="__card-item-6">Em andamento</div>
+                            
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
+
+            <div class="card __card-linha" data-linha>
+
+                <div class="accordion accordion-flush" id="accordionFlushExample" data-acc="aflush">
+                  <div class="accordion-item" id="accordionitem" data-acc="aitem">
+                    <h2 class="accordion-header" id="flush-headingTwo" data-acc="ahone">
+                      <button class="accordion-button collapsed" id="accordionbutton" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo" data-acc="abutton">
+                        Accordion Item #1
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample" data-acc="acone">
+                      <div class="accordion-body" id="accordionbody" data-acc="abody">
+                          <div class="card-body __card-corpo" id="cardbody" data-acc="acardb">
+  
+                            <div class="__card-titulo-1-inline">Número da solicitação</div><div class="__card-item-1"><a href="#"> CID-REQ-2022/1211</a></div>
+                            <div class="__card-titulo-2-inline">Data da solicitação</div><div class="__card-item-2">17/12/2022</div>
+                            <div class="__card-titulo-3-inline">Serviço</div><div class="__card-item-3">Instalação de caçamba</div>
+                            <div class="__card-titulo-4-inline">Órgão</div><div class="__card-item-4">COMLURB</div>
+                            <div class="__card-titulo-5-inline">Última atualização</div><div class="__card-item-5">30/12/2022</div>
+                            <div class="__card-titulo-6-inline">Situação</div><div class="__card-item-6">Em andamento</div>
+                            
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="card __card-linha" data-linha>
+
+                <div class="accordion accordion-flush" id="accordionFlushExample" data-acc="aflush">
+                  <div class="accordion-item" id="accordionitem" data-acc="aitem">
+                    <h2 class="accordion-header" id="flush-headingTwo" data-acc="ahone">
+                      <button class="accordion-button collapsed" id="accordionbutton" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo" data-acc="abutton">
+                        Accordion Item #1
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample" data-acc="acone">
+                      <div class="accordion-body" id="accordionbody" data-acc="abody">
+                          <div class="card-body __card-corpo" id="cardbody" data-acc="acardb">
+  
+                            <div class="__card-titulo-1-inline">Número da solicitação</div><div class="__card-item-1"><a href="#"> CID-REQ-2022/1211</a></div>
+                            <div class="__card-titulo-2-inline">Data da solicitação</div><div class="__card-item-2">17/12/2022</div>
+                            <div class="__card-titulo-3-inline">Serviço</div><div class="__card-item-3">Instalação de caçamba</div>
+                            <div class="__card-titulo-4-inline">Órgão</div><div class="__card-item-4">COMLURB</div>
+                            <div class="__card-titulo-5-inline">Última atualização</div><div class="__card-item-5">30/12/2022</div>
+                            <div class="__card-titulo-6-inline">Situação</div><div class="__card-item-6">Em andamento</div>
+                            
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+
+
 
     
             
+        </div>
 
 
     </main>
@@ -143,7 +201,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     <script src="js/filtro.js"></script>
-    <!-- <script src="js/main.js"></script> -->
+    <script src="js/main.js"></script>
+    <script src="js/pop.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>

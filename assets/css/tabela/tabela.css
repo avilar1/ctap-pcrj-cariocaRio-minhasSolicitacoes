@@ -99,3 +99,9 @@
         
     }
 }
+
+@media (max-width: 780px) {
+    .__card-corpo-titulo{
+        display: none;
+    }
+}

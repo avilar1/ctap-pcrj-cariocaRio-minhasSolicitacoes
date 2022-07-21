@@ -22,13 +22,13 @@
 
 @media (max-width: 992px) {
     .__container {
-        margin: 0 32px;
+        margin: 0px 15px 0px 2px;
         width: fit-content;
     }
 }
 
 @media (max-width: 780px) {
     .__container {
-        width: auto;
+        width: -webkit-fill-available;
     }
 }
