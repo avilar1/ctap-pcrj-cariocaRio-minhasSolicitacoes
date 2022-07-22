@@ -1,4 +1,5 @@
 const abuttonPop = document.querySelectorAll('[data-acc="abutton"]')
+const container = document.querySelector('#container')
 
 let control = 0
 
@@ -52,7 +53,9 @@ tamanho = Object.keys(pop).length;
 for (var prop in pop) {   
     // console.log(pop[prop].nso);
     let item = document.createElement('div');
+    item.classList.add("card", "__card-linha");
     item.textContent = pop[prop].nso
+    container.appendChild(item)
     console.log(item)
 }
 
