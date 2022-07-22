@@ -1,5 +1,15 @@
-const abuttonPop = document.querySelectorAll('[data-acc="abutton"]')
-const container = document.querySelector('#container')
+let linhaPOP = document.querySelectorAll('[data-linha]')
+
+let aflushPOP = document.querySelectorAll('[data-acc="aflush"]')
+let aitemPOP = document.querySelectorAll('[data-acc="aitem"]')
+let ahonePOP = document.querySelectorAll('[data-acc="ahone"]')
+let abuttonPOP = document.querySelectorAll('[data-acc="abutton"]')
+let aconePOP = document.querySelectorAll('[data-acc="acone"]')
+let abodyPOP = document.querySelectorAll('[data-acc="abody"]')
+
+let acardbPOP = document.querySelectorAll('[data-acc="acardb"]')
+
+let container = document.querySelector('#container')
 
 let control = 0
 
@@ -47,38 +57,72 @@ const pop = {
     }
 }
 
+  container.appendChild(linhaPOP[0])
+  linhaPOP[0].appendChild(aflushPOP[0])
+  aflushPOP[0].appendChild(aitemPOP[0])
+  aitemPOP[0].appendChild(ahonePOP[0])
+  aitemPOP[0].appendChild(abuttonPOP[0])
+  aflushPOP[0].appendChild(aconePOP[0])
+  aconePOP[0].appendChild(abodyPOP[0])
+  abodyPOP[0].appendChild(acardbPOP[0])
 
-tamanho = Object.keys(pop).length;
+  tamanho = Object.keys(pop).length;
 
-for (var prop in pop) {   
-    // console.log(pop[prop].nso);
-    let item = document.createElement('div');
-    item.classList.add("card", "__card-linha");
-    item.textContent = pop[prop].nso
-    container.appendChild(item)
-    console.log(item)
+for (let i = 0; i < tamanho; i++) {
+  linhaPOP = document.querySelectorAll('[data-linha]')
+  abuttonPOP = document.querySelectorAll('[data-acc="abutton"]')
+  console.log(i)
+  linhaPOP[i].insertAdjacentElement("afterend", linhaPOP[i].cloneNode(true))
+  abuttonPOP[i].textContent = i
+  
 }
 
-let item = document.createElement('div');
+linhaPOP = document.querySelectorAll('[data-linha]')
 
-function myFunction(x) {
+aflushPOP = document.querySelectorAll('[data-acc="aflush"]')
+aitemPOP = document.querySelectorAll('[data-acc="aitem"]')
+ahonePOP = document.querySelectorAll('[data-acc="ahone"]')
+abuttonPOP = document.querySelectorAll('[data-acc="abutton"]')
+aconePOP = document.querySelectorAll('[data-acc="acone"]')
+abodyPOP = document.querySelectorAll('[data-acc="abody"]')
 
-    if (x.matches) { // If media query matches
-  
-      if (control == 0) {
-        abuttonPop[1].textContent = 'aa'
-        control = 1;
-      }
-  
-    } else {
-      if (control == 1) {
+acardbPOP = document.querySelectorAll('[data-acc="acardb"]')
 
-        control = 0;
-      }
-      
-    }
-  }
-  
-  var x = window.matchMedia("(min-width: 780px)")
-  myFunction(x) // Call listener function at run time
-  x.addListener(myFunction) // Attach listener function on state changes
+container = document.querySelector('#container')
+
+  linhaPOP = document.querySelectorAll('[data-linha]')
+  linhaPOP[tamanho].style.display='none'
+
+
+// linhaPOP[0].insertAdjacentElement("afterend", linhaPOP[0].cloneNode(true)) funciona quando já tem um
+
+
+ let n = 0;
+ for (var prop in pop) {
+          abuttonPOP[n].textContent = pop[prop].srv
+         n++
+
+ }
+
+
+
+
+
+
+
+    // console.log(pop[prop].nso);
+    // let item = document.createElement('div');
+    // item.classList.add("card", "__card-linha");
+    // item.textContent = pop[prop].nso
+    // container.appendChild(item)
+    // console.log(item)
+
+            //   container.appendChild(linhaPOP[n])
+        //   linhaPOP[n].appendChild(aflushPOP[n])
+        //   aflushPOP[n].appendChild(aitemPOP[n])
+        //   aitemPOP[n].appendChild(ahonePOP[n])
+        //   aitemPOP[n].appendChild(abuttonPOP[n])
+        //   aflushPOP[n].appendChild(aconePOP[n])
+        //   aconePOP[n].appendChild(abodyPOP[n])
+        //   abodyPOP[n].appendChild(acardbPOP[n])
+        // n++

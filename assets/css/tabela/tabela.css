@@ -83,7 +83,8 @@
     
     }
     .__card-titulo-3-inline{
-        grid-area: srvT;
+        /* grid-area: srvT; */
+        display: none;
         
     }
     .__card-titulo-4-inline{
@@ -95,7 +96,8 @@
         
     }
     .__card-titulo-6-inline{
-        grid-area: sitT;
+        /* grid-area: sitT; */
+        display: none;
         
     }
 }
