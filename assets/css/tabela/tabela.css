@@ -6,14 +6,15 @@
 
 .__card-corpo-titulo{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 50px;
     grid-template-areas:
-    "nsoT dsoT srvT orgT utaT sitT";
+    "nsoT dsoT srvT srvT srvT orgT utaT sitT";
     align-items: center;
     justify-items: center;
     background-color: var(--azul-turquesa-variante);
     color: var(--branco);
+    justify-items: flex-start;
 }
 
 
@@ -28,6 +29,7 @@
 }
 .__card-titulo-3{
     grid-area: srvT;
+    justify-self: flex-start;
     
 }
 .__card-titulo-4{

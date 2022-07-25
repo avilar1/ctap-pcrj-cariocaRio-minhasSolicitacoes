@@ -93,6 +93,20 @@ container = document.querySelector('#container')
   linhaPOP = document.querySelectorAll('[data-linha]')
   linhaPOP[tamanho].style.display='none'
 
+  //titulos não mudam
+// acardtnso = document.querySelectorAll('[data-acc="acardtnso"]')
+// acardtdso = document.querySelectorAll('[data-acc="acardtdso"]')
+// acardtsrv = document.querySelectorAll('[data-acc="acardtsrv"]')
+// acardtorg = document.querySelectorAll('[data-acc="acardtorg"]')
+// acardtuta = document.querySelectorAll('[data-acc="acardtuta"]')
+// acardtsit = document.querySelectorAll('[data-acc="acardtsit"]')
+
+const acardinso = document.querySelectorAll('[data-acc="acardinso"]')
+const acardidso = document.querySelectorAll('[data-acc="acardidso"]')
+const acardisrv = document.querySelectorAll('[data-acc="acardisrv"]')
+const acardiorg = document.querySelectorAll('[data-acc="acardiorg"]')
+const acardiuta = document.querySelectorAll('[data-acc="acardiuta"]')
+const acardisit = document.querySelectorAll('[data-acc="acardisit"]')
 
 // linhaPOP[0].insertAdjacentElement("afterend", linhaPOP[0].cloneNode(true)) funciona quando já tem um
 
@@ -100,6 +114,12 @@ container = document.querySelector('#container')
  let n = 0;
  for (var prop in pop) {
           abuttonPOP[n].textContent = pop[prop].srv
+          acardinso[n].textContent = pop[prop].nso
+          acardisrv[n].textContent = pop[prop].srv
+          acardidso[n].textContent = pop[prop].dso
+          acardiorg[n].textContent = pop[prop].org
+          acardiuta[n].textContent = pop[prop].uta
+          acardisit[n].textContent = pop[prop].sit
          n++
 
  }
