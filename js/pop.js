@@ -92,6 +92,7 @@ container = document.querySelector('#container')
 
   linhaPOP = document.querySelectorAll('[data-linha]')
   linhaPOP[tamanho].style.display='none'
+  linhaPOP[tamanho].ariaHidden='true'
 
   //titulos não mudam
 // acardtnso = document.querySelectorAll('[data-acc="acardtnso"]')
