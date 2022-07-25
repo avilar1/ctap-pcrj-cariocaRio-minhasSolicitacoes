@@ -7,12 +7,13 @@
 
 .__card-corpo{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 50px;
     grid-template-areas:
-    "nso dso srv org uta sit";
+    "nso dso srv srv srv org uta sit";
     align-items: center;
     justify-items: center;
+    justify-items: flex-start;
 }
 
 .__card-item-1{
@@ -25,6 +26,7 @@
 }
 .__card-item-3{
     grid-area: srv;
+    justify-self: flex-start;
     
 }
 .__card-item-4{
