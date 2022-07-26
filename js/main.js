@@ -20,6 +20,7 @@ const abodyD = document.querySelectorAll('[data-acc="abody"]')
 
 const acardbD = document.querySelectorAll('[data-acc="acardb"]')
 
+const asitT = document.querySelectorAll('[data-acc="asit"]')
 
 
 let m = 0;
@@ -63,6 +64,7 @@ function myFunction(x) {
         aflushD[n].appendChild(aitemD[n])
         aitemD[n].appendChild(ahoneD[n])
         aitemD[n].appendChild(abuttonD[n])
+        aitemD[n].appendChild(asitT[n])
         aflushD[n].appendChild(aconeD[n])
         aconeD[n].appendChild(abodyD[n])
         abodyD[n].appendChild(acardbD[n])

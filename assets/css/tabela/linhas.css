@@ -7,17 +7,17 @@
 
 .__card-corpo{
     display: grid;
-    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
     grid-template-columns: 2fr 1fr 4fr 1fr 1fr 2fr;
-    grid-template-rows: 50px;
+    grid-template-rows: minmax(20px, 1fr);
     grid-template-areas:
     "nso dso srv org uta sit";
     align-items: center;
     justify-items: flex-start;
     grid-column-gap: 27px;
     font-size: 13px;
-    padding: 0px 15px !important;
+    padding: 15px 15px !important;
     border: 1px solid #cccccc !important;
+    align-items: start;
 }
 
 .__card-item-1{
