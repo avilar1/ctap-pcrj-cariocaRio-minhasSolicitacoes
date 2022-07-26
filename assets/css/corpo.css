@@ -34,13 +34,13 @@
 
 .__container {
 
-    min-height: 800px;
+    min-height: calc(100vmin - 150px) ;
     width: 1010px;
     height: auto;
     padding: 0 0 40px;
     background-color: var(--offwhite-fundo);
     /* padding: 32px 36px 36px; */
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    /* box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15); */
     
     /* border: solid 1px #ccc; */
 }
