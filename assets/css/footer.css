@@ -49,3 +49,16 @@
   color: #4579fb;
   border-radius: 50%;
 }/*# sourceMappingURL=footer.css.map */
+
+@media (max-width: 780px) {
+  .__footer{
+    background-color: var(--branco);
+  }
+  .__page-selected {
+    border-color: var(--branco);
+  }
+  .__page-not-selected{
+    background-color: var(--branco)
+  }
+
+}
