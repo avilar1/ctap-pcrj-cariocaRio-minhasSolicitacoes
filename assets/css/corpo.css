@@ -46,20 +46,33 @@
     /* border: solid 1px #ccc; */
 }
 
-@media (min-width: 780px) {
-    .__botao-sit {
-        text-align: start !important;
-        font-size: 12px !important;
-        border: none !important; 
-    }
-}
-
 .__card-sit {
     background-color: var(--branco) !important;
     text-align: start;
     /* padding-left: 53%; */
     padding: 15px 0px 15px 53%;
+    border-radius: 13px !important;
 }
+
+.btn-success{
+background-color: #28a745 !important;
+    border-color: #28a745 !important;
+}
+
+.btn-success:hover {
+    background-color: #198754 !important;
+    border-color: #198754 !important;
+}
+
+
+@media (min-width: 780px) {
+    .__botao-sit {
+        text-align: start !important;
+        font-size: 12px !important;
+        /* border: none !important;  */
+    }
+}
+
 
 @media (max-width: 992px) {
     .__container {
