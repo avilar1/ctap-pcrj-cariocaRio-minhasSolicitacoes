@@ -58,6 +58,14 @@
     justify-content: flex-start;
 }
 
+.Vector {
+    width: 21px;
+    height: 21px;
+    background-color: #ffffff;
+    margin-top: 15px;
+    margin-left: 40.2px;
+
+}
 
 
 @media screen and (max-width: 768px) {

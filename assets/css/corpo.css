@@ -46,6 +46,78 @@
     /* border: solid 1px #ccc; */
 }
 
+.__containerDetails{
+
+    min-height: 753px;
+    width: 938px;
+    min-width: 310px;
+    height: auto;
+    background-color: var(--offwhite-fundo);
+    padding: 32px 36px 162px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 38, 0.25);
+    border: solid 1px #ccc;
+    background-color: var(--branco);
+    margin-top: 20px;
+}
+
+.__requestDetails{
+    position: relative;
+    top:32px;
+    left: 14px;
+
+}
+
+.__formRow{
+    position:relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.__leftColumnForm{
+    float: left;
+    position:relative;
+}
+
+.__rightColumnForm{
+    padding-left: 325px;
+    position: relative;
+}
+
+#mais{
+    display: none;
+}
+
+.__statusRow{
+    position: relative;
+    padding-top: 20px;
+}
+
+.__status1{
+    height: 26px;
+    width: 96px;
+    color:#f41717;
+    border: 2px solid #f41717;
+    border-radius: 20px;
+    float: left;
+    position: relative;
+       
+}
+.__status2{
+    height: 26px;
+    width: 96px;
+    border: crimson;
+    
+    position: relative;
+    float: right;
+}
+
+.__statusBtn{
+    position: relative;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    
+}
 .__card-sit {
     background-color: var(--branco) !important;
     text-align: start;
