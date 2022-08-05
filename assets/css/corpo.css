@@ -53,7 +53,7 @@
     min-width: 310px;
     height: auto;
     background-color: var(--offwhite-fundo);
-    padding: 32px 36px 162px;
+    padding: 32px 36px ;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 38, 0.25);
     border: solid 1px #ccc;
     background-color: var(--branco);
@@ -86,9 +86,18 @@
     display: none;
 }
 
+#encaminhamento{
+    color:#4579fb
+}
+
+#botãoDescrição{
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
 .__statusRow{
     position: relative;
     padding-top: 20px;
+    display: flex;
 }
 
 .__status1{
@@ -99,18 +108,20 @@
     border-radius: 20px;
     float: left;
     position: relative;
-       
 }
 .__status2{
     height: 26px;
-    width: 96px;
-    border: crimson;
-    
+    width: 100px;
+    color:#7b7b7b;
+    border: 2px solid #7b7b7b;
+    border-radius: 20px;
+    margin-left: 10px;
     position: relative;
-    float: right;
 }
 
 .__statusBtn{
+    height: 72px;
+    width: 96px;
     position: relative;
     padding-left: 12px;
     padding-right: 12px;
@@ -136,6 +147,15 @@ background-color: #28a745 !important;
     border-color: #198754 !important;
 }
 
+.__timeLineSolicitation{
+    height: 260px;
+    width: 938px;
+}
+
+.__timeLineEvent{
+    padding-left: 14px;
+    padding-top: 40px;
+}
 
 @media (min-width: 780px) {
     .__botao-sit {
