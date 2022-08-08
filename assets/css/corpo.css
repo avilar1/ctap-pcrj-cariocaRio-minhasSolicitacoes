@@ -137,6 +137,16 @@
     border-radius: 13px !important;
 }
 
+.__timeLineStatus{
+    margin-left: 4px;
+}
+
+#etapaPassada{
+    margin-left: 7px;
+    color: #ffffff;
+    border:2px solid #02b0d6;
+    border-radius: 50%;     
+}
 .btn-success{
 background-color: #28a745 !important;
     border-color: #28a745 !important;
@@ -147,14 +157,41 @@ background-color: #28a745 !important;
     border-color: #198754 !important;
 }
 
+.__timeLineEventBox{
+    display: flex;
+}
 .__timeLineSolicitation{
-    height: 260px;
     width: 938px;
+    display: flex; 
+    margin-bottom: 40px;
 }
 
 .__timeLineEvent{
     padding-left: 14px;
-    padding-top: 40px;
+    width: 938px;
+    
+}
+.__timeLineDescription{
+    color: #7b7b7b;
+    margin-left: 14px;
+    margin-bottom: 20px;
+}
+.__iconEStatus{
+    display: flex;
+}
+.__superBox{
+    margin-top: 41px;
+    margin-bottom: 40px;
+    display: flex;
+}
+
+#linha-vertical {
+    height: 272px;
+    border-left: 2px solid #02b0d6;
+}
+
+.__superBox2{
+    position:absolute
 }
 
 @media (min-width: 780px) {
@@ -215,3 +252,4 @@ background-color: #28a745 !important;
     }
 
 }
+
