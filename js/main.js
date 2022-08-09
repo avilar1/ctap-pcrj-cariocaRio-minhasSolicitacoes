@@ -77,6 +77,17 @@ function myFunction(x) {
   }
 }
 
+
+// function colapsado(){
+  
+//   const texto = document.getElementsByTagName("__firstText")[0];
+
+//   background-image: linear-gradient(#111111, #ffffff);
+//   background-clip: text;
+//   -webkit-background-clip: text;
+//   color: transparent;
+// }
+
 var x = window.matchMedia("(min-width: 780px)")
 myFunction(x) // Call listener function at run time
 x.addListener(myFunction) // Attach listener function on state changes
@@ -91,4 +102,3 @@ window.onresize = function(){ location.reload(); }
           // aflush.appendChild(acone)
           // acone.appendChild(abody)
           // abody.appendChild(cardb)
-

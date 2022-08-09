@@ -59,7 +59,13 @@
     background-color: var(--branco);
     margin-top: 20px;
 }
-
+#btnMostrarMais{
+    border: none;
+    background: none;
+    color:#4579fb;
+    margin-left:200px;
+    box-shadow: none;
+}
 .__requestDetails{
     position: relative;
     top:32px;
@@ -98,6 +104,19 @@
     position: relative;
     padding-top: 20px;
     display: flex;
+}
+
+.__firstText{
+    height: 80px;
+    background-image: linear-gradient(#111111, #ffffff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+} 
+
+.collapse a{
+    border: none;
+    box-shadow: none;
 }
 
 .__status1{
