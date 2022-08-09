@@ -83,6 +83,8 @@ x.addListener(myFunction) // Attach listener function on state changes
 window.onresize = function(){ location.reload(); }
 
 
+
+
   //funcionava com 1 item apenas:
           // element.childNodes[0].parentNode.appendChild(aflush)
           // aflush.appendChild(aitem)
