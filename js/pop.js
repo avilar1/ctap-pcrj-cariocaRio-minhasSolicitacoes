@@ -135,6 +135,8 @@ for (var prop in pop) {
     acardiorg[n].textContent = pop[prop].org
     acardiuta[n].textContent = pop[prop].uta
 
+    //refazer tudo isso aqui depois que mudar pra table
+
     let sit = (pop[prop].sit == "Indeferido") ? (acardisit[k].classList.add("btn", "btn-outline-danger", "btn-sm", "__botao-sit"), console.log(100), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled")) :
         (pop[prop].sit == "Deferido") ? (acardisit[k].classList.add("btn", "btn-outline-success", "btn-sm", "__botao-sit"), console.log(200), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled") ) :
             (pop[prop].sit == "Em andamento") ?(acardisit[k].classList.add("btn", "btn-outline-primary", "btn-sm", "__botao-sit"), console.log(300), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled")) :

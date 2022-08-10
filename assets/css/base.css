@@ -6,7 +6,6 @@
     --verde-agua: #09b88a;
     --cinza-letra: #7b7b7b;
     --cinza-claro-campo: #c3c0c0;
-
 }
 @font-face {
     font-family: museo;
@@ -14,10 +13,6 @@
 }
 
 @font-face {
-    font-family: "museo700";
-    src: url(../fonts/museo-sans-700.ttf) format("truetype");
-}
-
-body {
-    font-family: museo  ;
+    font-family: museo700;
+    src: url(../fonts/MuseoSans_700.otf) format("truetype");
 }
