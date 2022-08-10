@@ -1,9 +1,9 @@
 @import url(../base.css);
 @import url(tabela.css);
 
-#modelo {
+/* #modelo {
     display: none;
-}
+} */
 
 .__card-corpo{
     display: grid;
@@ -17,6 +17,7 @@
     font-size: 13px;
     padding: 15px 15px  ;
     border: 1px solid #cccccc  ;
+    border-radius: 4px;
     align-items: start;
 }
 
