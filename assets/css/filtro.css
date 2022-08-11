@@ -2,14 +2,23 @@
  
 body nav{
     width: 1010px;
+    height: 70px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-self: center;
+    align-items: center;
+    font-size: 12px;
 }
 
- nav > div{
+body nav > div{
     padding: 25px 0px;
     display: block  ;
+}
+
+body nav label {
+    height: 20px;
+    margin-top: 32px;
+    margin-bottom: 24px;
 }
 
 body nav .btn-group-sm>.btn{
@@ -39,11 +48,16 @@ body nav .btn-group-sm>.btn{
 body nav p{
     margin-right: 12px; 
     align-self: center; 
-    padding-top: 12px;
+    margin-bottom: 0;
 }
 
 body nav button {
     padding: 0;
+}
+
+
+body fieldset .form-control{
+    display: none;
 }
 
 .__close-inline {
@@ -72,10 +86,12 @@ body nav button {
 @media (max-width: 780px) {
     body nav {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
         width: fit-content;
+        height: 183px;
+        padding: 0 15px;
     }
     nav > div{
         padding-top: 5px;
@@ -84,11 +100,40 @@ body nav button {
 
 @media (max-width: 480px) {
     body nav p{
-        align-self: flex-start; 
-        margin-right: 2px;
+        align-self: flex-start;
+    }
+
+    body nav label {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    body nav fieldset {
+        width: 100%;
+    }
+
+    body nav > div {
+        padding: 0px 0px;
     }
 
     nav > div{
         padding: 5px 0px;
     }
+
+    body nav .btn-group-sm>.btn {
+        margin: 0 3px;
+    }
+
+
+    body fieldset .form-control{
+        display: block;
+    }
+    select.form-control {
+        -webkit-appearance: menulist;
+    }
+
+    select option {
+        background-color: #ececec;
+    }
+    
 }

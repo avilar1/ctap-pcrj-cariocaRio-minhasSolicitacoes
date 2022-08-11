@@ -37,9 +37,27 @@
         </div>
   <div class="__area-nav">
         <nav>
-          <p>Últimos:</p>
+          <fieldset>
+          <input type="checkbox" name="arquivadas" id="checkaquirvadas">
+          <label for="checkaquirvadas">Ocultar solicitações arquivadas</label>
+          
+          <select id="ordenacao" class="form-control custom-select" >
+            <option value="" disabled selected hidden>Ordenar por</option>
+            <option value="UAt">Última atualização</option>
+            <option value="Sit">Situação</option>
+            <option value="NSl">Número da solicitação (A-Z)</option>
+            <option value="DSi">Data da solicitação</option>
+            <option value="Saz">Serviço (A-Z)</option>
+            <option value="Oaz">Órgão (A-Z)</option>
+<!--evidentemente, os valores podem ser mudados para melhor usabilidade do lado do servidor-->
+
+        </select>
+
+        </fieldset>
+          
           <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-    
+            <p>Últimos:</p>
+            <div>
             <div class="btn-group btn-group-sm" role="group" aria-label="grupo um">
               <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" data-filtro="trinta"
                 checked>
@@ -69,7 +87,7 @@
               <label class="btn btn-outline-primary" for="btnradio7">120 dias
               </label>
             </div>
-            
+          </div>
           </div>
         </nav>
       </div>
@@ -88,9 +106,9 @@
 
 
     <main>
-    <div class="__container" id="container">
+    <div class="__container" >
 
-      <table>
+      <table id="container">
       <thead class="card __card-linha">
         <tr class=" __card-corpo-titulo" data-corpo="linhacorpo">
 
@@ -104,6 +122,13 @@
         </tr>
       </thead>
 
+      <!--
+          Isso aqui na verdade é um modelo. Claro que usando um framework como react, vue.js etc ficaria mais fácil e isso estaria no return de um módulo do app. 
+          Como essa tela visa focar APENAS  no design por enquanto, foi criado um modelo dentro do html que é replicado pelo DOM (usando JS nativo e um pouco de JQuery), atualizado por linha de conteúdo e 
+          depois o modelo é ocultado (inclusive para leitores de tela). Isso impacta no html pois o modelo está hoje dentro do html. Em atualizações futuras, isso não ficará mais aqui. 
+          Em resumo, para efeitos de design, vale a pena isso ficar aqui agora até que se atualize para utilização de framework de JS.
+        -->
+
       <tbody id="modelo" data-tbody>
         <tr class="card __card-linha" data-linha>
         
@@ -111,7 +136,7 @@
             <div class="accordion-item" id="accordionitem" data-acc="aitem">
               <h2 class="accordion-header" id="" data-acc="ahone">
                 <button class="accordion-button collapsed" id="accordionbutton" type="button" data-bs-toggle="collapse" data-bs-target="" aria-expanded="false" aria-controls="" data-acc="abutton" data-id="">
-                  Accordion Item #1
+                  Modelo que não deveria aparecer
                   <div id="" data-acc="asit" data-toggle="collapse"><a data-acc="acardisit" ></a></div>
                 </button>
                        
@@ -160,7 +185,7 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
   <script src="js/filtro.js"></script>
   <script src="js/pop.js"></script>
-  <script src="js/main.js"></script>
+  <!-- <script src="js/main.js"></script> -->
   <script src="js/accordion.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

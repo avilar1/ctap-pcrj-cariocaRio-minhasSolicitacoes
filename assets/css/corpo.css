@@ -101,5 +101,9 @@ background-color: #28a745  ;
     .__card-linha .accordion-item{
         border: none;
     }
+
+    html body {
+        font-size: 15px;
+    }
 }
 

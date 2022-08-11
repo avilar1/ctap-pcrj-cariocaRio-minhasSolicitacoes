@@ -1,3 +1,5 @@
+
+let container = document.querySelector('#container')
 let linhaPOP = document.querySelectorAll('[data-linha]')
 
 let aflushPOP = document.querySelectorAll('[data-acc="aflush"]')
@@ -9,7 +11,6 @@ let abodyPOP = document.querySelectorAll('[data-acc="abody"]')
 
 let acardbPOP = document.querySelectorAll('[data-acc="acardb"]')
 
-let container = document.querySelector('#container')
 
 //excluir depois ou alterar
 let asit = document.querySelectorAll('[data-acc="asit"]')
@@ -83,37 +84,14 @@ tamanho = Object.keys(pop).length;
 for (let i = 0; i < tamanho; i++) {
     linhaPOP = document.querySelectorAll('[data-linha]')
     abuttonPOP = document.querySelectorAll('[data-acc="abutton"]')
-    console.log(i)
+    console.log(linhaPOP[i])
     linhaPOP[i].insertAdjacentElement("afterend", linhaPOP[i].cloneNode(true))
     abuttonPOP[i].textContent = i
 
 }
 
-linhaPOP = document.querySelectorAll('[data-linha]')
-
-aflushPOP = document.querySelectorAll('[data-acc="aflush"]')
-aitemPOP = document.querySelectorAll('[data-acc="aitem"]')
-ahonePOP = document.querySelectorAll('[data-acc="ahone"]')
-abuttonPOP = document.querySelectorAll('[data-acc="abutton"]')
-aconePOP = document.querySelectorAll('[data-acc="acone"]')
-abodyPOP = document.querySelectorAll('[data-acc="abody"]')
-
-acardbPOP = document.querySelectorAll('[data-acc="acardb"]')
-
-container = document.querySelector('#container')
-asit = document.querySelectorAll('[data-acc="asit"]')
-
-linhaPOP = document.querySelectorAll('[data-linha]')
-linhaPOP[tamanho].style.display = 'none'
-linhaPOP[tamanho].ariaHidden = 'true'
 
 //titulos não mudam
-// acardtnso = document.querySelectorAll('[data-acc="acardtnso"]')
-// acardtdso = document.querySelectorAll('[data-acc="acardtdso"]')
-// acardtsrv = document.querySelectorAll('[data-acc="acardtsrv"]')
-// acardtorg = document.querySelectorAll('[data-acc="acardtorg"]')
-// acardtuta = document.querySelectorAll('[data-acc="acardtuta"]')
-// acardtsit = document.querySelectorAll('[data-acc="acardtsit"]')
 
 const acardinso = document.querySelectorAll('[data-acc="acardinso"]')
 const acardidso = document.querySelectorAll('[data-acc="acardidso"]')
@@ -143,12 +121,12 @@ for (var prop in pop) {
                 (pop[prop].sit == "CUMPRIR EXIGÊNCIA") ? (acardisit[k].classList.add("btn", "btn-success", "btn-sm", "__botao-sit"), console.log(400)) : 
                 console.log("nenhum!");
                 
-    let sit2 = (pop[prop].sit == "Indeferido") ? (acardisit[k+1].classList.add("btn", "btn-outline-danger", "btn-sm", "__botao-sit"), console.log(100), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled")) :
-        (pop[prop].sit == "Deferido") ? (acardisit[k+1].classList.add("btn", "btn-outline-success", "btn-sm", "__botao-sit"), console.log(200), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled") ) :
-            (pop[prop].sit == "Em andamento") ?(acardisit[k+1].classList.add("btn", "btn-outline-primary", "btn-sm", "__botao-sit"), console.log(300), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled")) :
+    let sit2 = (pop[prop].sit == "Indeferido") ? (acardisit[k+1].classList.add("btn", "btn-outline-danger", "btn-sm", "__botao-sit"), console.log(1000), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled")) :
+        (pop[prop].sit == "Deferido") ? (acardisit[k+1].classList.add("btn", "btn-outline-success", "btn-sm", "__botao-sit"), console.log(2000), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled") ) :
+            (pop[prop].sit == "Em andamento") ?(acardisit[k+1].classList.add("btn", "btn-outline-primary", "btn-sm", "__botao-sit"), console.log(3000), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled")) :
             
-                (pop[prop].sit == "CUMPRIR EXIGÊNCIA") ? (acardisit[k+1].classList.add("btn", "btn-success", "btn-sm", "__botao-sit"), console.log(400)) : 
-            console.log("nenhum!");
+                (pop[prop].sit == "CUMPRIR EXIGÊNCIA") ? (acardisit[k+1].classList.add("btn", "btn-success", "btn-sm", "__botao-sit"), console.log(4000)) : 
+            console.log("nenhum Mesmo!");
 
 
     acardisit[k].textContent = pop[prop].sit
@@ -158,25 +136,44 @@ for (var prop in pop) {
 
 }
 
+//yago, isso veio do main.js, ajeitar, não precisa dessas variáveis redeclaradas
+
+//tentar mudar a visibilidade só com css
+
+const tbody = document.querySelector('[data-tbody]')
+const linha = document.querySelectorAll('[data-linha]')
+
+const aflushD = document.querySelectorAll('[data-acc="aflush"]')
+const aitemD = document.querySelectorAll('[data-acc="aitem"]')
+const ahoneD = document.querySelectorAll('[data-acc="ahone"]')
+const abuttonD = document.querySelectorAll('[data-acc="abutton"]')
+const aconeD = document.querySelectorAll('[data-acc="acone"]')
+const abodyD = document.querySelectorAll('[data-acc="abody"]')
+
+const acardbD = document.querySelectorAll('[data-acc="acardb"]')
+
+const asitT = document.querySelectorAll('[data-acc="asit"]')
+
+
+let m = 0;
+linha.forEach((element) => {
+  tbody.appendChild(element);
+  //$([aitemD])[0][0].dataset.acc='aa' //modelo
+  $(ahoneD)[m].id = 'flush-heading' + m;
+  $(abuttonD)[m].dataset.bsTarget = '#flush-collapse' + m;
+  $(abuttonD)[m].setAttribute("aria-controls", 'flush-collapse' + m);
+  $(abuttonD)[m].dataset.id = m;
+  $(aconeD)[m].id = 'flush-collapse' + m;
+  $(aconeD)[m].setAttribute("aria-labelledby", 'flush-heading' + m);
+  aconeD[m].ariaLabelledby = 'flush-heading' + m;
+  $(asitT)[m].id = m;
+  m++
+
+
+})
+
+
+// tbody.appendChild(linha[0]);
 
 
 
-
-
-
-    // console.log(pop[prop].nso);
-    // let item = document.createElement('div');
-    // item.classList.add("card", "__card-linha");
-    // item.textContent = pop[prop].nso
-    // container.appendChild(item)
-    // console.log(item)
-
-            //   container.appendChild(linhaPOP[n])
-        //   linhaPOP[n].appendChild(aflushPOP[n])
-        //   aflushPOP[n].appendChild(aitemPOP[n])
-        //   aitemPOP[n].appendChild(ahonePOP[n])
-        //   aitemPOP[n].appendChild(abuttonPOP[n])
-        //   aflushPOP[n].appendChild(aconePOP[n])
-        //   aconePOP[n].appendChild(abodyPOP[n])
-        //   abodyPOP[n].appendChild(acardbPOP[n])
-        // n++
