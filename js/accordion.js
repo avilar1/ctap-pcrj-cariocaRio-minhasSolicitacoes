@@ -1,27 +1,27 @@
-const accSit = document.querySelectorAll("[data-acc=asit]")
-const abuttonACC = document.querySelectorAll('[data-acc="abutton"]')
+// const accSit = document.querySelectorAll("[data-acc=asit]")
+// const abuttonACC = document.querySelectorAll('[data-acc="abutton"]')
 
-let cliquei = false;
+// let cliquei = false;
 
-abuttonACC.forEach((e) => {
+// abuttonACC.forEach((e) => {
     
-    e.addEventListener('click', function() {
-        clicado()
-        let x = e.dataset.id;
+//     e.addEventListener('click', function() {
+//         clicado()
+//         let x = e.dataset.id;
 
-        console.log(x)
-        if(cliquei) {
-            accSit[x-1].style.backgroundColor="#f5f5f5";
-            console.log("red")            
-        }
-        else{
-            accSit[x-1].style.backgroundColor="";
-            console.log("none")
-        }
+//         console.log(x)
+//         if(cliquei) {
+//             accSit[x-1].style.backgroundColor="#f5f5f5";
+//             console.log("red")            
+//         }
+//         else{
+//             accSit[x-1].style.backgroundColor="";
+//             console.log("none")
+//         }
         
-    })
-})
+//     })
+// })
 
-function clicado() {
-    cliquei = !cliquei
-}
+// function clicado() {
+//     cliquei = !cliquei
+// }

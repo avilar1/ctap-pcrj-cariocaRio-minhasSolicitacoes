@@ -83,7 +83,7 @@ background-color: #28a745  ;
 
     .collapse {
         transition: background-color 0.25s;
-        background-color: var(--offwhite-fundo) ;
+        /* background-color: var(--offwhite-fundo) ; */
     }
 
     .accordion-button:not(.collapsed ) {
@@ -98,5 +98,8 @@ background-color: #28a745  ;
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
     }
 
+    .__card-linha .accordion-item{
+        border: none;
+    }
 }
 
