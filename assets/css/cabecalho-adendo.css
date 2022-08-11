@@ -1,0 +1,10 @@
+@import url(base.css);
+
+
+header .__area-nav {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--offwhite-fundo);
+}

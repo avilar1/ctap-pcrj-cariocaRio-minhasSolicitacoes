@@ -1,22 +1,24 @@
 @import url(../base.css);
 
-.__card-linha{
-    border-top: 5px solid rgba(0,0,0,.125) !important;
-}
 
 .__card-corpo-titulo{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 50px;
+    grid-template-columns: 2fr 1fr 4fr 1fr 1fr 2fr;
+    grid-template-rows: calc(70px - 30px);
     grid-template-areas:
     "nsoT dsoT srvT orgT utaT sitT";
-    align-items: center;
-    justify-items: center;
+    align-items: flex-start;
     background-color: var(--azul-turquesa-variante);
     color: var(--branco);
+    justify-items: flex-start;
+    grid-column-gap: 27px;
+    font-size: 13px;
+    padding: 15px 14px;
 }
 
-
+.card-body{
+    padding: 0px  ;
+}
 
 .__card-titulo-1{
     grid-area: nsoT;
@@ -28,6 +30,7 @@
 }
 .__card-titulo-3{
     grid-area: srvT;
+    justify-self: flex-start;
     
 }
 .__card-titulo-4{

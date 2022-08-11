@@ -1,18 +1,24 @@
 @import url(../base.css);
 @import url(tabela.css);
 
-#modelo {
+/* #modelo {
     display: none;
-}
+} */
 
 .__card-corpo{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 50px;
+    grid-template-columns: 2fr 1fr 4fr 1fr 1fr 2fr;
+    grid-template-rows: minmax(20px, 1fr);
     grid-template-areas:
     "nso dso srv org uta sit";
     align-items: center;
-    justify-items: center;
+    justify-items: flex-start;
+    grid-column-gap: 27px;
+    font-size: 13px;
+    padding: 15px 15px  ;
+    border: 1px solid #cccccc  ;
+    border-radius: 4px;
+    align-items: start;
 }
 
 .__card-item-1{
@@ -25,6 +31,7 @@
 }
 .__card-item-3{
     grid-area: srv;
+    justify-self: flex-start;
     
 }
 .__card-item-4{
@@ -63,7 +70,8 @@
         align-items: start;
         justify-items: start;
         row-gap: 15px;
-        padding: 0px !important;
+        padding: 0px  ;
+        border: none  ;
     }
 
 }

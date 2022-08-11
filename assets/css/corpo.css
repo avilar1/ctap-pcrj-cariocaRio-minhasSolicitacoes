@@ -1,25 +1,70 @@
 @import url(base.css);
 
-.__main {
+body {
+    font-family: museo;
+}
+
+body main {
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #E5E5E5;
+    background-color: var(--offwhite-fundo);
 
+}
+
+.__card-linha {
+    border: 1px;
+    margin-top: 5px;
+}
+
+.accordion-item div {
+    padding: 15px 0;
 }
 
 .__container {
-
-    min-height: 800px;
+    min-height: calc(100vmin - 150px);
     width: 1010px;
     height: auto;
     padding: 0 0 40px;
-    /* background-color: var(--offwhite-fundo); */
-    /* padding: 32px 36px 36px; */
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 38, 0.25);
-    border: solid 1px #ccc;
+    background-color: var(--offwhite-fundo);
 }
+
+
+td .accordion-button {
+    padding-left: 4px;
+    padding-bottom: 0px;
+
+
+}
+
+.btn-success{
+background-color: #28a745  ;
+    border-color: #28a745  ;
+}
+
+.btn-success:hover {
+    background-color: #198754  ;
+    border-color: #198754  ;
+}
+
+
+.__botao-sit {
+    font-size: 12px  ;
+    border-radius: 13px  ;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+@media (min-width: 780px) {
+    .__botao-sit {
+        text-align: start  ;
+    }
+}
+
 
 @media (max-width: 992px) {
     .__container {
@@ -29,7 +74,29 @@
 }
 
 @media (max-width: 780px) {
+
     .__container {
         width: -webkit-fill-available;
+        margin: 0px 15px 0px 15px;
+        box-shadow: none;
     }
+
+    .collapse {
+        transition: background-color 0.25s;
+        background-color: var(--offwhite-fundo) ;
+    }
+
+    .accordion-button:not(.collapsed ) {
+        background-color: var(--azul-turquesa-variante)  ;
+        color: var(--branco) ;
+        padding-bottom: 15px;
+    }
+
+
+    .__card-linha {
+        border: 0px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+    }
+
 }
+
