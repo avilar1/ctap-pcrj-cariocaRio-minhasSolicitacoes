@@ -16,146 +16,27 @@ body main {
 
 .__card-linha {
     border: 1px;
-    border-color: rgba(0, 0, 0, 0);
-    border-style: solid;
-    border-top: 5px solid var(--offwhite-fundo)  ;
-    padding: 0px 15px  ;
+    margin-top: 5px;
 }
 
-.__card-linha:nth-child(1) {
-    padding: 15px  ;
-    border: none;
-    border-radius: 0.25rem 0.25rem 0rem 0rem;
-    border-top: none  ;
-    background: var(--azul-turquesa-variante);
-}
-
-.__card-linha:not(:nth-child(1)) {
-    padding: 0px  ;
-
+.accordion-item div {
+    padding: 15px 0;
 }
 
 .__container {
-
     min-height: calc(100vmin - 150px);
     width: 1010px;
     height: auto;
     padding: 0 0 40px;
     background-color: var(--offwhite-fundo);
-    /* padding: 32px 36px 36px; */
-    /* box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15); */
-
-    /* border: solid 1px #ccc; */
 }
 
-.__containerDetails{
 
-    min-height: 753px;
-    width: 938px;
-    min-width: 310px;
-    height: auto;
-    background-color: var(--offwhite-fundo);
-    padding: 32px 36px ;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 38, 0.25);
-    border: solid 1px #ccc;
-    background-color: var(--branco);
-    margin-top: 20px;
-}
-#btnMostrarMais{
-    border: none;
-    background: none;
-    color:#4579fb;
-    margin-left:200px;
-    box-shadow: none;
-}
-.__requestDetails{
-    position: relative;
-    top:32px;
-    left: 14px;
+td .accordion-button {
+    padding-left: 4px;
+    padding-bottom: 0px;
 
-}
 
-.__formRow{
-    position:relative;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.__leftColumnForm{
-    float: left;
-    position:relative;
-}
-
-.__rightColumnForm{
-    padding-left: 325px;
-    position: relative;
-}
-
-#mais{
-    display: none;
-}
-
-#encaminhamento{
-    color:#4579fb
-}
-
-#botãoDescrição{
-    padding-top: 20px;
-    padding-bottom: 40px;
-}
-.__statusRow{
-    position: relative;
-    padding-top: 20px;
-    display: flex;
-}
-
-.__firstText{
-    height: 80px;
-    background-image: linear-gradient(#111111, #ffffff);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-} 
-
-.collapse a{
-    border: none;
-    box-shadow: none;
-}
-
-.__status1{
-    height: 26px;
-    width: 96px;
-    color:#f41717;
-    border: 2px solid #f41717;
-    border-radius: 20px;
-    float: left;
-    position: relative;
-}
-.__status2{
-    height: 26px;
-    width: 100px;
-    color:#7b7b7b;
-    border: 2px solid #7b7b7b;
-    border-radius: 20px;
-    margin-left: 10px;
-    position: relative;
-}
-
-.__statusBtn{
-    height: 72px;
-    width: 96px;
-    position: relative;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    
-}
-.__card-sit {
-    background-color: var(--branco)  ;
-    text-align: start;
-    /* padding-left: 53%; */
-    padding: 15px 0px 15px 53%;
-    border-radius: 13px  ;
 }
 
 .__timeLineStatus{
@@ -178,48 +59,19 @@ background-color: #28a745  ;
     border-color: #198754  ;
 }
 
-.__timeLineEventBox{
-    display: flex;
-}
-.__timeLineSolicitation{
-    width: 938px;
-    display: flex; 
-    margin-bottom: 40px;
+
+.__botao-sit {
+    font-size: 12px  ;
+    border-radius: 13px  ;
 }
 
-.__timeLineEvent{
-    padding-left: 14px;
-    width: 938px;
-    
-}
-.__timeLineDescription{
-    color: #7b7b7b;
-    margin-left: 14px;
-    margin-bottom: 20px;
-}
-.__iconEStatus{
-    display: flex;
-}
-.__superBox{
-    margin-top: 41px;
-    margin-bottom: 40px;
-    display: flex;
-}
-
-#linha-vertical {
-    height: 272px;
-    border-left: 2px solid #02b0d6;
-}
-
-.__superBox2{
-    position:absolute
+.accordion-button:focus {
+    box-shadow: none;
 }
 
 @media (min-width: 780px) {
     .__botao-sit {
         text-align: start  ;
-        /* font-size: 12px  ; */
-        /* border: none  ;  */
     }
 }
 
@@ -232,26 +84,11 @@ background-color: #28a745  ;
 }
 
 @media (max-width: 780px) {
-    body main{
-        background-color: var(--branco);
-    }
-    
+
     .__container {
         width: -webkit-fill-available;
         margin: 0px 15px 0px 15px;
         box-shadow: none;
-        background-color: var(--branco);
-    }
-
-
-    .__card-linha:nth-child(1) {
-        display: none;
-    }
-
-    .__card-linha:not(:nth-child(1)) {
-        padding: 0px  ;
-        border: 1px solid #cccccc  ;
-        margin-top: 5px;
     }
 
     .collapse {
@@ -259,17 +96,16 @@ background-color: #28a745  ;
         background-color: var(--offwhite-fundo) ;
     }
 
-    .accordion-button:not(.collapsed) {
+    .accordion-button:not(.collapsed ) {
         background-color: var(--azul-turquesa-variante)  ;
         color: var(--branco) ;
+        padding-bottom: 15px;
     }
-    .__card-sit:not(.collapsed){
-        background-color: var(--offwhite-fundo);
-    }
-    
-    .__botao-sit {
-        font-size: 12px  ;
-        border-radius: 13px  ;
+
+
+    .__card-linha {
+        border: 0px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
     }
 
 }

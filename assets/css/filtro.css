@@ -84,6 +84,7 @@ body nav button {
 
 @media (max-width: 480px) {
     body nav p{
+        align-self: flex-start; 
         margin-right: 2px;
     }
 
