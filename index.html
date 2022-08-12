@@ -38,8 +38,7 @@
   <div class="__area-nav">
         <nav>
           <fieldset>
-          <input type="checkbox" name="arquivadas" id="checkaquirvadas">
-          <label for="checkaquirvadas">Ocultar solicitações arquivadas</label>
+          
           
           <select id="ordenacao" class="form-control custom-select" >
             <option value="" disabled selected hidden>Ordenar por</option>
@@ -49,6 +48,9 @@
             <option value="DSi">Data da solicitação</option>
             <option value="Saz">Serviço (A-Z)</option>
             <option value="Oaz">Órgão (A-Z)</option>
+
+            <input type="checkbox" name="arquivadas" id="checkaquirvadas">
+          <label for="checkaquirvadas">Ocultar solicitações arquivadas</label>
 <!--evidentemente, os valores podem ser mudados para melhor usabilidade do lado do servidor-->
 
         </select>
@@ -56,7 +58,7 @@
         </fieldset>
           
           <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-            <p>Últimos:</p>
+            <p>Últimos</p>
             <div>
             <div class="btn-group btn-group-sm" role="group" aria-label="grupo um">
               <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" data-filtro="trinta"

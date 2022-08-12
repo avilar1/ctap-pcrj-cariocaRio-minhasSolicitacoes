@@ -14,6 +14,10 @@ body main {
 
 }
 
+tbody .accordion-body {
+    padding: 0;
+}
+
 .__card-linha {
     border: 1px;
     margin-top: 5px;
@@ -21,6 +25,7 @@ body main {
 
 .accordion-item div {
     padding: 15px 0;
+    display: none;
 }
 
 .__container {
@@ -104,6 +109,15 @@ background-color: #28a745  ;
 
     html body {
         font-size: 15px;
+    }
+
+    .accordion-item div {
+
+        display: block;
+    }
+
+    tbody .accordion-body {
+        padding: 1rem 1.25rem;
     }
 }
 

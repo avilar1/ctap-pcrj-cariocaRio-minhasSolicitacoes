@@ -17,6 +17,20 @@ let asit = document.querySelectorAll('[data-acc="asit"]')
 
 let control = 0
 
+
+//pop tem que receber uma string do back, aqui temos apenas um modelo.
+
+/*
+alterar em todos os locais que aparecem as seguites variáveis de acordo com os atributo do back (ou não):
+
+nso-> número da solicitação
+dso-> data da solicitação
+srv-> descrição do serviço
+org-> orgão
+uta-> última atualização
+sit-> situação
+*/
+
 const pop = {
     "rowum": {
         "nso": "CID-REQ-2022/1211",
@@ -91,7 +105,7 @@ for (let i = 0; i < tamanho; i++) {
 }
 
 
-//titulos não mudam
+//titulos não mudam, só linha
 
 const acardinso = document.querySelectorAll('[data-acc="acardinso"]')
 const acardidso = document.querySelectorAll('[data-acc="acardidso"]')
@@ -100,11 +114,12 @@ const acardiorg = document.querySelectorAll('[data-acc="acardiorg"]')
 const acardiuta = document.querySelectorAll('[data-acc="acardiuta"]')
 const acardisit = document.querySelectorAll('[data-acc="acardisit"]')
 
-// linhaPOP[0].insertAdjacentElement("afterend", linhaPOP[0].cloneNode(true)) funciona quando já tem um
 
 
 let n = 0;
 let k = 0;
+
+//veja que ele pega as propriedades do pop, pegando os valores de cada um pelo seu nome. Logo, os nomes "srv, nso, dso..." todos devem ser alterados para o título dos atributos da JSON que pop recebeu.
 for (var prop in pop) {
     abuttonPOP[n].textContent = pop[prop].srv
     acardinso[n].textContent = pop[prop].nso
@@ -136,9 +151,7 @@ for (var prop in pop) {
 
 }
 
-//yago, isso veio do main.js, ajeitar, não precisa dessas variáveis redeclaradas
-
-//tentar mudar a visibilidade só com css
+//yago, isso veio do main.js. Ajeitar, não precisa dessas variáveis redeclaradas
 
 const tbody = document.querySelector('[data-tbody]')
 const linha = document.querySelectorAll('[data-linha]')
@@ -172,8 +185,49 @@ linha.forEach((element) => {
 
 })
 
+//aos fatos: como usei um modelo dentro do próprio html, após adicionar todas informações que preciso nos corretos, é necessário eliminar o modelo. É por isso que o modelo não aparece no html final.
+//usando um framework, isso não seria necessário. Mas, como observado, o resultado é satisfatório.
+linha[tamanho].remove();
 
-// tbody.appendChild(linha[0]);
+let controle = 0;
+let cont = 0;
+
+function myFunction(x) {
+    if (x.matches) { // If media query matches
+      
+      if (controle == 0) {
+        console.log("desktop")
+        let n = 0
+        linha.forEach((elemento) => {
+            
+            aconeD[n].classList.add("show")
+            n++
+
+        })       
+        controle = 1;        
+      }
+  
+
+    } else {
+      if (controle == 1) {
+        console.log("celular")
+        let n = 0
+        linha.forEach((element) => {
+          
+          aconeD[n].classList.remove("show")
+          n++
+        
+        })  
+        controle = 0;
+      }
+    }
+  }
+  
+
+  
+  var x = window.matchMedia("(min-width: 780px)")
+  myFunction(x) // Call listener function at run time
+  x.addListener(myFunction) // Attach listener function on state changes
 
 
 

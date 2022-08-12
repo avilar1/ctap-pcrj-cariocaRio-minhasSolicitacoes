@@ -15,10 +15,13 @@ body nav > div{
     display: block  ;
 }
 
-body nav label {
-    height: 20px;
+body nav select {
     margin-top: 32px;
     margin-bottom: 24px;
+}
+
+body nav label {
+    height: 20px;
 }
 
 body nav .btn-group-sm>.btn{
@@ -75,7 +78,7 @@ body fieldset .form-control{
     body nav {
         margin: 0 32px;
         width: 1010px;
-        justify-content: center;
+        /* justify-content: center; */
     }
 
     nav > div{
@@ -84,6 +87,8 @@ body fieldset .form-control{
 }
 
 @media (max-width: 780px) {
+    
+    
     body nav {
         display: flex;
         flex-direction: column-reverse;
@@ -96,14 +101,16 @@ body fieldset .form-control{
     nav > div{
         padding-top: 5px;
     }
-}
+/* }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) { */
     body nav p{
         align-self: flex-start;
+        font-size: 15px;
+        margin-bottom: 10px;
     }
 
-    body nav label {
+    body nav select {
         margin-top: 20px;
         margin-bottom: 20px;
     }
@@ -134,6 +141,10 @@ body fieldset .form-control{
 
     select option {
         background-color: #ececec;
+    }
+
+    body nav label {
+        font-size: 15px;
     }
     
 }
