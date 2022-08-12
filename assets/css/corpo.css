@@ -4,6 +4,15 @@ body {
     font-family: museo;
 }
 
+.__container {
+    min-height: calc(100vmin - 150px);
+    width: 938px;
+    height: auto;
+    padding: 0 0 40px;
+    background-color: var(--offwhite-fundo);
+    align-self: center;
+}
+
 body main {
     width: 100vw;
     display: flex;
@@ -18,42 +27,58 @@ tbody .accordion-body {
     padding: 0;
 }
 
+
+tbody .accordion-item {
+    border: none;
+}
+
+tbody a {
+    text-decoration: none;
+}
+
 .__card-linha {
     border: 1px;
     margin-top: 5px;
 }
+
 
 .accordion-item div {
     padding: 15px 0;
     display: none;
 }
 
-.__container {
-    min-height: calc(100vmin - 150px);
-    width: 1010px;
-    height: auto;
-    padding: 0 0 40px;
-    background-color: var(--offwhite-fundo);
+main table {
+    max-width: 938px;
 }
-
 
 td .accordion-button {
     padding-left: 4px;
     padding-bottom: 0px;
-
-
 }
 
-.btn-success{
-background-color: #28a745  ;
-    border-color: #28a745  ;
+tbody .btn {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+tbody .btn-success{
+background-color: #09b88a  ;
+    border-color: #09b88a  ;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+tbody .btn-outline-success {
+    color: #09b88a  ;
+    border-color: #09b88a  ;
+    max-width: 107px;
+    
 }
 
 .btn-success:hover {
     background-color: #198754  ;
     border-color: #198754  ;
 }
-
 
 .__botao-sit {
     font-size: 12px  ;
@@ -107,17 +132,29 @@ background-color: #28a745  ;
         border: none;
     }
 
+
+    table tbody div{
+        font-size: 15px;
+    }
+
     html body {
         font-size: 15px;
     }
 
+    tbody .btn-outline-success {
+        max-width: none;
+        white-space: nowrap;
+    }
+
+
     .accordion-item div {
 
         display: block;
+        padding: 15px 4px;
     }
 
     tbody .accordion-body {
-        padding: 1rem 1.25rem;
+        padding:  0px 4px 15px;
     }
 }
 

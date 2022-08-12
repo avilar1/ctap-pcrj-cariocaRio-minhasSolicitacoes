@@ -1,86 +1,118 @@
 @import url(../base.css);
 
-/* #modelo {
-    display: none;
-} */
-
-.__card-corpo{
-    display: grid;
+/*
+como estava:
     grid-template-columns: 2fr 1fr 4fr 1fr 1fr 2fr;
     grid-template-rows: minmax(20px, 1fr);
-    grid-template-areas:
-    "nso dso srv org uta sit";
-    align-items: center;
-    justify-items: flex-start;
     grid-column-gap: 27px;
-    font-size: 13px;
-    padding: 15px 15px  ;
-    border: 1px solid #cccccc  ;
-    border-radius: 4px;
-    align-items: start;
-}
-
-.__card-item-1{
-    grid-area: nso;
+*/
+.__card-corpo {
+    display: grid;
+    grid-template-columns: 140px 70px 271px 85px 71px 143px;
+    grid-template-rows: minmax(20px, 1fr);
+    grid-template-areas:
+        "nso dso srv org uta sit";
     
+    align-items: start;
+    /* align-items: start; */
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 13px;
+    grid-column-gap: 27px;
+    justify-items: flex-start;
+    padding: 15px 14px;
 }
-.__card-item-2{
-    grid-area: dso; 
+
+#cardI1 {
+    grid-area: nso;
 
 }
-.__card-item-3{
+
+#cardI2 {
+    grid-area: dso;
+
+}
+
+#cardI3 {
     grid-area: srv;
     justify-self: flex-start;
-    
+
 }
-.__card-item-4{
+
+#cardI4 {
     grid-area: org;
-    
+
 }
-.__card-item-5{
+
+#cardI5 {
     grid-area: uta;
-    
+
 }
-.__card-item-6{
+
+#cardI6 {
     grid-area: sit;
-    
+
 }
 
 tbody .accordion-flush .accordion-item .accordion-button {
     display: none;
 }
 
+.__card-corpo > a {
+    display: none;
+}
+
+@media (min-width: 780px) and (max-width: 1009px) {
+    .__card-corpo {
+        grid-template-columns: 2fr 1fr 4fr 1fr 1fr 2fr;
+        grid-template-rows: minmax(20px, 1fr);
+        grid-column-gap: 27px;
+    }
+
+}
+
 
 @media (max-width: 780px) {
 
-    .__card-item-3{
+    #cardI3,
+    #cardI6 {
         display: none;
     }
 
-    .__card-item-6{
-        display: none;
-    }
 
+    /*  Essa funciona bem também:
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr 2fr 1fr 2fr 1fr 2fr ; */
+    /* row-gap: 15px; */
 
-    .__card-corpo{
+    .__card-corpo {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20px 35px 20px 35px 20px 35px 20px 35px;
         grid-template-areas:
-        "nsoT nso"
-        "dsoT dso"
-        "orgT org"
-        "utaT uta";
+            "nsoT"
+            "nso"
+            "dsoT"
+            "dso"
+            "orgT"
+            "org"
+            "utaT"
+            "uta";
         align-items: start;
         justify-items: start;
-        row-gap: 15px;
-        padding: 0px  ;
-        border: none  ;
+        row-gap: 5px;
+        padding: 0px;
+        border: none;
     }
 
     tbody .accordion-flush .accordion-item .accordion-button {
         display: flex;
     }
-    
-    
+
+    .__card-corpo > a {
+        display: block;
+        justify-self: end;
+        font-size: 15px;
+    }
+
 }

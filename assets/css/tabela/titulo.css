@@ -1,9 +1,15 @@
 @import url(../base.css);
 
 
+/*como estava
+grid-template-columns: 2fr 1fr 4fr 1fr 1fr 2fr;
+grid-template-rows: calc(70px - 30px);
+grid-column-gap: 27px;
+*/
+
 .__card-corpo-titulo{
     display: grid;
-    grid-template-columns: 2fr 1fr 4fr 1fr 1fr 2fr;
+    grid-template-columns: 140px 70px 271px 85px 71px 143px;
     grid-template-rows: calc(70px - 30px);
     grid-template-areas:
     "nsoT dsoT srvT orgT utaT sitT";
@@ -11,7 +17,7 @@
     background-color: var(--azul-turquesa-variante);
     color: var(--branco);
     justify-items: flex-start;
-    grid-column-gap: 27px;
+    grid-column-gap: 26px;
     font-size: 13px;
     padding: 15px 14px;
 }
@@ -20,93 +26,78 @@
     padding: 0px  ;
 }
 
-.__card-titulo-1{
+#cardT1{
     grid-area: nsoT;
     
 }
-.__card-titulo-2{
+#cardT2{
     grid-area: dsoT; 
 
 }
-.__card-titulo-3{
+#cardT3{
     grid-area: srvT;
     justify-self: flex-start;
     
 }
-.__card-titulo-4{
+#cardT4{
     grid-area: orgT;
     
 }
-.__card-titulo-5{
+#cardT5{
     grid-area: utaT;
     
 }
-.__card-titulo-6{
+#cardT6{
     grid-area: sitT;
     
 }
 
 
+@media (min-width: 780px) and (max-width: 1010px) {
+    .__card-corpo-titulo {
+        grid-template-columns: 2fr 1fr 4fr 1fr 1fr 2fr;
+        grid-template-rows: calc(70px - 30px);
+        grid-column-gap: 27px;
+    }
+
+}
 
 
 @media (min-width: 780px){
-    .__card-titulo-1-inline{
-        display: none;
-        
-    }
-    .__card-titulo-2-inline{
-        display: none;
-    
-    }
-    .__card-titulo-3-inline{
-        display: none;
-        
-    }
-    .__card-titulo-4-inline{
-        display: none;
-        
-    }
-    .__card-titulo-5-inline{
-        display: none;
-        
-    }
-    .__card-titulo-6-inline{
-        display: none;
-        
+    #cardTi1, #cardTi2, #cardTi3, #cardTi4, #cardTi5, #cardTi6{
+        display: none;  
     }
 }
 
 @media (max-width: 780px){
-    .__card-titulo-1-inline{
+    
+
+    .__card-corpo-titulo {
+        display: none;
+    }
+
+    
+
+    #cardTi1{
         grid-area: nsoT;
         
     }
-    .__card-titulo-2-inline{
+    #cardTi2{
         grid-area: dsoT; 
     
     }
-    .__card-titulo-3-inline{
-        /* grid-area: srvT; */
+    #cardTi3, #cardTi6{
+        
         display: none;
         
     }
-    .__card-titulo-4-inline{
+    #cardTi4{
         grid-area: orgT;
         
     }
-    .__card-titulo-5-inline{
+    #cardTi5{
         grid-area: utaT;
         
     }
-    .__card-titulo-6-inline{
-        /* grid-area: sitT; */
-        display: none;
-        
-    }
-}
 
-@media (max-width: 780px) {
-    .__card-corpo-titulo{
-        display: none;
-    }
 }
