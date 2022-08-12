@@ -1,0 +1,103 @@
+@import url(../base.css);
+
+
+/*como estava
+grid-template-columns: 2fr 1fr 4fr 1fr 1fr 2fr;
+grid-template-rows: calc(70px - 30px);
+grid-column-gap: 27px;
+*/
+
+.__card-corpo-titulo{
+    display: grid;
+    grid-template-columns: 140px 70px 271px 85px 71px 143px;
+    grid-template-rows: calc(70px - 30px);
+    grid-template-areas:
+    "nsoT dsoT srvT orgT utaT sitT";
+    align-items: flex-start;
+    background-color: var(--azul-turquesa-variante);
+    color: var(--branco);
+    justify-items: flex-start;
+    grid-column-gap: 26px;
+    font-size: 13px;
+    padding: 15px 14px;
+}
+
+.card-body{
+    padding: 0px  ;
+}
+
+#cardT1{
+    grid-area: nsoT;
+    
+}
+#cardT2{
+    grid-area: dsoT; 
+
+}
+#cardT3{
+    grid-area: srvT;
+    justify-self: flex-start;
+    
+}
+#cardT4{
+    grid-area: orgT;
+    
+}
+#cardT5{
+    grid-area: utaT;
+    
+}
+#cardT6{
+    grid-area: sitT;
+    
+}
+
+
+@media (min-width: 780px) and (max-width: 1010px) {
+    .__card-corpo-titulo {
+        grid-template-columns: 2fr 1fr 4fr 1fr 1fr 2fr;
+        grid-template-rows: calc(70px - 30px);
+        grid-column-gap: 27px;
+    }
+
+}
+
+
+@media (min-width: 780px){
+    #cardTi1, #cardTi2, #cardTi3, #cardTi4, #cardTi5, #cardTi6{
+        display: none;  
+    }
+}
+
+@media (max-width: 780px){
+    
+
+    .__card-corpo-titulo {
+        display: none;
+    }
+
+    
+
+    #cardTi1{
+        grid-area: nsoT;
+        
+    }
+    #cardTi2{
+        grid-area: dsoT; 
+    
+    }
+    #cardTi3, #cardTi6{
+        
+        display: none;
+        
+    }
+    #cardTi4{
+        grid-area: orgT;
+        
+    }
+    #cardTi5{
+        grid-area: utaT;
+        
+    }
+
+}

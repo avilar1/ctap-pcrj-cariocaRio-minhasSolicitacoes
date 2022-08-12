@@ -1,4 +1,4 @@
-// REMOVER:
+// REMOVER todo esse js. Está aqui apenas para consulta do primeiro modelo
 
 // accordionFlushExample
 // accordionitem

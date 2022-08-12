@@ -1,3 +1,5 @@
+
+let container = document.querySelector('#container')
 let linhaPOP = document.querySelectorAll('[data-linha]')
 
 let aflushPOP = document.querySelectorAll('[data-acc="aflush"]')
@@ -9,12 +11,25 @@ let abodyPOP = document.querySelectorAll('[data-acc="abody"]')
 
 let acardbPOP = document.querySelectorAll('[data-acc="acardb"]')
 
-let container = document.querySelector('#container')
 
 //excluir depois ou alterar
 let asit = document.querySelectorAll('[data-acc="asit"]')
 
 let control = 0
+
+
+//pop tem que receber uma string do back, aqui temos apenas um modelo.
+
+/*
+alterar em todos os locais que aparecem as seguites variáveis de acordo com os atributo do back (ou não):
+
+nso-> número da solicitação
+dso-> data da solicitação
+srv-> descrição do serviço
+org-> orgão
+uta-> última atualização
+sit-> situação
+*/
 
 const pop = {
     "rowum": {
@@ -32,7 +47,7 @@ const pop = {
         "srv": "Remoção de entulho e bens inservíveis",
         "org": "COMLURB",
         "uta": "24/6/2022",
-        "sit": "Indeferido"
+        "sit": "Indeferida"
     },
     "rowtres": {
         "nso": "CID-REQ-2022/2452",
@@ -56,7 +71,7 @@ const pop = {
         "srv": "Qualquer Coisa",
         "org": "COMLURB",
         "uta": "20/5/2022",
-        "sit": "Deferido"
+        "sit": "Deferida"
     },
     "rxx": {
         "nso": "CID-REQ-0000/0000",
@@ -64,7 +79,7 @@ const pop = {
         "srv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et tortor ac eros aliquam lacinia. Cras semper tellus sed tortor imperdiet viverra. Maecenas feugiat laoreet ipsum. Pellentesque euismod commodo quam, a pellentesque ante euismod nec. Etiam at est et elit commodo pellentesque eu vel dui. Donec at enim tortor. Nam ac convallis sem. Fusce dignissim justo ante, eget placerat nisi pretium et. Maecenas interdum tortor quam, id pellentesque felis sagittis et. Duis viverra tellus varius, lacinia turpis ut, tincidunt erat. Phasellus porttitor tellus id turpis cursus, eget condimentum ante convallis. Cras lobortis imperdiet enim, porttitor mattis ante pulvinar id. Vestibulum dignissim leo eu ligula blandit, nec dictum erat ultricies. Nam in massa sit amet justo egestas tempus. Donec a porttitor nisi.",
         "org": "NOTHING",
         "uta": "00/00/2022",
-        "sit": "Indeferido"
+        "sit": "Deferida parcialmente"
     }
 }
 
@@ -83,37 +98,14 @@ tamanho = Object.keys(pop).length;
 for (let i = 0; i < tamanho; i++) {
     linhaPOP = document.querySelectorAll('[data-linha]')
     abuttonPOP = document.querySelectorAll('[data-acc="abutton"]')
-    console.log(i)
+    console.log(linhaPOP[i])
     linhaPOP[i].insertAdjacentElement("afterend", linhaPOP[i].cloneNode(true))
     abuttonPOP[i].textContent = i
 
 }
 
-linhaPOP = document.querySelectorAll('[data-linha]')
 
-aflushPOP = document.querySelectorAll('[data-acc="aflush"]')
-aitemPOP = document.querySelectorAll('[data-acc="aitem"]')
-ahonePOP = document.querySelectorAll('[data-acc="ahone"]')
-abuttonPOP = document.querySelectorAll('[data-acc="abutton"]')
-aconePOP = document.querySelectorAll('[data-acc="acone"]')
-abodyPOP = document.querySelectorAll('[data-acc="abody"]')
-
-acardbPOP = document.querySelectorAll('[data-acc="acardb"]')
-
-container = document.querySelector('#container')
-asit = document.querySelectorAll('[data-acc="asit"]')
-
-linhaPOP = document.querySelectorAll('[data-linha]')
-linhaPOP[tamanho].style.display = 'none'
-linhaPOP[tamanho].ariaHidden = 'true'
-
-//titulos não mudam
-// acardtnso = document.querySelectorAll('[data-acc="acardtnso"]')
-// acardtdso = document.querySelectorAll('[data-acc="acardtdso"]')
-// acardtsrv = document.querySelectorAll('[data-acc="acardtsrv"]')
-// acardtorg = document.querySelectorAll('[data-acc="acardtorg"]')
-// acardtuta = document.querySelectorAll('[data-acc="acardtuta"]')
-// acardtsit = document.querySelectorAll('[data-acc="acardtsit"]')
+//titulos não mudam, só linha
 
 const acardinso = document.querySelectorAll('[data-acc="acardinso"]')
 const acardidso = document.querySelectorAll('[data-acc="acardidso"]')
@@ -122,11 +114,12 @@ const acardiorg = document.querySelectorAll('[data-acc="acardiorg"]')
 const acardiuta = document.querySelectorAll('[data-acc="acardiuta"]')
 const acardisit = document.querySelectorAll('[data-acc="acardisit"]')
 
-// linhaPOP[0].insertAdjacentElement("afterend", linhaPOP[0].cloneNode(true)) funciona quando já tem um
 
 
 let n = 0;
 let k = 0;
+
+//veja que ele pega as propriedades do pop, pegando os valores de cada um pelo seu nome. Logo, os nomes "srv, nso, dso..." todos devem ser alterados para o título dos atributos da JSON que pop recebeu.
 for (var prop in pop) {
     abuttonPOP[n].textContent = pop[prop].srv
     acardinso[n].textContent = pop[prop].nso
@@ -136,19 +129,21 @@ for (var prop in pop) {
     acardiuta[n].textContent = pop[prop].uta
 
 
-    let sit = (pop[prop].sit == "Indeferido") ? (acardisit[k].classList.add("btn", "btn-outline-danger", "btn-sm", "__botao-sit"), console.log(100), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled")) :
-        (pop[prop].sit == "Deferido") ? (acardisit[k].classList.add("btn", "btn-outline-success", "btn-sm", "__botao-sit"), console.log(200), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled") ) :
-            (pop[prop].sit == "Em andamento") ?(acardisit[k].classList.add("btn", "btn-outline-primary", "btn-sm", "__botao-sit"), console.log(300), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled")) :
+    let sit = (pop[prop].sit == "Indeferida") ? (acardisit[k].classList.add("btn", "btn-outline-danger", "btn-sm", "__botao-sit"), console.log(100), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled")) :
+                (pop[prop].sit == "Deferida") ? (acardisit[k].classList.add("btn", "btn-outline-success", "btn-sm", "__botao-sit"), console.log(200), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled") ) :
+                    (pop[prop].sit == "Deferida parcialmente") ? (acardisit[k].classList.add("btn", "btn-outline-success", "btn-sm", "__botao-sit"), console.log(300), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled") ) :    
+                        (pop[prop].sit == "Em andamento") ?(acardisit[k].classList.add("btn", "btn-outline-primary", "btn-sm", "__botao-sit"), console.log(400), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled")) :
+                            
+                        (pop[prop].sit == "CUMPRIR EXIGÊNCIA") ? (acardisit[k].classList.add("btn", "btn-success", "btn-sm", "__botao-sit"), console.log(500)) : 
+                        console.log("nenhum!");
                 
-                (pop[prop].sit == "CUMPRIR EXIGÊNCIA") ? (acardisit[k].classList.add("btn", "btn-success", "btn-sm", "__botao-sit"), console.log(400)) : 
-                console.log("nenhum!");
-                
-    let sit2 = (pop[prop].sit == "Indeferido") ? (acardisit[k+1].classList.add("btn", "btn-outline-danger", "btn-sm", "__botao-sit"), console.log(100), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled")) :
-        (pop[prop].sit == "Deferido") ? (acardisit[k+1].classList.add("btn", "btn-outline-success", "btn-sm", "__botao-sit"), console.log(200), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled") ) :
-            (pop[prop].sit == "Em andamento") ?(acardisit[k+1].classList.add("btn", "btn-outline-primary", "btn-sm", "__botao-sit"), console.log(300), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled")) :
-            
-                (pop[prop].sit == "CUMPRIR EXIGÊNCIA") ? (acardisit[k+1].classList.add("btn", "btn-success", "btn-sm", "__botao-sit"), console.log(400)) : 
-            console.log("nenhum!");
+    let sit2 = (pop[prop].sit == "Indeferida") ? (acardisit[k+1].classList.add("btn", "btn-outline-danger", "btn-sm", "__botao-sit"), console.log(1000), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled")) :
+                (pop[prop].sit == "Deferida") ? (acardisit[k+1].classList.add("btn", "btn-outline-success", "btn-sm", "__botao-sit"), console.log(2000), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled") ) :
+                    (pop[prop].sit == "Deferida parcialmente") ? (acardisit[k+1].classList.add("btn", "btn-outline-success", "btn-sm", "__botao-sit"), console.log(3000), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled") ) :
+                        (pop[prop].sit == "Em andamento") ?(acardisit[k+1].classList.add("btn", "btn-outline-primary", "btn-sm", "__botao-sit"), console.log(4000), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled")) :
+                    
+                        (pop[prop].sit == "CUMPRIR EXIGÊNCIA") ? (acardisit[k+1].classList.add("btn", "btn-success", "btn-sm", "__botao-sit"), console.log(5000)) : 
+                    console.log("nenhum Mesmo!");
 
 
     acardisit[k].textContent = pop[prop].sit
@@ -158,25 +153,83 @@ for (var prop in pop) {
 
 }
 
+//yago, isso veio do main.js. Ajeitar, não precisa dessas variáveis redeclaradas
+
+const tbody = document.querySelector('[data-tbody]')
+const linha = document.querySelectorAll('[data-linha]')
+
+const aflushD = document.querySelectorAll('[data-acc="aflush"]')
+const aitemD = document.querySelectorAll('[data-acc="aitem"]')
+const ahoneD = document.querySelectorAll('[data-acc="ahone"]')
+const abuttonD = document.querySelectorAll('[data-acc="abutton"]')
+const aconeD = document.querySelectorAll('[data-acc="acone"]')
+const abodyD = document.querySelectorAll('[data-acc="abody"]')
+
+const acardbD = document.querySelectorAll('[data-acc="acardb"]')
+
+const asitT = document.querySelectorAll('[data-acc="asit"]')
+
+
+let m = 0;
+linha.forEach((element) => {
+  tbody.appendChild(element);
+  //$([aitemD])[0][0].dataset.acc='aa' //modelo
+  $(ahoneD)[m].id = 'flush-heading' + m;
+  $(abuttonD)[m].dataset.bsTarget = '#flush-collapse' + m;
+  $(abuttonD)[m].setAttribute("aria-controls", 'flush-collapse' + m);
+  $(abuttonD)[m].dataset.id = m;
+  $(aconeD)[m].id = 'flush-collapse' + m;
+  $(aconeD)[m].setAttribute("aria-labelledby", 'flush-heading' + m);
+  aconeD[m].ariaLabelledby = 'flush-heading' + m;
+  $(asitT)[m].id = m;
+  m++
+
+
+})
+
+//aos fatos: como usei um modelo dentro do próprio html, após adicionar todas informações que preciso nos corretos, é necessário eliminar o modelo. É por isso que o modelo não aparece no html final.
+//usando um framework, isso não seria necessário. Mas, como observado, o resultado é satisfatório.
+linha[tamanho].remove();
+
+let controle = 0;
+let cont = 0;
+
+function myFunction(x) {
+    if (x.matches) { // If media query matches
+      
+      if (controle == 0) {
+        console.log("desktop")
+        let n = 0
+        linha.forEach((elemento) => {
+            
+            aconeD[n].classList.add("show")
+            n++
+
+        })       
+        controle = 1;        
+      }
+  
+
+    } else {
+      if (controle == 1) {
+        console.log("celular")
+        let n = 0
+        linha.forEach((element) => {
+          
+          aconeD[n].classList.remove("show")
+          n++
+        
+        })  
+        controle = 0;
+      }
+    }
+  }
+  
+
+  
+  var x = window.matchMedia("(min-width: 780px)")
+  myFunction(x) // Call listener function at run time
+  x.addListener(myFunction) // Attach listener function on state changes
 
 
 
-
-
-
-    // console.log(pop[prop].nso);
-    // let item = document.createElement('div');
-    // item.classList.add("card", "__card-linha");
-    // item.textContent = pop[prop].nso
-    // container.appendChild(item)
-    // console.log(item)
-
-            //   container.appendChild(linhaPOP[n])
-        //   linhaPOP[n].appendChild(aflushPOP[n])
-        //   aflushPOP[n].appendChild(aitemPOP[n])
-        //   aitemPOP[n].appendChild(ahonePOP[n])
-        //   aitemPOP[n].appendChild(abuttonPOP[n])
-        //   aflushPOP[n].appendChild(aconePOP[n])
-        //   aconePOP[n].appendChild(abodyPOP[n])
-        //   abodyPOP[n].appendChild(acardbPOP[n])
-        // n++

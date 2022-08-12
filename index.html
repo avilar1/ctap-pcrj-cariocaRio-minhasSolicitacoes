@@ -37,9 +37,29 @@
         </div>
   <div class="__area-nav">
         <nav>
-          <p>Últimos:</p>
+          <fieldset>
+          
+          
+          <select id="ordenacao" class="form-control custom-select" >
+            <option value="" disabled selected hidden>Ordenar por</option>
+            <option value="UAt">Última atualização</option>
+            <option value="Sit">Situação</option>
+            <option value="NSl">Número da solicitação (A-Z)</option>
+            <option value="DSi">Data da solicitação</option>
+            <option value="Saz">Serviço (A-Z)</option>
+            <option value="Oaz">Órgão (A-Z)</option>
+
+            <input type="checkbox" name="arquivadas" id="checkaquirvadas">
+          <label for="checkaquirvadas">Ocultar solicitações arquivadas</label>
+<!--evidentemente, os valores podem ser mudados para melhor usabilidade do lado do servidor-->
+
+        </select>
+
+        </fieldset>
+          
           <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-    
+            <p>Últimos</p>
+            <div>
             <div class="btn-group btn-group-sm" role="group" aria-label="grupo um">
               <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" data-filtro="trinta"
                 checked>
@@ -69,7 +89,7 @@
               <label class="btn btn-outline-primary" for="btnradio7">120 dias
               </label>
             </div>
-            
+          </div>
           </div>
         </nav>
       </div>
@@ -88,21 +108,28 @@
 
 
     <main>
-    <div class="__container" id="container">
+    <div class="__container" >
 
-      <table>
+      <table id="container">
       <thead class="card __card-linha">
         <tr class=" __card-corpo-titulo" data-corpo="linhacorpo">
 
-          <td class="__card-titulo-1">Número da solicitação</td>
-          <td class="__card-titulo-2">Data da solicitação</td>
-          <td class="__card-titulo-3">Serviço</td>
-          <td class="__card-titulo-4">Órgão</td>
-          <td class="__card-titulo-5">Última atualização</td>
-          <td class="__card-titulo-6">Situação</td>
+          <td id="cardT1">Número da solicitação</td>
+          <td id="cardT2">Data da solicitação</td>
+          <td id="cardT3">Serviço</td>
+          <td id="cardT4">Órgão</td>
+          <td id="cardT5">Última atualização</td>
+          <td id="cardT6">Situação</td>
 
         </tr>
       </thead>
+
+      <!--
+          Isso aqui na verdade é um modelo. Claro que usando um framework como react, vue.js etc ficaria mais fácil e isso estaria no return de um módulo do app. 
+          Como essa tela visa focar APENAS  no design por enquanto, foi criado um modelo dentro do html que é replicado pelo DOM (usando JS nativo e um pouco de JQuery), atualizado por linha de conteúdo e 
+          depois o modelo é ocultado (inclusive para leitores de tela). Isso impacta no html pois o modelo está hoje dentro do html. Em atualizações futuras, isso não ficará mais aqui. 
+          Em resumo, para efeitos de design, vale a pena isso ficar aqui agora até que se atualize para utilização de framework de JS.
+        -->
 
       <tbody id="modelo" data-tbody>
         <tr class="card __card-linha" data-linha>
@@ -111,7 +138,7 @@
             <div class="accordion-item" id="accordionitem" data-acc="aitem">
               <h2 class="accordion-header" id="" data-acc="ahone">
                 <button class="accordion-button collapsed" id="accordionbutton" type="button" data-bs-toggle="collapse" data-bs-target="" aria-expanded="false" aria-controls="" data-acc="abutton" data-id="">
-                  Accordion Item #1
+                  Modelo que não deveria aparecer
                   <div id="" data-acc="asit" data-toggle="collapse"><a data-acc="acardisit" ></a></div>
                 </button>
                        
@@ -121,13 +148,13 @@
                 <div class="accordion-body" id="accordionbody" data-acc="abody">
                   <div class="__card-corpo" id="cardbody" data-acc="acardb">
 
-                    <div class="__card-titulo-1-inline" data-acc="acardtnso">Número da solicitação </div>             <div class="__card-item-1" ><a href="#" data-acc="acardinso"></a></div>
-                    <div class="__card-titulo-2-inline" data-acc="acardtdso">Data da solicitação</div>               <div class="__card-item-2" data-acc="acardidso"></div>
-                    <div class="__card-titulo-3-inline" data-acc="acardtsrv">Serviço</div>                           <div class="__card-item-3" data-acc="acardisrv"></div>
-                    <div class="__card-titulo-4-inline" data-acc="acardtorg">Órgão</div>                             <div class="__card-item-4" data-acc="acardiorg"></div>
-                    <div class="__card-titulo-5-inline" data-acc="acardtuta">Última atualização</div>                <div class="__card-item-5" data-acc="acardiuta"></div>
-                    <div class="__card-titulo-6-inline" data-acc="acardtsit">Situação</div>                          <div class="__card-item-6" ><a data-acc="acardisit" ></a></div>
-
+                    <div id="cardTi1" data-acc="acardtnso">Número da solicitação </div>             <div id="cardI1" ><a href="#" data-acc="acardinso"></a></div>
+                    <div id="cardTi2" data-acc="acardtdso">Data da solicitação</div>               <div id="cardI2" data-acc="acardidso"></div>
+                    <div id="cardTi3" data-acc="acardtsrv">Serviço</div>                           <div id="cardI3" data-acc="acardisrv"></div>
+                    <div id="cardTi4" data-acc="acardtorg">Órgão</div>                             <div id="cardI4" data-acc="acardiorg"></div>
+                    <div id="cardTi5" data-acc="acardtuta">Última atualização</div>                <div id="cardI5" data-acc="acardiuta"></div>
+                    <div id="cardTi6" data-acc="acardtsit">Situação</div>                          <div ><a id="cardI6" data-acc="acardisit" ></a></div>
+                    <a href="#">Veja mais detalhes</a>
                   </div>
                 </div>
               </div>
@@ -160,7 +187,7 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
   <script src="js/filtro.js"></script>
   <script src="js/pop.js"></script>
-  <script src="js/main.js"></script>
+  <!-- <script src="js/main.js"></script> -->
   <script src="js/accordion.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

@@ -51,14 +51,18 @@
 }/*# sourceMappingURL=footer.css.map */
 
 @media (max-width: 780px) {
-  .__footer{
-    background-color: var(--branco);
+
+ main footer {
+    display: none;
+  }
+  /* .__footer{
+    background-color: var(--offwhite-fundo);
   }
   .__page-selected {
-    border-color: var(--branco);
+    border-color: var(--offwhite-fundo);
   }
   .__page-not-selected{
-    background-color: var(--branco)
-  }
+    background-color: var(--offwhite-fundo);
+  } */
 
 }
