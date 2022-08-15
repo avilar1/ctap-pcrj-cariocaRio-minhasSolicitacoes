@@ -13,12 +13,11 @@ como estava:
     grid-template-areas:
         "nso dso srv org uta sit";
     
-    align-items: start;
-    /* align-items: start; */
+    align-items: flex-start;
     border: 1px solid #cccccc;
     border-radius: 4px;
     font-size: 13px;
-    grid-column-gap: 27px;
+    grid-column-gap: 26px;
     justify-items: flex-start;
     padding: 15px 14px;
 }
