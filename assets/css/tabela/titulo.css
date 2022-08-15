@@ -20,6 +20,7 @@ grid-column-gap: 27px;
     grid-column-gap: 26px;
     font-size: 13px;
     padding: 15px 14px;
+    border-width: 1px;
 }
 
 .card-body{

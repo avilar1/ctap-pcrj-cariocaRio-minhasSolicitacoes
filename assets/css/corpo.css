@@ -14,13 +14,28 @@ body {
 }
 
 body main {
-    width: 100vw;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--offwhite-fundo);
+    width: 100vw;
 
+}
+
+thead.card,
+tbody.card {
+    align-items: center;
+    width: 938px;
+}
+
+table tbody .card {
+    width: 938px;
+}
+
+table tbody {
+    width: 938px;
 }
 
 tbody .accordion-body {
@@ -36,11 +51,21 @@ tbody a {
     text-decoration: none;
 }
 
+thead tr td {
+    font-weight: 700;
+    height: 40px;
+    line-height: 20px;
+}
+
 .__card-linha {
     border: 1px;
     margin-top: 5px;
 }
 
+/* .card.__card-linha {
+    margin-bottom: 5px;
+    margin-top: 20px;
+} */
 
 .accordion-item div {
     padding: 15px 0;
@@ -61,28 +86,28 @@ tbody .btn {
     padding-right: 12px;
 }
 
-tbody .btn-success{
-background-color: #09b88a  ;
-    border-color: #09b88a  ;
+tbody .btn-success {
+    background-color: #09b88a;
+    border-color: #09b88a;
     border-radius: 4px;
     white-space: nowrap;
 }
 
 tbody .btn-outline-success {
-    color: #09b88a  ;
-    border-color: #09b88a  ;
+    color: #09b88a;
+    border-color: #09b88a;
     max-width: 107px;
-    
+
 }
 
 .btn-success:hover {
-    background-color: #198754  ;
-    border-color: #198754  ;
+    background-color: #198754;
+    border-color: #198754;
 }
 
 .__botao-sit {
-    font-size: 12px  ;
-    border-radius: 13px  ;
+    font-size: 12px;
+    border-radius: 13px;
 }
 
 .accordion-button:focus {
@@ -91,7 +116,7 @@ tbody .btn-outline-success {
 
 @media (min-width: 780px) {
     .__botao-sit {
-        text-align: start  ;
+        text-align: start;
     }
 }
 
@@ -106,9 +131,19 @@ tbody .btn-outline-success {
 @media (max-width: 780px) {
 
     .__container {
+        width: calc(100% - 30px);
         width: -webkit-fill-available;
+        width: -moz-avaible;
+        width: fill-available;
+
+        display: flex;
+
         margin: 0px 15px 0px 15px;
         box-shadow: none;
+
+        align-self: center;
+        align-items: center;
+        justify-content: center;
     }
 
     .collapse {
@@ -116,9 +151,14 @@ tbody .btn-outline-success {
         /* background-color: var(--offwhite-fundo) ; */
     }
 
-    .accordion-button:not(.collapsed ) {
-        background-color: var(--azul-turquesa-variante)  ;
-        color: var(--branco) ;
+    table tbody {
+        width: 100%;
+    }
+
+
+    .accordion-button:not(.collapsed) {
+        background-color: var(--azul-turquesa-variante);
+        color: var(--branco);
         padding-bottom: 15px;
     }
 
@@ -128,12 +168,12 @@ tbody .btn-outline-success {
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
     }
 
-    .__card-linha .accordion-item{
+    .__card-linha .accordion-item {
         border: none;
     }
 
 
-    table tbody div{
+    table tbody div {
         font-size: 15px;
     }
 
@@ -146,6 +186,15 @@ tbody .btn-outline-success {
         white-space: nowrap;
     }
 
+    table tbody .card {
+        width: 100%;
+    }
+
+    thead.card,
+    tbody.card {
+        width: 100%;
+    }
+
 
     .accordion-item div {
 
@@ -154,7 +203,6 @@ tbody .btn-outline-success {
     }
 
     tbody .accordion-body {
-        padding:  0px 4px 15px;
+        padding: 0px 4px 15px;
     }
 }
-
