@@ -1,13 +1,21 @@
-@import url(footer.css);
 @import url(base.css);
-.__footer {
+
+footer {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--offwhite-fundo);
 }
 
-.__change-page {
+footer a {
+  text-decoration: none;
+}
+
+footer .__page-selected a {
+  color: var(--offwhite-fundo)
+}
+
+footer > div {
   justify-content: center;
   display: flex;
   padding: 40px;
@@ -41,28 +49,23 @@
   border-radius: 50%;
 }
 
-.__proxima {
+#proxima {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--offwhite-fundo);
   color: #4579fb;
   border-radius: 50%;
-}/*# sourceMappingURL=footer.css.map */
+}
+
+#proxima a {
+  color: #4579fb;
+}
 
 @media (max-width: 780px) {
 
  main footer {
     display: none;
   }
-  /* .__footer{
-    background-color: var(--offwhite-fundo);
-  }
-  .__page-selected {
-    border-color: var(--offwhite-fundo);
-  }
-  .__page-not-selected{
-    background-color: var(--offwhite-fundo);
-  } */
 
 }

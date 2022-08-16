@@ -18,10 +18,10 @@ let asit = document.querySelectorAll('[data-acc="asit"]')
 let control = 0
 
 
-//pop tem que receber uma string do back, aqui temos apenas um modelo.
+//pop na verdade é apenas um objeto nesse exemplo, nem JSON é. Caso for usá-lo, recomendável criar um array de objetos ou adaptar o código;
 
 /*
-alterar em todos os locais que aparecem as seguites variáveis de acordo com os atributo do back (ou não):
+alterar em todos os locais que aparecem as seguites variáveis de acordo com os atributo do back (se for usar como objeto):
 
 nso-> número da solicitação
 dso-> data da solicitação
@@ -83,6 +83,8 @@ const pop = {
     }
 }
 
+// const popJSON = JSON.stringify(pop); <-se for necessário, passa o objeto para JSON
+
 container.appendChild(linhaPOP[0])
 linhaPOP[0].appendChild(aflushPOP[0])
 aflushPOP[0].appendChild(aitemPOP[0])
@@ -119,7 +121,7 @@ const acardisit = document.querySelectorAll('[data-acc="acardisit"]')
 let n = 0;
 let k = 0;
 
-//veja que ele pega as propriedades do pop, pegando os valores de cada um pelo seu nome. Logo, os nomes "srv, nso, dso..." todos devem ser alterados para o título dos atributos da JSON que pop recebeu.
+//veja que ele pega as propriedades do pop, pegando os valores de cada um pelo seu nome 9propriedades do objeto). Logo, os nomes "srv, nso, dso..." todos devem ser alterados para o título dos atributos da JSON que pop recebeu.
 for (var prop in pop) {
     abuttonPOP[n].textContent = pop[prop].srv
     acardinso[n].textContent = pop[prop].nso
@@ -153,7 +155,7 @@ for (var prop in pop) {
 
 }
 
-//yago, isso veio do main.js. Ajeitar, não precisa dessas variáveis redeclaradas
+//Isso veio do main.js. Ajeitar, não precisa dessas variáveis redeclaradas. Mas aí precisa acertar embaixo.
 
 const tbody = document.querySelector('[data-tbody]')
 const linha = document.querySelectorAll('[data-linha]')
@@ -187,7 +189,7 @@ linha.forEach((element) => {
 
 })
 
-//aos fatos: como usei um modelo dentro do próprio html, após adicionar todas informações que preciso nos corretos, é necessário eliminar o modelo. É por isso que o modelo não aparece no html final.
+//Como usei um modelo dentro do próprio html, após adicionar todas informações que preciso nos corretos, é necessário eliminar o modelo. É por isso que o modelo não aparece no html final.
 //usando um framework, isso não seria necessário. Mas, como observado, o resultado é satisfatório.
 linha[tamanho].remove();
 

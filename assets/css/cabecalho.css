@@ -47,7 +47,6 @@ header .__area-h1 {
     display: flex;
     justify-content: center;
     height: 50px;
-    width: 100vw;
     align-items: center;
 }
 

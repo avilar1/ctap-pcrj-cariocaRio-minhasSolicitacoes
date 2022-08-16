@@ -29,6 +29,7 @@ como estava:
 
 #cardI2 {
     grid-area: dso;
+    justify-self: end;
 
 }
 
@@ -45,6 +46,7 @@ como estava:
 
 #cardI5 {
     grid-area: uta;
+    justify-self: end;
 
 }
 
@@ -78,6 +80,9 @@ tbody .accordion-flush .accordion-item .accordion-button {
         display: none;
     }
 
+    #cardI2, #cardI5 {
+        justify-self: start;
+    }
 
     /*  Essa funciona bem também:
     grid-template-columns: 1fr;

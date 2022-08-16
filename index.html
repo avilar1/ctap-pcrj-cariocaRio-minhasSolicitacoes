@@ -51,7 +51,7 @@
 
             <input type="checkbox" name="arquivadas" id="checkaquirvadas">
           <label for="checkaquirvadas">Ocultar solicitações arquivadas</label>
-<!--evidentemente, os valores podem ser mudados para melhor usabilidade do lado do servidor-->
+<!--evidentemente, os value das option podem ser mudados para melhor usabilidade do lado do servidor. Trata-se de um modelo-->
 
         </select>
 
@@ -61,11 +61,11 @@
             <p>Últimos</p>
             <div>
             <div class="btn-group btn-group-sm" role="group" aria-label="grupo um">
-              <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" data-filtro="trinta"
-                checked>
+              <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" 
+              data-filtro="trinta">
               <label class="btn btn-outline-primary" for="btnradio4">
                 30 dias
-                <button type="button" class="__close-inline" aria-label="Close" id="closebutton"></button>
+                
               </label>
             </div>
     
@@ -78,8 +78,9 @@
     
             <div class="btn-group btn-group-sm" role="group" aria-label="grupo tres">
               <input type="radio" class="btn-check " name="btnradio" id="btnradio6" autocomplete="off"
-                data-filtro="noventa">
+                data-filtro="noventa" checked>
               <label class="btn btn-outline-primary" for="btnradio6">90 dias
+                <button type="button" class="__close-inline" aria-label="Close" id="closebutton"></button>
               </label>
             </div>
     
@@ -111,15 +112,15 @@
     <div class="__container" >
 
       <table id="container">
-      <thead class="card __card-linha">
+      <thead class="card">
         <tr class=" __card-corpo-titulo" data-corpo="linhacorpo">
 
-          <td id="cardT1">Número da solicitação</td>
-          <td id="cardT2">Data da solicitação</td>
-          <td id="cardT3">Serviço</td>
-          <td id="cardT4">Órgão</td>
-          <td id="cardT5">Última atualização</td>
-          <td id="cardT6">Situação</td>
+          <th id="cardT1">Número da solicitação</th>
+          <th id="cardT2">Data da solicitação</th>
+          <th id="cardT3">Serviço</th>
+          <th id="cardT4">Órgão</th>
+          <th id="cardT5">Última atualização</th>
+          <th id="cardT6">Situação</th>
 
         </tr>
       </thead>
@@ -132,7 +133,7 @@
         -->
 
       <tbody id="modelo" data-tbody>
-        <tr class="card __card-linha" data-linha>
+        <tr class="card " data-linha>
         
           <td class="accordion accordion-flush" id="accordionFlushExample" data-acc="aflush">
             <div class="accordion-item" id="accordionitem" data-acc="aitem">
@@ -170,11 +171,11 @@
       </div>
 
 
-    <footer class="__footer">
-        <div class="__change-page">
-            <div class="__page-selected"> 1 </div>
-            <div class="__page-not-selected"> 2 </div>
-            <div class="__proxima"> <span>próxima ></span> </div>
+    <footer>
+        <div>
+            <div class="__page-selected"> <a href="#">1</a></div>
+            <div class="__page-not-selected"> <a href="#">2</a></div>
+            <div id="proxima"> <a href="#">próxima</a> </div>
         </div>
 
 
