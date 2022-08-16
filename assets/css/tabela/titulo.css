@@ -32,44 +32,58 @@ grid-column-gap: 27px;
 
 #cardT1 {
     grid-area: nsoT;
-
+}
+#cardT1::after{
+    content: "";
 }
 
 #cardT2 {
     grid-area: dsoT;
-
+}
+#cardT2::after{
+    content: "";
 }
 
 #cardT3 {
     grid-area: srvT;
     justify-self: flex-start;
 }
-
-#cardT3:after {
-    background: url(../../img/caret-down-fill.webp) no-repeat;
+#cardT3::after{
     content: "";
-    display: inline-block;
-    flex-grow: 0;
-    height: 13px;
-    margin-left: 10px;
-    width: 13px;
-    transform: rotate(-180deg);    
 }
 
 #cardT4 {
     grid-area: orgT;
-
+}
+#cardT4::after{
+    content: "";
 }
 
 #cardT5 {
     grid-area: utaT;
-
+}
+#cardT5:after {
+    position: absolute;
+    background: url(../../img/caret-down-fill.webp) no-repeat;
+    display: inline-block;
+    flex-grow: 0;
+    height: 13px;
+    margin-left: 5px;
+    width: 13px;
+    transform: rotate(-180deg);
+    top: 20px
+}
+#cardT5::after{
+    content: "";
 }
 
 #cardT6 {
     grid-area: sitT;
-
 }
+#cardT6::after{
+    content: "";
+}
+
 
 
 /* @media (min-width: 780px) and (max-width: 1010px) {
