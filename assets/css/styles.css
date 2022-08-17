@@ -1,9 +1,8 @@
 @import url(base.css);
 @import url(cabecalho.css);
 @import url(corpo.css);
-@import url(filtro.css);
+@import url(nav-e-filtro.css);
 @import url(footer.css);
-@import url(cabecalho-adendo.css);
 
 @import url(tabela/titulo.css);
 @import url(tabela/linhas.css);

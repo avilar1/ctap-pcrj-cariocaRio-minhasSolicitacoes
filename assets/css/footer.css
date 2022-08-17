@@ -1,10 +1,10 @@
 @import url(base.css);
 
 footer {
-  display: flex;
-  justify-content: center;
   align-items: center;
   background-color: var(--offwhite-fundo);
+  display: flex;
+  justify-content: center;
 }
 
 footer a {
@@ -16,46 +16,46 @@ footer .__page-selected a {
 }
 
 footer > div {
-  justify-content: center;
   display: flex;
+  justify-content: center;
   padding: 40px;
 }
 
 .__page-selected {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  height: 40px;
-  width: 40px;
+  display: flex;
   background-color: #4579fb;
-  color: #fff;
   border: 2px;
   border-color: var(--offwhite-fundo);
   border-radius: 50px;
+  color: #fff;
+  height: 40px;
+  justify-content: center;
   transition: 0.7s;
+  width: 40px;
 }
 .__page-selected:hover {
   border-color: #4579fb;
 }
 
 .__page-not-selected {
+  align-items: center;
+  background-color: var(--offwhite-fundo);
+  border-radius: 50%;
+  color: #4579fb;
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 40px;
   width: 40px;
-  background-color: var(--offwhite-fundo);
-  color: #4579fb;
-  border-radius: 50%;
 }
 
 #proxima {
-  display: flex;
-  justify-content: center;
   align-items: center;
   background-color: var(--offwhite-fundo);
-  color: #4579fb;
   border-radius: 50%;
+  color: #4579fb;
+  display: flex;
+  justify-content: center;
 }
 
 #proxima a {

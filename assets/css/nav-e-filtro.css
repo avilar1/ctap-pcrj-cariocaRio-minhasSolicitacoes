@@ -1,0 +1,213 @@
+@import url(base.css);
+
+body nav {
+    width: 938px;
+    height: 76px;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+body nav>div {
+    padding: 32px 0px 20px;
+    display: block;
+}
+
+body nav select {
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
+
+body nav label {
+    height: 20px;
+}
+
+
+body nav .btn-group-sm>.btn {
+
+    margin: 0 10px;
+    border-radius: 17px;
+    font-size: 12px;
+    font-weight: 400;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 11px;
+    min-width: 34px;
+}
+
+body nav .btn-group-sm>.btn:nth-last-child() {
+    margin-right: 0px;
+}
+
+body nav .btn-group-sm>.btn label {
+    padding: 0 15px;
+}
+
+.btn-toolbar>div div:last-child label {
+    margin-right: 0px;
+}
+
+body nav .btn-sm {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.__filtro-close {
+    align-items: center;
+    margin-left: 12px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.btn-close {
+    opacity: 1;
+    width: 0.7em;
+    height: 0.7em;
+}
+
+body nav p {
+    align-self: center;
+    line-height: 20px;
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+body nav button {
+    padding: 0;
+}
+
+body fieldset .form-control {
+    display: none;
+}
+
+.__close-inline {
+    height: 19px;
+    background: url(../img/xStroke.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    color: #000;
+    margin-right: -8px;
+    transition: .5s;
+    width: 19px;
+}
+
+.__close-inline:hover {
+    background: url(../img/x.png);
+    background-color: var(--branco);
+    border: 1px solid var(--branco);
+    border-radius: 100%;
+    transition: .5s;
+}
+
+header .__area-nav {
+    align-items: center;
+    background-color: var(--offwhite-fundo);
+    display: flex;
+    justify-content: center;
+}
+
+header .__area-nav fieldset {
+    align-items: center;
+    padding: 32px 0px 24px;
+    display: flex;
+}
+
+/*não tá pegando*/
+fieldset>[type="checkbox" i] {
+
+    background: #ffffff;
+    border: 1px solid #D9D9D9;
+    border-color: #D9D9D9;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px 0 var(--offwhite-fundo);
+    box-sizing: border-box;
+    color: #d9d9d9;  
+    height: 14px;
+    margin-right: 5px;
+    width: 14px;
+    /* margin: 32px 5px 27px 36px; */
+    /* box-shadow: 0px 2px 2px rgb(245 245 245 / 25%); */
+}
+
+fieldset label {
+    line-height: 20px;
+    /* margin: 32px 0 24px 5px; */
+}
+
+@media (min-width: 780px) and (max-width: 992px) {
+    body nav {
+        margin: 0 32px;
+        width: 1010px;
+    }
+
+    nav>div {
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 780px) {
+
+    body nav {
+        align-items: center;
+        display: flex;
+        flex-direction: column-reverse;
+        height: 183px;
+        justify-content: center;
+        padding: 0 15px;
+    }
+  
+    body nav>div {
+        padding-top: 5px;
+        padding: 0px 0px;
+    }
+
+    body nav p {
+        align-self: flex-start;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    body nav label {
+        font-size: 15px;
+    }
+
+    body nav select {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    body nav fieldset {
+        width: 100%;
+    }
+
+    body nav .btn-group-sm>.btn {
+        margin: 0 0px;
+    }
+
+    body fieldset .form-control {
+        display: block;
+    }
+
+    select.form-control {
+        -webkit-appearance: menulist;
+    }
+
+    select option {
+        background-color: #ececec;
+    }
+
+    fieldset label {
+        margin: 0;
+    }
+
+    header .__area-nav fieldset {
+        display: block;
+        padding: 0;
+    }
+
+}

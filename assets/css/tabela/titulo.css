@@ -23,7 +23,6 @@ grid-column-gap: 27px;
     justify-items: flex-start;
     grid-column-gap: 26px;
     padding: 15px 14px;
-    /* border-width: 1px; */
 }
 
 .card-body {
@@ -35,6 +34,7 @@ grid-column-gap: 27px;
 }
 #cardT1::after{
     content: "";
+
 }
 
 #cardT2 {
@@ -42,6 +42,7 @@ grid-column-gap: 27px;
 }
 #cardT2::after{
     content: "";
+
 }
 
 #cardT3 {
@@ -50,6 +51,7 @@ grid-column-gap: 27px;
 }
 #cardT3::after{
     content: "";
+
 }
 
 #cardT4 {
@@ -57,24 +59,24 @@ grid-column-gap: 27px;
 }
 #cardT4::after{
     content: "";
+
 }
 
 #cardT5 {
     grid-area: utaT;
 }
-#cardT5:after {
+
+#cardT5::after{
+    content: "";
     position: absolute;
     background: url(../../img/caret-down-fill.webp) no-repeat;
     display: inline-block;
     flex-grow: 0;
     height: 13px;
-    margin-left: 5px;
+    margin-left: 10px;
     width: 13px;
     transform: rotate(-180deg);
     top: 20px
-}
-#cardT5::after{
-    content: "";
 }
 
 #cardT6 {
@@ -82,8 +84,8 @@ grid-column-gap: 27px;
 }
 #cardT6::after{
     content: "";
-}
 
+}
 
 
 /* @media (min-width: 780px) and (max-width: 1010px) {

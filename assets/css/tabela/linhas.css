@@ -55,13 +55,14 @@ como estava:
 
 }
 
-tbody .accordion-flush .accordion-item .accordion-button {
-    display: none;
-}
-
+tbody .accordion-flush .accordion-item .accordion-button,
 .__card-corpo > a {
     display: none;
 }
+
+/* .__card-corpo > a {
+    display: none;
+} */
 
 @media (min-width: 780px) and (max-width: 1009px) {
     .__card-corpo {
