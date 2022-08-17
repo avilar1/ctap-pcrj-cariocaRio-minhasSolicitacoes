@@ -28,9 +28,13 @@ body nav label {
 body nav .btn-group-sm>.btn {
 
     margin: 0 10px;
+    background-color:  #FFFFFF;
+    border-color: #4579FB;
     border-radius: 17px;
+    color: #4579FB;
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 500;
+    line-height: 20px;
     height: 24px;
     display: flex;
     justify-content: space-between;
