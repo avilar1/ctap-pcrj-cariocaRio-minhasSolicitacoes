@@ -68,15 +68,16 @@ grid-column-gap: 27px;
 
 #cardT5::after{
     content: "";
-    position: absolute;
+    
     background: url(../../img/caret-down-fill.webp) no-repeat;
     display: inline-block;
     flex-grow: 0;
     height: 13px;
     margin-left: 10px;
-    width: 13px;
+    position: absolute;
     transform: rotate(-180deg);
-    top: 20px
+    top: 20px;
+    width: 13px;
 }
 
 #cardT6 {
