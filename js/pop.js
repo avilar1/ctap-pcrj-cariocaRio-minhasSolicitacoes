@@ -121,7 +121,7 @@ const acardisit = document.querySelectorAll('[data-acc="acardisit"]')
 let n = 0;
 let k = 0;
 
-//veja que ele pega as propriedades do pop, pegando os valores de cada um pelo seu nome 9propriedades do objeto). Logo, os nomes "srv, nso, dso..." todos devem ser alterados para o título dos atributos da JSON que pop recebeu.
+//veja que ele pega as propriedades do pop, pegando os valores de cada um pelo seu nome (propriedades do objeto). Logo, os nomes "srv, nso, dso..." todos devem ser alterados para o título dos atributos da JSON que pop recebeu.
 for (var prop in pop) {
     abuttonPOP[n].textContent = pop[prop].srv
     acardinso[n].textContent = pop[prop].nso
@@ -155,35 +155,34 @@ for (var prop in pop) {
 
 }
 
-//Isso veio do main.js. Ajeitar, não precisa dessas variáveis redeclaradas. Mas aí precisa acertar embaixo.
 
 const tbody = document.querySelector('[data-tbody]')
 const linha = document.querySelectorAll('[data-linha]')
 
-const aflushD = document.querySelectorAll('[data-acc="aflush"]')
-const aitemD = document.querySelectorAll('[data-acc="aitem"]')
-const ahoneD = document.querySelectorAll('[data-acc="ahone"]')
-const abuttonD = document.querySelectorAll('[data-acc="abutton"]')
-const aconeD = document.querySelectorAll('[data-acc="acone"]')
-const abodyD = document.querySelectorAll('[data-acc="abody"]')
+aflushPOP = document.querySelectorAll('[data-acc="aflush"]')
+aitemPOP = document.querySelectorAll('[data-acc="aitem"]')
+ahonePOP = document.querySelectorAll('[data-acc="ahone"]')
+abuttonPOP = document.querySelectorAll('[data-acc="abutton"]')
+aconePOP = document.querySelectorAll('[data-acc="acone"]')
+abodyPOP = document.querySelectorAll('[data-acc="abody"]')
 
-const acardbD = document.querySelectorAll('[data-acc="acardb"]')
+acardbPOP = document.querySelectorAll('[data-acc="acardb"]')
 
-const asitT = document.querySelectorAll('[data-acc="asit"]')
-
+asit = document.querySelectorAll('[data-acc="asit"]')
 
 let m = 0;
 linha.forEach((element) => {
   tbody.appendChild(element);
   //$([aitemD])[0][0].dataset.acc='aa' //modelo
-  $(ahoneD)[m].id = 'flush-heading' + m;
-  $(abuttonD)[m].dataset.bsTarget = '#flush-collapse' + m;
-  $(abuttonD)[m].setAttribute("aria-controls", 'flush-collapse' + m);
-  $(abuttonD)[m].dataset.id = m;
-  $(aconeD)[m].id = 'flush-collapse' + m;
-  $(aconeD)[m].setAttribute("aria-labelledby", 'flush-heading' + m);
-  aconeD[m].ariaLabelledby = 'flush-heading' + m;
-  $(asitT)[m].id = m;
+  ahonePOP[m].id = 'flush-heading' + m;
+  abuttonPOP[m].dataset.bsTarget = '#flush-collapse' + m;
+  abuttonPOP[m].setAttribute("aria-controls", 'flush-collapse' + m);
+  abuttonPOP[m].dataset.id = m;
+  abuttonPOP[m].id = 'accordionbutton' + m;
+  aconePOP[m].id = 'flush-collapse' + m;
+  aconePOP[m].setAttribute("aria-labelledby", 'flush-heading' + m);
+  aconePOP[m].ariaLabelledby = 'flush-heading' + m;
+  asit[m].id = m;
   m++
 
 
@@ -204,7 +203,7 @@ function myFunction(x) {
         let n = 0
         linha.forEach((elemento) => {
             
-            aconeD[n].classList.add("show")
+            aconePOP[n].classList.add("show")
             n++
 
         })       
@@ -218,7 +217,7 @@ function myFunction(x) {
         let n = 0
         linha.forEach((element) => {
           
-          aconeD[n].classList.remove("show")
+          aconePOP[n].classList.remove("show")
           n++
         
         })  
