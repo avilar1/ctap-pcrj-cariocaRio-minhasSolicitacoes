@@ -40,6 +40,13 @@
     white-space: nowrap;
 
 }
+.__painel-login i{
+    background: url(../img/seta\ baixo\ login.webp) no-repeat;
+    background-size: 10px 10px;
+    height: 10px;
+    width: 10px;
+    margin-left: 10px;
+}
 
 header .__area-h1 {
     background-color: #ffffff;
@@ -71,6 +78,13 @@ header .__area-h1 h1 {
 
 }
 
+.__painel-logo a {
+    display: block;
+    background-size: 194px 70px;
+    min-height: 70px;
+    width: 194px;
+}
+
 .__painel-logo p {
     display: none;
 }
@@ -97,6 +111,13 @@ header .__area-h1 h1 {
         width: 148px;
         min-height: 0px;
         margin-bottom: -6px; /*assim conseguimos a distância de 18px para baixo do logo, mantendo inalterado o login*/
+    }
+
+    .__painel-logo a {
+        display: block;
+        background-size: 148px 54px;
+        height: 54px;
+        width: 148px;
     }
 
     .__cabecalho-conteudo {
@@ -131,6 +152,12 @@ header .__area-h1 h1 {
         line-height: 1.48;
         margin: 0px;
         text-align: left;
+    }
+
+    .__painel-login i {
+        width: 10px !important;
+        height: 10px;
+        margin-left: 0;
     }
 
     .__painel-login p span:nth-child(1) {

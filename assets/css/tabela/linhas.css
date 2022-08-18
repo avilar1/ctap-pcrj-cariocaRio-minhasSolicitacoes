@@ -7,35 +7,55 @@ como estava:
     grid-column-gap: 27px;
 */
 .__card-corpo {
+    width: 938px;
     display: grid;
-    grid-template-columns: 140px 70px 271px 85px 71px 143px;
+    grid-template-columns: 
+    calc(138px + 15px) /*nso*/
+    26px
+    calc(66px + 15px) /*dso*/
+    26px
+    calc(46px + 15px) /*srv*/
+    198px
+    calc(39px + 15px) /*org*/
+    57px
+    calc(70px + 15px) /*uta*/
+    26px
+    calc(53px + 15px) /*sit*/
+    calc(89px - 14px);
     grid-template-rows: minmax(20px, 1fr);
     grid-template-areas:
-        "nso dso srv org uta sit";
+        "nso . dso . srv srv org org uta . sit sit";
     
     align-items: flex-start;
     border: 1px solid #cccccc;
     border-radius: 4px;
+    border-width: 1px;
     font-size: 13px;
-    grid-column-gap: 26px;
+    line-height: 20px;
+    grid-column-gap: 0px;
     justify-items: flex-start;
     padding: 15px 14px;
 }
 
 #cardI1 {
     grid-area: nso;
+}
 
+#cardI1 a {
+    line-height: 20px;
+    height: 20px;
 }
 
 #cardI2 {
     grid-area: dso;
     justify-self: end;
-
+    margin-right: 15px;
 }
 
 #cardI3 {
     grid-area: srv;
     justify-self: flex-start;
+    margin-right: 26px;
 
 }
 
@@ -47,30 +67,19 @@ como estava:
 #cardI5 {
     grid-area: uta;
     justify-self: end;
-
+    /* margin-right: 15px; */
 }
 
 #cardI6 {
     grid-area: sit;
-
+    margin-top: -4.5px;
+    margin-bottom: -9.5px;
+    line-height: 20px;
 }
 
 tbody .accordion-flush .accordion-item .accordion-button,
 .__card-corpo > a {
     display: none;
-}
-
-/* .__card-corpo > a {
-    display: none;
-} */
-
-@media (min-width: 780px) and (max-width: 1009px) {
-    .__card-corpo {
-        grid-template-columns: 2fr 1fr 4fr 1fr 1fr 2fr;
-        grid-template-rows: minmax(20px, 1fr);
-        grid-column-gap: 27px;
-    }
-
 }
 
 
@@ -91,6 +100,7 @@ tbody .accordion-flush .accordion-item .accordion-button,
     /* row-gap: 15px; */
 
     .__card-corpo {
+        width: auto;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 20px 35px 20px 35px 20px 35px 20px 35px;
