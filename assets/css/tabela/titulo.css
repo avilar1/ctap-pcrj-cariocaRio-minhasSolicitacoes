@@ -20,6 +20,7 @@ grid-column-gap: 27px;
     border-width: 1px;
     color: var(--branco);
     font-size: 13px;
+    font-weight: 700;
     justify-items: flex-start;
     grid-column-gap: 26px;
     padding: 15px 14px;
@@ -32,72 +33,89 @@ grid-column-gap: 27px;
 #cardT1 {
     grid-area: nsoT;
 }
-#cardT1::after{
-    content: "";
-
-}
 
 #cardT2 {
     grid-area: dsoT;
-}
-#cardT2::after{
-    content: "";
-
 }
 
 #cardT3 {
     grid-area: srvT;
     justify-self: flex-start;
 }
-#cardT3::after{
-    content: "";
-
-}
 
 #cardT4 {
     grid-area: orgT;
-}
-#cardT4::after{
-    content: "";
-
 }
 
 #cardT5 {
     grid-area: utaT;
 }
 
-#cardT5::after{
-    content: "";
-    
-    background: url(../../img/caret-down-fill.webp) no-repeat;
-    display: inline-block;
-    flex-grow: 0;
-    height: 13px;
-    margin-left: 10px;
-    position: absolute;
-    transform: rotate(-180deg);
-    top: 20px;
-    width: 13px;
-}
-
 #cardT6 {
     grid-area: sitT;
 }
+
+#cardT1::after,
+#cardT2::after,
+#cardT3::after,
+#cardT4::after,
+#cardT5::after,
 #cardT6::after{
     content: "";
+    background: url(../../img/caret-down-fill2.webp) no-repeat;
+    display: inline-block;
+    flex-grow: 0;
+    height: 13px;
+    margin-left: 2px;
+    position: absolute;
+    top: 20px;
+    width: 13px; 
+    
+}
 
+#cardT5::after,
+#cardT2::after{
+    top:40px;
+}
+
+#cardT1:hover::after,
+#cardT2:hover::after,
+#cardT3:hover::after,
+#cardT4:hover::after,
+#cardT5:hover::after,
+#cardT6:hover::after{
+    transition: .5s;
+    transform: rotate(-180deg);
 }
 
 
-/* @media (min-width: 780px) and (max-width: 1010px) {
-    .__card-corpo-titulo {
-        grid-template-columns: 2fr 1fr 4fr 1fr 1fr 2fr;
-        grid-template-rows: calc(70px - 30px);
-        grid-column-gap: 27px;
-    }
+#cardT1:not(:hover)::after,
+#cardT2:not(:hover)::after,
+#cardT3:not(:hover)::after,
+#cardT4:not(:hover)::after,
+#cardT5:not(:hover)::after,
+#cardT6:not(:hover)::after{
+    transition: .5s;
+    
+}
 
-} */
+#cardT1.nselected::after,
+#cardT2.nselected::after,
+#cardT3.nselected::after,
+#cardT4.nselected::after,
+#cardT5.nselected::after,
+#cardT6.nselected::after{
+    content: none;
+}
 
+#cardT1.nrotate::after,
+#cardT2.nrotate::after,
+#cardT3.nrotate::after,
+#cardT4.nrotate::after,
+#cardT5.nrotate::after,
+#cardT6.nrotate::after{
+    transform: rotate(-180deg);
+}
 
 @media (min-width: 780px) {
 

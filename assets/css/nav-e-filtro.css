@@ -92,6 +92,7 @@ body fieldset .form-control {
     height: 19px;
     background: url(../img/xStroke.png);
     background-position: center;
+    background-position-y: 5px;
     background-repeat: no-repeat;
     border: none;
     color: #000;
@@ -102,6 +103,7 @@ body fieldset .form-control {
 
 .__close-inline:hover {
     background: url(../img/x.png);
+    background-position: center;
     background-color: var(--branco);
     border: 1px solid var(--branco);
     border-radius: 100%;

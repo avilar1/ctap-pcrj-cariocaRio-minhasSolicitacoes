@@ -10,7 +10,7 @@ close.addEventListener('click', (evento) => {
 
 radio.forEach((elemento) => {
   if (elemento.checked == true) {
-    console.log(elemento.dataset.filtro)
+    console.log(`filtro checado é ${elemento.dataset.filtro}`)
     if(check==false) {
       elemento.checked = false
       console.log(check)
@@ -21,8 +21,8 @@ radio.forEach((elemento) => {
 radio.forEach((elemento) => {
   elemento.addEventListener('click', (evento) => {
     if (elemento.checked == true) {
-      console.log(elemento.dataset.filtro)
-      console.log(elemento.parentElement.lastElementChild)
+      console.log(`filtro checado é ${elemento.dataset.filtro}`)
+      // console.log(elemento.parentElement.lastElementChild)
         elemento.parentElement.lastElementChild.appendChild(close)
         close.style.display = ""
         click=true
@@ -31,7 +31,7 @@ radio.forEach((elemento) => {
 })
 
 function closebutton() {
-  console.log("aaaa")
+  // console.log("aaaa")
     click = !click
     check = !check
     click?(close.style.display = ""):close.style.display= "none"

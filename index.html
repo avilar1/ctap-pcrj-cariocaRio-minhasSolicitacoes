@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Listagem das solicitações de peticionamento externo">
     <link rel="stylesheet" href="assets/css/reset.css">
     
 
@@ -115,12 +116,12 @@
       <thead class="card">
         <tr class=" __card-corpo-titulo" data-corpo="linhacorpo">
 
-          <th id="cardT1">Número da solicitação</th>
-          <th id="cardT2">Data da solicitação</th>
-          <th id="cardT3">Serviço</th>
-          <th id="cardT4">Órgão</th>
-          <th id="cardT5">Última atualização</th>
-          <th id="cardT6">Situação</th>
+          <th id="cardT1" class="nselected" data-t="1">Número da solicitação</th>
+          <th id="cardT2" class="nselected" data-t="2">Data da solicitação</th>
+          <th id="cardT3" class="nselected" data-t="3">Serviço</th>
+          <th id="cardT4" class="nselected" data-t="4">Órgão</th>
+          <th id="cardT5" class="nselected" data-t="5">Última atualização</th>
+          <th id="cardT6" class="nselected" data-t="6">Situação</th>
 
         </tr>
       </thead>
@@ -154,7 +155,7 @@
                     <div id="cardTi3" data-acc="acardtsrv">Serviço</div>                           <div id="cardI3" data-acc="acardisrv"></div>
                     <div id="cardTi4" data-acc="acardtorg">Órgão</div>                             <div id="cardI4" data-acc="acardiorg"></div>
                     <div id="cardTi5" data-acc="acardtuta">Última atualização</div>                <div id="cardI5" data-acc="acardiuta"></div>
-                    <div id="cardTi6" data-acc="acardtsit">Situação</div>                          <div ><a id="cardI6" data-acc="acardisit" ></a></div>
+                    <div id="cardTi6" data-acc="acardtsit">Situação</div>                          <div ><a href="#" id="cardI6" data-acc="acardisit" ></a></div>
                     <a href="#">Veja mais detalhes</a>
                   </div>
                 </div>
@@ -189,6 +190,7 @@
   <script src="js/filtro.js"></script>
   <script src="js/pop.js"></script>
   <script src="js/accordion.js"></script>
+  <script src="js/tabela.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
