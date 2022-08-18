@@ -64,23 +64,43 @@ tbody>tr.card {
 }
 
 tbody .btn {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 10.666px;
+    padding-right: 10.666px;
 }
 
-tbody .btn-success {
+tbody .btn-sm {
+    padding-top: 3.667px;
+    padding-bottom: 3.667px;
+}
+
+tbody .btn.btn-success {
     background-color: #09b88a;
     border-color: #09b88a;
     border-radius: 3px;
     height: 30px;
-    white-space: nowrap;
+    line-height: 20px;
+    font-family: museo700;
     font-weight: 700;
+    font-size: 12px;
+    padding-left: 9.666px;
+    padding-right: 9.666px;
 }
 
 tbody .btn-outline-success {
     color: #09b88a;
     border-color: #09b88a;
     max-width: 107px;
+    width: calc(53px + 24px);
+    line-height: 1.54;
+    text-align: center;
+    font-size: 13px;
+}
+
+tbody .btn-outline-success.__btn-parcialmente{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 103px;
+    text-align: start;
 }
 
 thead{
@@ -109,7 +129,7 @@ td .accordion-button {
 
 .__botao-sit {
     border-radius: 13px;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .accordion-button:focus {
@@ -173,6 +193,11 @@ td .accordion-button {
     tbody .btn-outline-success {
         max-width: none;
         white-space: nowrap;
+        width: auto;
+    }
+
+    tbody .btn-outline-success.__btn-parcialmente {
+        width: auto;
     }
 
     tbody .accordion-body {

@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Listagem das solicitações de peticionamento externo">
     <link rel="stylesheet" href="assets/css/reset.css">
-    
-
+    <link href="http://fonts.cdnfonts.com/css/rawline" rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -21,17 +20,18 @@
 
 <body>
     <header>
-        <div class="__cabecalho">
-            <div class="__cabecalho-conteudo ">
+       <div class="__cabecalho">
+        <div class="__cabecalho-conteudo ">
+            
+            <div class="__painel-logo">
+              <a href="https://carioca.rio"><p>Carioca Digital</p></a>
                 
-                <div class="__painel-logo">
-                    <p>Carioca Digital</p>
-                </div>
-                <div class="__painel-login">
-                    <p>Olá, <span> Fernando!</span> <span>Você está conectado(a)</span> </p>
-                </div>
+            </div>
+            <div class="__painel-login">
+                <p>Olá, <span> Fernando!</span> <span>Você está conectado(a)</span>  </p><i></i>
             </div>
         </div>
+    </div>
 
         <div class="__area-h1">
             <h1>Rever cálculo de IPTU</h1>
@@ -118,7 +118,7 @@
 
           <th id="cardT1" class="nselected" data-t="1">Número da solicitação</th>
           <th id="cardT2" class="nselected" data-t="2">Data da solicitação</th>
-          <th id="cardT3" class="nselected" data-t="3">Serviço</th>
+          <th id="cardT3" class="" data-t="3">Serviço</th> <!--por padrão, fica em serviço. Se mudar o padrão, só mudar onde não tem a classe nselected-->
           <th id="cardT4" class="nselected" data-t="4">Órgão</th>
           <th id="cardT5" class="nselected" data-t="5">Última atualização</th>
           <th id="cardT6" class="nselected" data-t="6">Situação</th>
@@ -155,7 +155,7 @@
                     <div id="cardTi3" data-acc="acardtsrv">Serviço</div>                           <div id="cardI3" data-acc="acardisrv"></div>
                     <div id="cardTi4" data-acc="acardtorg">Órgão</div>                             <div id="cardI4" data-acc="acardiorg"></div>
                     <div id="cardTi5" data-acc="acardtuta">Última atualização</div>                <div id="cardI5" data-acc="acardiuta"></div>
-                    <div id="cardTi6" data-acc="acardtsit">Situação</div>                          <div ><a href="#" id="cardI6" data-acc="acardisit" ></a></div>
+                    <div id="cardTi6" data-acc="acardtsit">Situação</div>                          <div id="cardI6"><a href="#" data-acc="acardisit" ></a></div>
                     <a href="#">Veja mais detalhes</a>
                   </div>
                 </div>

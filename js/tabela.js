@@ -1,6 +1,6 @@
 
 let titulos = document.querySelectorAll('[data-t]');
-let tx;
+let tx = 3;
 titulos.forEach(element => {
     // console.log(element.textContent)
     

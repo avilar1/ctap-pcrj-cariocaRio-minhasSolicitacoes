@@ -8,11 +8,24 @@ grid-column-gap: 27px;
 */
 
 .__card-corpo-titulo {
+    width: 938px;
     display: grid;
-    grid-template-columns: 140px 70px 271px 85px 71px 143px;
+    grid-template-columns: 
+    calc(138px + 15px) /*nso*/
+    26px
+    calc(66px + 15px) /*dso*/
+    26px
+    calc(46px + 15px) /*srv*/
+    198px
+    calc(39px + 15px) /*org*/
+    57px
+    calc(70px + 15px) /*uta*/
+    26px
+    calc(53px + 15px) /*sit*/
+    calc(89px - 14px);
     grid-template-rows: calc(70px - 30px);
     grid-template-areas:
-        "nsoT dsoT srvT orgT utaT sitT";
+        "nsoT . dsoT . srvT . orgT . utaT . sitT .";
     align-items: flex-start;
     background-color: var(--azul-turquesa-variante);
     border: solid 1px #ccc;
@@ -20,10 +33,12 @@ grid-column-gap: 27px;
     border-width: 1px;
     color: var(--branco);
     font-size: 13px;
-    font-weight: 700;
+    font-family: museo700;
     justify-items: flex-start;
-    grid-column-gap: 26px;
+    grid-column-gap: 0px;
     padding: 15px 14px;
+
+    
 }
 
 .card-body {
@@ -32,10 +47,12 @@ grid-column-gap: 27px;
 
 #cardT1 {
     grid-area: nsoT;
+    width: 138px;
 }
 
 #cardT2 {
     grid-area: dsoT;
+    width: 66px;
 }
 
 #cardT3 {
@@ -45,14 +62,17 @@ grid-column-gap: 27px;
 
 #cardT4 {
     grid-area: orgT;
+    width: 39px;
 }
 
 #cardT5 {
     grid-area: utaT;
+    width: 70px;
 }
 
 #cardT6 {
     grid-area: sitT;
+    width: 53px;
 }
 
 #cardT1::after,
@@ -60,7 +80,7 @@ grid-column-gap: 27px;
 #cardT3::after,
 #cardT4::after,
 #cardT5::after,
-#cardT6::after{
+#cardT6::after {
     content: "";
     background: url(../../img/caret-down-fill2.webp) no-repeat;
     display: inline-block;
@@ -69,13 +89,13 @@ grid-column-gap: 27px;
     margin-left: 2px;
     position: absolute;
     top: 20px;
-    width: 13px; 
-    
+    width: 13px;
+
 }
 
 #cardT5::after,
-#cardT2::after{
-    top:40px;
+#cardT2::after {
+    top: 40px;
 }
 
 #cardT1:hover::after,
@@ -83,7 +103,7 @@ grid-column-gap: 27px;
 #cardT3:hover::after,
 #cardT4:hover::after,
 #cardT5:hover::after,
-#cardT6:hover::after{
+#cardT6:hover::after {
     transition: .5s;
     transform: rotate(-180deg);
 }
@@ -94,9 +114,9 @@ grid-column-gap: 27px;
 #cardT3:not(:hover)::after,
 #cardT4:not(:hover)::after,
 #cardT5:not(:hover)::after,
-#cardT6:not(:hover)::after{
+#cardT6:not(:hover)::after {
     transition: .5s;
-    
+
 }
 
 #cardT1.nselected::after,
@@ -104,8 +124,19 @@ grid-column-gap: 27px;
 #cardT3.nselected::after,
 #cardT4.nselected::after,
 #cardT5.nselected::after,
-#cardT6.nselected::after{
+#cardT6.nselected::after {
     content: none;
+}
+
+#cardT1.nselected:hover::after,
+#cardT2.nselected:hover::after,
+#cardT3.nselected:hover::after,
+#cardT4.nselected:hover::after,
+#cardT5.nselected:hover::after,
+#cardT6.nselected:hover::after {
+    content: "";
+    transform: rotate(-360deg);
+    transition: .5s;
 }
 
 #cardT1.nrotate::after,
@@ -113,7 +144,7 @@ grid-column-gap: 27px;
 #cardT3.nrotate::after,
 #cardT4.nrotate::after,
 #cardT5.nrotate::after,
-#cardT6.nrotate::after{
+#cardT6.nrotate::after {
     transform: rotate(-180deg);
 }
 
