@@ -205,7 +205,7 @@ function myFunction(x) {
             
             aconePOP[n].classList.add("show")
             n++
-
+            
         })       
         controle = 1;        
       }
@@ -220,6 +220,8 @@ function myFunction(x) {
           aconePOP[n].classList.remove("show")
           n++
         
+          document.querySelector("#mostrar").open = false;
+
         })  
         controle = 0;
       }

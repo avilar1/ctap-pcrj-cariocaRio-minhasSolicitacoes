@@ -201,7 +201,7 @@ td .accordion-button {
     }
 
     tbody .accordion-body {
-        padding: 0px 4px 15px;
+        padding: 0px 4px 20px;
     }
 
     thead.card,
@@ -219,6 +219,11 @@ td .accordion-button {
         color: var(--branco);
         background-color: var(--azul-turquesa-variante);
         padding-bottom: 15px;
+        
+    }
+
+    main tbody .accordion-flush .accordion-item .accordion-button:not(.collapsed) {
+        font-weight: 700;
     }
 
     .accordion-item div {
@@ -226,5 +231,12 @@ td .accordion-button {
         padding: 15px 4px;
     }
 
+    .accordion-item div a {
+        font-size: 15px;
+        font-weight: 500;
+    }
 
+    td .accordion-button {
+        padding-right: 4px;
+    }
 }
