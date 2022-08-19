@@ -126,12 +126,15 @@ summary::after:not(:hover) .__informacoes,
     line-height: normal;
     height: 13px;
     text-decoration: none;
+    overflow: auto;
 }
 
 .__informacoes-logout {
     background-color: #ffffff;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    margin-top: 2px;
+    border-top: solid 2px;
+    border-color: #eae6e6;
+    /* margin-top: 2px; */
     text-align: right;
     padding: 12px 15px 12px;
 }
@@ -139,14 +142,12 @@ summary::after:not(:hover) .__informacoes,
 .__informacoes-logout button {
     padding: calc(8px - 1.333px) calc(24px - 1.333px);
     border-radius: 24px;
+    
 }
-
-
 
 .__mostrar:hover .__informacoes {
     display: block;
 }
-
 
 header .__area-h1 {
     background-color: #ffffff;
@@ -285,6 +286,17 @@ header .__area-h1 h1 {
 
     .__painel-login p span:nth-child(2) {
         display: none;
+    }
+
+    .__informacoes-logout {
+        padding-right: 11px;
+    }
+
+    .btn-sm.__sair {
+        font-size: 11.67px;
+        font-weight: 600;
+        color: #1351B4;
+        border-color: #1351B4;
     }
 
 }
