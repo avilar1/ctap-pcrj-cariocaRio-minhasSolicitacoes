@@ -12,10 +12,10 @@ titulos.forEach(element => {
         }
         tx = element.dataset.t;
         // console.log(tx);
-        titulos.forEach(element2 => {
-            if (element2.dataset.t != tx) {
-                if(!element2.classList.contains('nselected')){
-                    element2.classList.toggle('nselected');
+        titulos.forEach(titulo => {
+            if (titulo.dataset.t != tx) {
+                if(!titulo.classList.contains('nselected')){
+                    titulo.classList.toggle('nselected');
                 }               
             }
         })

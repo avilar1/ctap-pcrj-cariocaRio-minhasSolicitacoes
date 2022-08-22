@@ -53,20 +53,29 @@
         <div class="__area-nav">
           <nav>
           <fieldset>
-          <select id="ordenacao" class="form-control custom-select" >
-            <option value="" disabled selected hidden>Ordenar por</option>
-            <option value="UAt">Última atualização</option>
-            <option value="Sit">Situação</option>
-            <option value="NSl">Número da solicitação (A-Z)</option>
-            <option value="DSi">Data da solicitação</option>
-            <option value="Saz">Serviço (A-Z)</option>
-            <option value="Oaz">Órgão (A-Z)</option>
 
+            <div class="dropdown" role="menu">
+              <a class="btn btn-secondary dropdown-toggle __dropdown-btn" id="selecione" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                Ordenar por
+              </a>
+            
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item dropdown-item-selecionado" href="#" data-m="1">Última atualização</a></li>
+                <li><a class="dropdown-item" href="#" data-m="2">Situação</a></li>
+                <li><a class="dropdown-item" href="#" data-m="3">Número da solicitação (A-Z)</a></li>
+                <li><a class="dropdown-item" href="#" data-m="4">Data da solicitação</a></li>
+                <li><a class="dropdown-item" href="#" data-m="5">Serviço (A-Z)</a></li>
+                <li><a class="dropdown-item" href="#" data-m="6">Órgão (A-Z)</a></li>
+              </ul>
+            </div>
+
+            <div class="__check">
             <input type="checkbox" name="arquivadas" id="checkaquirvadas">
           <label for="checkaquirvadas">Ocultar solicitações arquivadas</label>
+        </div>
 <!--evidentemente, os value das option podem ser mudados para melhor usabilidade do lado do servidor. Trata-se de um modelo-->
 
-        </select>
+        
 
         </fieldset>
           
@@ -203,6 +212,7 @@
   <script src="js/pop.js"></script>
   <script src="js/accordion.js"></script>
   <script src="js/tabela.js"></script>
+  <script src="js/dropdown.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">

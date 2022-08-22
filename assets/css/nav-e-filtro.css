@@ -10,12 +10,16 @@ body nav {
     font-size: 12px;
 }
 
+fieldset .dropdown {
+    display: none;
+}
+
 body nav>div {
     padding: 32px 0px 20px;
     display: block;
 }
 
-body nav select {
+body nav .__dropdown-btn {
     margin-top: 32px;
     margin-bottom: 24px;
 }
@@ -97,20 +101,22 @@ body fieldset .form-control {
     border: none;
     color: #000;
     margin-right: -8px;
-    transition: .5s;
+    /* transition: .5s; */
     width: 20px;
     padding: 2px 2px 2px 4px;
     margin-left: 4px;
 }
 
+/*colocar hover depois*/
 .__close-inline:hover {
     background: url(../img/x.png);
     background-position: center;
     background-color: var(--branco);
     border: 1px solid var(--branco);
     border-radius: 100%;
-    transition: .5s;
-    margin-bottom: 1px;
+    /* transition: .5s; */
+    /* margin-bottom: 1px; */
+    margin-top: 0px;
 }
 
 header .__area-nav {
@@ -128,6 +134,15 @@ header .__area-nav fieldset {
     display: flex;
 }
 
+.dropdown-item-selecionado::after {
+    content: "";
+    background: url(../img/check-lg.webp) no-repeat;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-left: 2px;
+}
+
 /*não tá pegando*/
 fieldset>[type="checkbox" i] {
 
@@ -141,8 +156,13 @@ fieldset>[type="checkbox" i] {
     height: 14px;
     margin-right: 5px;
     width: 14px;
+    text-align: center;
     /* margin: 32px 5px 27px 36px; */
     /* box-shadow: 0px 2px 2px rgb(245 245 245 / 25%); */
+}
+
+.__check {
+    text-align: center;
 }
 
 fieldset label {
@@ -187,19 +207,73 @@ fieldset label {
         font-size: 15px;
     }
 
-    body nav select {
+    fieldset .dropdown {
+        display: flex;
+        justify-content: center;
+    }
+
+    body nav .__dropdown-btn {
         margin-top: 20px;
         margin-bottom: 20px;
+        background-color: var(--branco);
         border-color: #CCCCCC;
+        color: #212529;
         font-size: 15px;
         font-weight: 500;
         line-height: 20px;
         padding-top: 5px;
         padding-bottom: 5px;
         padding-left: 4px;
+        width: 240px;
+        display: flex;
+        justify-content: space-between;
     }
-    
-    select option {
+
+    body nav .__dropdown-btn.show {
+        border-radius: 4px 4px 0 0;
+    }
+
+    body nav .dropdown-menu {
+        width: 240px;
+    }
+
+    .btn-check:focus+.btn-secondary, .btn-secondary:focus{
+        background-color: var(--branco);
+        border-color: #CCCCCC;
+        color: #212529;
+    }
+
+    .btn-secondary:hover{
+        background-color: var(--branco);
+        border-color: #CCCCCC;
+        color: #212529;
+    }
+
+    .btn-secondary:focus, .btn-secondary:active, .btn-secondary:active:focus, .btn-secondary:hover{
+        box-shadow: none;
+    }
+
+    .dropdown-toggle::after {
+        flex-shrink: 0;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        width: 18px;
+        height: 18px;
+        margin-left: auto;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: 1.25rem;
+        transition: transform .2s ease-in-out;
+        border: none;
+
+    }
+
+    fieldset .dropdown .dropdown-menu{
+        background-color: var(--offwhite-fundo);
+        margin-top: -2px;
+        border-radius: 0;
+    }
+
+    .__dropdown-btn .dropdown-menu .dropdown-item {
         font-size: 15px;
         font-weight: 500;
         line-height: 20px;
@@ -209,7 +283,7 @@ fieldset label {
         background-color: #ececec;
     }
 
-    body nav select option:last-of-type {
+    .__dropdown-btn .dropdown-menu .dropdown-item:last-of-type {
         padding-bottom: 28px;
     }
 
@@ -227,16 +301,6 @@ fieldset label {
     body fieldset .form-control {
         display: block;
     }
-
-
-    body fieldset .form-control select:last-child {
-        padding-bottom: 28px;
-    }
-
-    select.form-control {
-        -webkit-appearance: menulist;
-    }
-
 
     fieldset label {
         margin: 0;
@@ -257,4 +321,10 @@ fieldset label {
         /* margin-right: 2px; */
     }
 
+}
+
+@media (max-width: 480px) {
+    body nav .__dropdown-btn, body nav .dropdown-menu {
+        width: 100%;
+    }
 }

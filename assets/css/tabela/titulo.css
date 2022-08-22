@@ -133,9 +133,15 @@ grid-column-gap: 27px;
 #cardT3.nselected:hover::after,
 #cardT4.nselected:hover::after,
 #cardT5.nselected:hover::after,
-#cardT6.nselected:hover::after {
+#cardT6.nselected:hover::after,
+#cardT1.nrotate:hover::after,
+#cardT2.nrotate:hover::after,
+#cardT3.nrotate:hover::after,
+#cardT4.nrotate:hover::after,
+#cardT5.nrotate:hover::after,
+#cardT6.nrotate:hover::after{
     content: "";
-    transform: rotate(-360deg);
+    transform: rotate(-0deg);
     transition: .5s;
 }
 
@@ -147,6 +153,7 @@ grid-column-gap: 27px;
 #cardT6.nrotate::after {
     transform: rotate(-180deg);
 }
+
 
 @media (min-width: 780px) {
 
