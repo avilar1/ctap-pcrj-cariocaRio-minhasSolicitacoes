@@ -122,14 +122,15 @@ td .accordion-button {
     padding: 15px 0;
 }
 
-.btn-success:hover {
-    background-color: #198754;
-    border-color: #198754;
-}
-
 .__botao-sit {
     border-radius: 13px;
     font-size: 13px;
+    text-align: start;
+}
+
+.btn-success:hover {
+    background-color: #198754;
+    border-color: #198754;
 }
 
 .accordion-button:focus {
@@ -144,12 +145,6 @@ td .accordion-button {
     }
 }
 
-
-@media (min-width: 780px) {
-    .__botao-sit {
-        text-align: start;
-    }
-}
 
 @media (max-width: 780px) {
 

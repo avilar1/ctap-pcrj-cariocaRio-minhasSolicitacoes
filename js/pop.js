@@ -14,6 +14,9 @@ let abodyPOP = document.querySelectorAll('[data-acc="abody"]')
 let acardbPOP = document.querySelectorAll('[data-acc="acardb"]')
 let asit = document.querySelectorAll('[data-acc="asit"]')
 
+
+
+
 let rowDesk = document.querySelectorAll('[data-desk="row"]')
 let numeroDaSolicitacao = document.querySelectorAll('[data-desk="nso"]')
 let linkNumeroDaSolicitacao = document.querySelectorAll('[data-desk="nsoD"]')
@@ -138,6 +141,9 @@ rowDesk[0].appendChild(situacao[0])
 situacao[0].appendChild(situacaoLink[0])
 
 
+
+
+
 container.appendChild(linhaPOP[0])
 linhaPOP[0].appendChild(aflushPOP[0])
 aflushPOP[0].appendChild(aitemPOP[0])
@@ -196,12 +202,15 @@ for (var prop in pop) {
     acardiorg[n].textContent = pop[prop].org
     acardiuta[n].textContent = pop[prop].uta
 
+
+
+
     linkNumeroDaSolicitacao[n].textContent =  pop[prop].nso
-    dataDaSolicitacao[n].textContent =    pop[prop].dso
-    servico[n].textContent =              pop[prop].srv
-    orgao[n].textContent =                pop[prop].org
-    ultimaAtualizacao[n].textContent =    pop[prop].uta
-    situacao[n].textContent =             pop[prop].sit
+    dataDaSolicitacao[n].textContent =        pop[prop].dso
+    servico[n].textContent =                  pop[prop].srv
+    orgao[n].textContent =                    pop[prop].org
+    ultimaAtualizacao[n].textContent =        pop[prop].uta
+    situacao[n].textContent =                 pop[prop].sit
 
 let situacaoC = (pop[prop].sit == "Indeferida") ? (situacao[n].classList.add("btn", "btn-outline-danger", "btn-sm", "__botao-sit"), situacao[n].style.pointerEvents="none", situacao[n].setAttribute("disabled", "disabled")) :
                   (pop[prop].sit == "Deferida") ? (situacao[n].classList.add("btn", "btn-outline-success", "btn-sm", "__botao-sit"), situacao[n].style.pointerEvents="none", situacao[n].setAttribute("disabled", "disabled") ) :

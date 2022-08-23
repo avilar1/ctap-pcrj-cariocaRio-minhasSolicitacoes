@@ -32,16 +32,14 @@
     padding: 15px 14px;
 }
 
-
 #cardI1-desk {
-    grid-area: nsoD;
-    
+    grid-area: nsoD; 
 }
 
 #cardI1-desk a {
+    color: #4579FB;
     line-height: 20px;
     height: 20px;
-    color: #4579FB;
 }
 
 #cardI2-desk {
@@ -53,13 +51,10 @@
 #cardI3-desk {
     grid-area: srvD;
     justify-self: flex-start;
-
-
 }
 
 #cardI4-desk {
     grid-area: orgD;
-
 }
 
 #cardI5-desk {

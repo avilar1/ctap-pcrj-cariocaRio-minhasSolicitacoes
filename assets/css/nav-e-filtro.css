@@ -101,7 +101,6 @@ body fieldset .form-control {
     border: none;
     color: #000;
     margin-right: -8px;
-    /* transition: .5s; */
     width: 20px;
     padding: 2px 2px 2px 4px;
     margin-left: 4px;
@@ -114,8 +113,6 @@ body fieldset .form-control {
     background-color: var(--branco);
     border: 1px solid var(--branco);
     border-radius: 100%;
-    /* transition: .5s; */
-    /* margin-bottom: 1px; */
     margin-top: 0px;
 }
 
@@ -136,11 +133,16 @@ header .__area-nav fieldset {
 
 .dropdown-item-selecionado::after {
     content: "";
-    background: url(../img/check-lg.webp) no-repeat;
+    background: url(../img/dark-caret-down-fill-down.webp) no-repeat;
     display: inline-block;
     width: 13px;
     height: 13px;
-    margin-left: 2px;
+    margin-left: 5px;
+    /* transform: rotate(-180deg); */
+}
+
+.dropdown-item-rotate::after {
+    transform: rotate(-180deg);
 }
 
 /*não tá pegando*/

@@ -1,84 +1,5 @@
 @import url(../base.css);
 
-/*
-como estava:
-    grid-template-columns: 2fr 1fr 4fr 1fr 1fr 2fr;
-    grid-template-rows: minmax(20px, 1fr);
-    grid-column-gap: 27px;
-*/
-.__card-corpo {
-    width: 938px;
-    display: grid;
-    grid-template-columns:
-        calc(138px + 15px)
-        /*nso*/
-        26px calc(66px + 15px)
-        /*dso*/
-        26px calc(46px + 15px)
-        /*srv*/
-        198px calc(39px + 15px)
-        /*org*/
-        57px calc(70px + 15px)
-        /*uta*/
-        26px calc(53px + 15px)
-        /*sit*/
-        calc(89px - 14px);
-    grid-template-rows: minmax(20px, 1fr);
-    grid-template-areas:
-        "nso . dso . srv srv org org uta . sit sit";
-
-    align-items: flex-start;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    border-width: 1px;
-    font-size: 13px;
-    line-height: 20px;
-    grid-column-gap: 0px;
-    justify-items: flex-start;
-    padding: 15px 14px;
-}
-
-#cardI1 {
-    grid-area: nso;
-    
-}
-
-#cardI1 a {
-    line-height: 20px;
-    height: 20px;
-    color: #4579FB;
-}
-
-#cardI2 {
-    grid-area: dso;
-    justify-self: end;
-    margin-right: 15px;
-}
-
-#cardI3 {
-    grid-area: srv;
-    justify-self: flex-start;
-
-
-}
-
-#cardI4 {
-    grid-area: org;
-
-}
-
-#cardI5 {
-    grid-area: uta;
-    justify-self: end;
-    /* margin-right: 15px; */
-}
-
-#cardI6 {
-    grid-area: sit;
-    margin-top: -4.5px;
-    margin-bottom: -9.5px;
-    line-height: 20px;
-}
 
 tbody .accordion-flush .accordion-item .accordion-button,
 .__card-corpo>a {
@@ -88,7 +9,31 @@ tbody .accordion-flush .accordion-item .accordion-button,
 
 @media (max-width: 780px) {
 
-    #cardI1, #cardI2, #cardI4, #cardI5 {
+    #cardI1 {
+        grid-area: nso;
+    }
+    #cardI1 a {
+        line-height: 20px;
+        height: 20px;
+        color: #4579FB;
+    }
+
+    #cardI2 {
+        grid-area: dso;
+    }
+
+    #cardI4 {
+        grid-area: org;
+    }
+
+    #cardI5 {
+        grid-area: uta;
+    }
+
+    #cardI1, 
+    #cardI2, 
+    #cardI4, 
+    #cardI5 {
         padding-left: 4px;
     }
 
@@ -101,11 +46,6 @@ tbody .accordion-flush .accordion-item .accordion-button,
     #cardI5 {
         justify-self: start;
     }
-
-    /*  Essa funciona bem também:
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 1fr 2fr 1fr 2fr 1fr 2fr ; */
-    /* row-gap: 15px; */
 
     .__card-corpo {
         width: auto;
@@ -122,10 +62,12 @@ tbody .accordion-flush .accordion-item .accordion-button,
             "utaT"
             "uta";
         align-items: start;
-        justify-items: start;
-        row-gap: 5px;
-        padding: 0px;
         border: none;
+        font-size: 13px;
+        line-height: 20px;
+        justify-items: start;
+        padding: 0px;
+        row-gap: 5px;
     }
 
     tbody .accordion-flush .accordion-item .accordion-button {

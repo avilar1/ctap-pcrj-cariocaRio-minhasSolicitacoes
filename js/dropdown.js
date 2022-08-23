@@ -4,10 +4,14 @@ let selecione = document.querySelector('#selecione')
 let mx = 0;
 itens.forEach(element => {
   element.addEventListener('click', (ev) => {
-    element.classList.toggle('dropdown-item-selecionado');
-
+    if(element.dataset.m != mx) {
+      element.classList.toggle('dropdown-item-selecionado');
+    }else {
+      element.classList.toggle('dropdown-item-rotate');
+    }
+        
     mx = element.dataset.m;
-    selecione.text = element.textContent;
+    // selecione.text = element.textContent;
     itens.forEach(item => {
       if (item.dataset.m != mx) {
           if(item.classList.contains('dropdown-item-selecionado')){
