@@ -9,6 +9,10 @@ tbody .accordion-flush .accordion-item .accordion-button,
 
 @media (max-width: 780px) {
 
+    #cardI0 {
+        grid-area: dso;
+    }
+
     #cardI1 {
         grid-area: nso;
     }
@@ -30,6 +34,11 @@ tbody .accordion-flush .accordion-item .accordion-button,
         grid-area: uta;
     }
 
+    #cardI6 {
+        grid-area: sit;
+        padding: 15px 4px;
+    }
+
     #cardI1, 
     #cardI2, 
     #cardI4, 
@@ -37,8 +46,7 @@ tbody .accordion-flush .accordion-item .accordion-button,
         padding-left: 4px;
     }
 
-    #cardI3,
-    #cardI6 {
+    #cardI3 {
         display: none;
     }
 
@@ -51,8 +59,9 @@ tbody .accordion-flush .accordion-item .accordion-button,
         width: auto;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 20px 35px 20px 35px 20px 35px 20px 40px;
+        grid-template-rows: auto 20px 35px 20px 35px 20px 35px 20px 40px;
         grid-template-areas:
+            "sit"
             "nsoT"
             "nso"
             "dsoT"

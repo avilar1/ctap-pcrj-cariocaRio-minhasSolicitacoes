@@ -50,6 +50,7 @@ tbody .accordion-body {
 
 tbody .accordion-item {
     border: none;
+    
 }
 
 tbody a {
@@ -117,10 +118,6 @@ td .accordion-button {
     padding-bottom: 0px;
 }
 
-.accordion-item div {
-    display: none;
-    padding: 15px 0;
-}
 
 .__botao-sit {
     border-radius: 13px;
@@ -136,6 +133,7 @@ td .accordion-button {
 .accordion-button:focus {
     box-shadow: none;
 }
+
 
 
 @media (max-width: 992px) {
@@ -221,12 +219,12 @@ td .accordion-button {
         font-weight: 700;
     }
 
-    .accordion-item div {
+    td .__extra-situacao {
         display: block;
         padding: 15px 4px;
     }
 
-    .accordion-item div a {
+    td .__extra-situacao a {
         font-size: 15px;
         font-weight: 500;
     }

@@ -149,8 +149,9 @@ linhaPOP[0].appendChild(aflushPOP[0])
 aflushPOP[0].appendChild(aitemPOP[0])
 aitemPOP[0].appendChild(ahonePOP[0])
 aitemPOP[0].appendChild(abuttonPOP[0])
-aitemPOP[0].appendChild(asit[0])
+// aitemPOP[0].appendChild(asit[0])
 aflushPOP[0].appendChild(aconePOP[0])
+aflushPOP[0].appendChild(asit[0])
 aconePOP[0].appendChild(abodyPOP[0])
 abodyPOP[0].appendChild(acardbPOP[0])
 
@@ -220,12 +221,22 @@ let situacaoC = (pop[prop].sit == "Indeferida") ? (situacao[n].classList.add("bt
                         (pop[prop].sit == "CUMPRIR EXIGÊNCIA") ? (situacao[n].classList.add("btn", "btn-success", "btn-sm", "__botao-sit")) : 
                         console.log("nenhum!");
 
+// for (let i = 0; i < 2; i++) {
+//   let sit = (pop[prop].sit == "Indeferida") ? (acardisit[k+i].classList.add("btn", "btn-outline-danger", "btn-sm", "__botao-sit"), acardisit[k+i].style.pointerEvents="none", acardisit[k+i].setAttribute("disabled", "disabled")) :
+//   (pop[prop].sit == "Deferida") ? (acardisit[k+i].classList.add("btn", "btn-outline-success", "btn-sm", "__botao-sit"), acardisit[k+i].style.pointerEvents="none", acardisit[k+i].setAttribute("disabled", "disabled") ) :
+//       (pop[prop].sit == "Deferida parcialmente") ? (acardisit[k+i].classList.add("btn", "btn-outline-success", "__btn-parcialmente", "btn-sm", "__botao-sit"), acardisit[k+i].style.pointerEvents="none", acardisit[k+i].setAttribute("disabled", "disabled") ) :    
+//           (pop[prop].sit == "Em andamento") ?(acardisit[k+i].classList.add("btn", "btn-outline-primary", "btn-sm", "__botao-sit"), acardisit[k+i].style.pointerEvents="none", acardisit[k+i].setAttribute("disabled", "disabled")) :
+              
+//           (pop[prop].sit == "CUMPRIR EXIGÊNCIA") ? (acardisit[k+i].classList.add("btn", "btn-success", "btn-sm", "__botao-sit")) : 
+//           console.log("nenhum!");
+// }
+
     let sit = (pop[prop].sit == "Indeferida") ? (acardisit[k].classList.add("btn", "btn-outline-danger", "btn-sm", "__botao-sit"), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled")) :
                 (pop[prop].sit == "Deferida") ? (acardisit[k].classList.add("btn", "btn-outline-success", "btn-sm", "__botao-sit"), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled") ) :
                     (pop[prop].sit == "Deferida parcialmente") ? (acardisit[k].classList.add("btn", "btn-outline-success", "__btn-parcialmente", "btn-sm", "__botao-sit"), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled") ) :    
-                        (pop[prop].sit == "Em andamento") ?(acardisit[k].classList.add("btn", "btn-outline-primary", "btn-sm", "__botao-sit"), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled")) :
-                            
-                        (pop[prop].sit == "CUMPRIR EXIGÊNCIA") ? (acardisit[k].classList.add("btn", "btn-success", "btn-sm", "__botao-sit")) : 
+                      
+                        (pop[prop].sit == "CUMPRIR EXIGÊNCIA") ? (acardisit[k].classList.add("btn", "btn-success", "btn-sm", "__botao-sit")) :   
+                        
                         console.log("nenhum!");
                 
     let sit2 = (pop[prop].sit == "Indeferida") ? (acardisit[k+1].classList.add("btn", "btn-outline-danger", "btn-sm", "__botao-sit"), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled")) :
@@ -233,7 +244,7 @@ let situacaoC = (pop[prop].sit == "Indeferida") ? (situacao[n].classList.add("bt
                     (pop[prop].sit == "Deferida parcialmente") ? (acardisit[k+1].classList.add("btn", "btn-outline-success", "__btn-parcialmente", "btn-sm", "__botao-sit"), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled") ) :
                         (pop[prop].sit == "Em andamento") ?(acardisit[k+1].classList.add("btn", "btn-outline-primary", "btn-sm", "__botao-sit"), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled")) :
                     
-                        (pop[prop].sit == "CUMPRIR EXIGÊNCIA") ? (acardisit[k+1].classList.add("btn", "btn-success", "btn-sm", "__botao-sit")) : 
+                        (pop[prop].sit == "CUMPRIR EXIGÊNCIA") ? (acardisit[k+1].classList.add("btn", "btn-outline-success", "btn-sm", "__botao-sit"), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled")):  
                     console.log("nenhum Mesmo!");
 
     acardisit[k].textContent = pop[prop].sit
@@ -266,11 +277,13 @@ linha.forEach((element) => {
   abuttonPOP[m].dataset.bsTarget = '#flush-collapse' + m;
   abuttonPOP[m].setAttribute("aria-controls", 'flush-collapse' + m);
   abuttonPOP[m].dataset.id = m;
+  abuttonPOP[m].dataset.qualacc = m;
   abuttonPOP[m].id = 'accordionbutton' + m;
   aconePOP[m].id = 'flush-collapse' + m;
   aconePOP[m].setAttribute("aria-labelledby", 'flush-heading' + m);
   aconePOP[m].ariaLabelledby = 'flush-heading' + m;
   asit[m].id = m;
+  asit[m].dataset.qualacc = m;
   m++
 
 

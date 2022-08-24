@@ -164,7 +164,7 @@ fieldset>[type="checkbox" i] {
 }
 
 .__check {
-    text-align: center;
+    text-align: start;
 }
 
 fieldset label {
@@ -323,10 +323,4 @@ fieldset label {
         /* margin-right: 2px; */
     }
 
-}
-
-@media (max-width: 480px) {
-    body nav .__dropdown-btn, body nav .dropdown-menu {
-        width: 100%;
-    }
 }
