@@ -108,12 +108,13 @@ body fieldset .form-control {
 
 /*colocar hover depois*/
 .__close-inline:hover {
-    background: url(../img/x.png);
+    background: url(../img/x-blue.webp);
     background-position: center;
     background-color: var(--branco);
     border: 1px solid var(--branco);
     border-radius: 100%;
     margin-top: 0px;
+    padding: 2px 2px 2px 4px;
 }
 
 header .__area-nav {
@@ -146,7 +147,7 @@ header .__area-nav fieldset {
 }
 
 /*não tá pegando*/
-fieldset>[type="checkbox" i] {
+fieldset [type="checkbox"] {
 
     background: #ffffff;
     border: 1px solid #D9D9D9;

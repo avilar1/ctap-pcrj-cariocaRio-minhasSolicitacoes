@@ -22,6 +22,7 @@
         "nsoD . dsoD . srvD srvD orgD orgD utaD . sitD sitD";
 
     align-items: flex-start;
+    background-color: var(--branco);
     border: 1px solid #cccccc;
     border-radius: 4px;
     border-width: 1px;
