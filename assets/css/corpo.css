@@ -23,7 +23,8 @@ body main div, body main label {
     background-color: var(--offwhite-fundo);
     height: auto;
     min-height: calc(100vmin - 150px);
-    padding: 0 0 40px;
+    /* padding: 0 0 40px; */
+    padding: 0;
     width: 938px;
 }
 

@@ -274,6 +274,11 @@ fieldset label {
         background-color: var(--offwhite-fundo);
         margin-top: -2px;
         border-radius: 0;
+        padding: 7.5px 4px 20.5px;
+    }
+
+    .dropdown-menu .dropdown-item {
+        padding: 7.5px 0;
     }
 
     .__dropdown-btn .dropdown-menu .dropdown-item {
