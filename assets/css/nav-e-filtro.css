@@ -77,6 +77,11 @@ body nav .btn-sm {
     height: 0.7em;
 }
 
+.btn-check:checked+.btn-outline-primary{
+    border-color: #4579FB;
+    background-color: #4579FB;
+}
+
 body nav p {
     align-self: center;
     line-height: 20px;
