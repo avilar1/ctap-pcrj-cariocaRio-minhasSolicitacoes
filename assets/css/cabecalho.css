@@ -18,7 +18,6 @@
 }
 
 .__painel-login {
-
     align-items: center;
     align-self: center;
     border: solid 1px var(--branco);
@@ -31,7 +30,7 @@
     padding: 24px 14px;
 }
 
-.__painel-login p {
+.__painel-login > p {
     font-size: 13.5px;
     height: 20px;
     line-height: 20px;
@@ -40,7 +39,33 @@
     white-space: nowrap;
 
 }
-.__painel-login i{
+
+details>summary {
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: url(../img/seta\ baixo\ login.webp);
+}
+
+summary::after:hover .__informacoes,
+.__mostrar:hover .__informacoes,
+.__informacoes:hover {
+    display: block;
+}
+
+summary::after:not(:hover) .__informacoes,
+.__mostrar:not(:hover) .__informacoes,
+.__informacoes:not(:hover) {
+  display: none;
+}
+
+.__painel-login summary i {
+    content: "";
     background: url(../img/seta\ baixo\ login.webp) no-repeat;
     background-size: 10px 10px;
     height: 10px;
@@ -48,12 +73,88 @@
     margin-left: 10px;
 }
 
+.__mostrar {
+    position: relative;
+    display: block;
+}
+
+.__informacoes {
+    display: none;
+    position: absolute;
+    right: 0;
+    /* margin-right: 20px; */
+    border-right: solid 20px;
+    border-right-color: transparent;
+    border-top: solid 37px;
+    border-top-color: transparent;
+    width: 231px;
+    min-height: 121px;
+    top: 0;
+    z-index: 2;
+}
+.__informacoes-dados {
+    background-color: #ffffff;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    padding: 22px 24px 12px;
+    line-height: normal;
+}
+.__informacoes-dados ul {
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.__informacoes-dados p {
+    color: #000;
+    font-family: Rawline;
+    font-size: 11.7px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    white-space: pre-wrap;
+    margin-bottom: 0;
+}
+
+.__informacoes-dados a {
+    color: #2670e8;
+    font-family: Rawline;
+    font-size: 9.7px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    height: 13px;
+    text-decoration: none;
+    overflow: auto;
+}
+
+.__informacoes-logout {
+    background-color: #ffffff;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    border-top: solid 2px;
+    border-color: #eae6e6;
+    /* margin-top: 2px; */
+    text-align: right;
+    padding: 12px 15px 12px;
+}
+
+.__informacoes-logout button {
+    padding: calc(8px - 1.333px) calc(24px - 1.333px);
+    border-radius: 24px;
+    
+}
+
+.__mostrar:hover .__informacoes {
+    display: block;
+}
+
 header .__area-h1 {
     background-color: #ffffff;
     border: solid 1px #c8c6c6;
     display: flex;
     justify-content: center;
-    height: 50px;
+    height: 54px;
+    width: 100vw;
     align-items: center;
 }
 
@@ -89,12 +190,10 @@ header .__area-h1 h1 {
     display: none;
 }
 
-
-
 @media screen and (max-width: 768px) {
 
 
-    body header{
+    body header {
         display: flex;
         flex-direction: column;
     }
@@ -110,7 +209,8 @@ header .__area-h1 h1 {
         height: 54px;
         width: 148px;
         min-height: 0px;
-        margin-bottom: -6px; /*assim conseguimos a distância de 18px para baixo do logo, mantendo inalterado o login*/
+        margin-bottom: -6px;
+        /*assim conseguimos a distância de 18px para baixo do logo, mantendo inalterado o login*/
     }
 
     .__painel-logo a {
@@ -141,13 +241,13 @@ header .__area-h1 h1 {
         padding-bottom: 0px;
         padding-top: 0px;
         /* margin-bottom: 7px; */
-        width: 123px;
+        /* width: 123px; */
         align-self: flex-end;
         margin-left: 19px;
 
     }
 
-    .__painel-login p {
+    .__painel-login > p {
         height: 20px;
         line-height: 1.48;
         margin: 0px;
@@ -160,12 +260,43 @@ header .__area-h1 h1 {
         margin-left: 0;
     }
 
+    .__informacoes {
+        border-top: 20px;
+        border-right: 0;
+        margin-right: 0;
+        width: fit-content;
+        top: auto
+    }
+
+    .__informacoes-dados {
+        padding: 22px 11px 12px;
+    }
+
+    .__informacoes-dados p {
+        font-size: 11.7px;
+        line-height: normal;
+        height: 16px;
+        white-space: pre-wrap;
+        display: initial;
+    }
+
     .__painel-login p span:nth-child(1) {
         text-transform: uppercase;
     }
 
     .__painel-login p span:nth-child(2) {
         display: none;
+    }
+
+    .__informacoes-logout {
+        padding-right: 11px;
+    }
+
+    .btn-sm.__sair {
+        font-size: 11.67px;
+        font-weight: 600;
+        color: #1351B4;
+        border-color: #1351B4;
     }
 
 }

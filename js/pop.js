@@ -2,6 +2,8 @@
 let container = document.querySelector('#container')
 let linhaPOP = document.querySelectorAll('[data-linha]')
 
+const tbody = document.querySelector('[data-tbody]')
+
 let aflushPOP = document.querySelectorAll('[data-acc="aflush"]')
 let aitemPOP = document.querySelectorAll('[data-acc="aitem"]')
 let ahonePOP = document.querySelectorAll('[data-acc="ahone"]')
@@ -10,10 +12,20 @@ let aconePOP = document.querySelectorAll('[data-acc="acone"]')
 let abodyPOP = document.querySelectorAll('[data-acc="abody"]')
 
 let acardbPOP = document.querySelectorAll('[data-acc="acardb"]')
-
-
-//excluir depois ou alterar
 let asit = document.querySelectorAll('[data-acc="asit"]')
+
+
+
+
+let rowDesk = document.querySelectorAll('[data-desk="row"]')
+let numeroDaSolicitacao = document.querySelectorAll('[data-desk="nso"]')
+let linkNumeroDaSolicitacao = document.querySelectorAll('[data-desk="nsoD"]')
+let dataDaSolicitacao = document.querySelectorAll('[data-desk="dso"]')
+let servico = document.querySelectorAll('[data-desk="srv"]')
+let orgao = document.querySelectorAll('[data-desk="org"]')
+let ultimaAtualizacao = document.querySelectorAll('[data-desk="uta"]')
+let situacao = document.querySelectorAll('[data-desk="sit"]')
+let situacaoLink = document.querySelectorAll('[data-desk="sitA"]')
 
 let control = 0
 
@@ -32,7 +44,7 @@ sit-> situação
 */
 
 const pop = {
-    "rowum": {
+    "1": {
         "nso": "CID-REQ-2022/1211",
         "dso": "17/12/2022",
         "srv": "Instalação de caçamba",
@@ -41,7 +53,7 @@ const pop = {
         "sit": "Em andamento"
     },
 
-    "rowdois": {
+    "2": {
         "nso": "CID-REQ-2022/2874",
         "dso": "22/5/2022",
         "srv": "Remoção de entulho e bens inservíveis",
@@ -49,7 +61,7 @@ const pop = {
         "uta": "24/6/2022",
         "sit": "Indeferida"
     },
-    "rowtres": {
+    "3": {
         "nso": "CID-REQ-2022/2452",
         "dso": "20/5/2022",
         "srv": "Denunciar obra irregular",
@@ -57,41 +69,89 @@ const pop = {
         "uta": "22/6/2022",
         "sit": "CUMPRIR EXIGÊNCIA"
     },
-    "rowquatro": {
+    "4": {
         "nso": "CID-REQ-2022/2014",
         "dso": "07/5/2022",
         "srv": "Autorização para colocação de mesas e cadeiras em área pública",
         "org": "PGM",
         "uta": "22/5/2022",
-        "sit": "Em andamento"
+        "sit": "Deferida parcialmente"
     },
-    "rowcinco": {
+    "5": {
         "nso": "CID-REQ-0000/0000",
         "dso": "14/5/2022",
-        "srv": "Qualquer Coisa",
+        "srv": "Limpeza de praças",
         "org": "COMLURB",
         "uta": "20/5/2022",
         "sit": "Deferida"
     },
-    "rxx": {
-        "nso": "CID-REQ-0000/0000",
-        "dso": "00/00/2022",
-        "srv": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et tortor ac eros aliquam lacinia. Cras semper tellus sed tortor imperdiet viverra. Maecenas feugiat laoreet ipsum. Pellentesque euismod commodo quam, a pellentesque ante euismod nec. Etiam at est et elit commodo pellentesque eu vel dui. Donec at enim tortor. Nam ac convallis sem. Fusce dignissim justo ante, eget placerat nisi pretium et. Maecenas interdum tortor quam, id pellentesque felis sagittis et. Duis viverra tellus varius, lacinia turpis ut, tincidunt erat. Phasellus porttitor tellus id turpis cursus, eget condimentum ante convallis. Cras lobortis imperdiet enim, porttitor mattis ante pulvinar id. Vestibulum dignissim leo eu ligula blandit, nec dictum erat ultricies. Nam in massa sit amet justo egestas tempus. Donec a porttitor nisi.",
-        "org": "NOTHING",
-        "uta": "00/00/2022",
-        "sit": "Deferida parcialmente"
-    }
+    "6": {
+        "nso": "CID-REQ-2022/1458",
+        "dso": "4/5/2022",
+        "srv": "Cópia de plantas de imóveis",
+        "org": "SMDEIS",
+        "uta": "17/5/2022",
+        "sit": "CUMPRIR EXIGÊNCIA"
+    },
+    "7": {
+        "nso": "CID-REQ-2022/1258",
+        "dso": "16/5/2022",
+        "srv": "Fiscalização de obras",
+        "org": "RIOURBE",
+        "uta": "20/5/2022",
+        "sit": "Indeferida"
+    },
+    "8": {
+        "nso": "CID-REQ-2022/1254",
+        "dso": "20/4/2022",
+        "srv": "Instalação de quebra - molas",
+        "org": "CET-RIO",
+        "uta": "10/5/2022",
+        "sit": "Indeferida"
+    },
+    "9": {
+        "nso": "CID-REQ-2022/1232",
+        "dso": "10/4/2022",
+        "srv": "Rever cálculo de IPTU",
+        "org": "SMFP",
+        "uta": "25/4/2022",
+        "sit": "CUMPRIR EXIGÊNCIA"
+      },
+    "10": {
+        "nso": "CID-REQ-2022/1234",
+        "dso": "3/4/2022",
+        "srv": "Reparo de buraco",
+        "org": "CET-RIO",
+        "uta": "20/4/2022",
+        "sit": "Deferida"
+      }
 }
 
 // const popJSON = JSON.stringify(pop); <-se for necessário, passa o objeto para JSON
+
+
+tbody.appendChild(rowDesk[0])
+rowDesk[0].appendChild(numeroDaSolicitacao[0])
+numeroDaSolicitacao[0].appendChild(linkNumeroDaSolicitacao[0])
+rowDesk[0].appendChild(dataDaSolicitacao[0])
+rowDesk[0].appendChild(servico[0])
+rowDesk[0].appendChild(orgao[0])
+rowDesk[0].appendChild(ultimaAtualizacao[0])
+rowDesk[0].appendChild(situacao[0])
+situacao[0].appendChild(situacaoLink[0])
+
+
+
+
 
 container.appendChild(linhaPOP[0])
 linhaPOP[0].appendChild(aflushPOP[0])
 aflushPOP[0].appendChild(aitemPOP[0])
 aitemPOP[0].appendChild(ahonePOP[0])
 aitemPOP[0].appendChild(abuttonPOP[0])
-aitemPOP[0].appendChild(asit[0])
+// aitemPOP[0].appendChild(asit[0])
 aflushPOP[0].appendChild(aconePOP[0])
+aflushPOP[0].appendChild(asit[0])
 aconePOP[0].appendChild(abodyPOP[0])
 abodyPOP[0].appendChild(acardbPOP[0])
 
@@ -104,6 +164,9 @@ for (let i = 0; i < tamanho; i++) {
     linhaPOP[i].insertAdjacentElement("afterend", linhaPOP[i].cloneNode(true))
     abuttonPOP[i].textContent = i
 
+    rowDesk = document.querySelectorAll('[data-desk="row"]')
+    rowDesk[i].insertAdjacentElement("afterend", rowDesk[i].cloneNode(true))
+    rowDesk[i].id= "cardbody-desk" + i
 }
 
 
@@ -115,6 +178,16 @@ const acardisrv = document.querySelectorAll('[data-acc="acardisrv"]')
 const acardiorg = document.querySelectorAll('[data-acc="acardiorg"]')
 const acardiuta = document.querySelectorAll('[data-acc="acardiuta"]')
 const acardisit = document.querySelectorAll('[data-acc="acardisit"]')
+
+
+
+numeroDaSolicitacao = document.querySelectorAll('[data-desk="nso"]')
+linkNumeroDaSolicitacao = document.querySelectorAll('[data-desk="nsoD"]')
+dataDaSolicitacao = document.querySelectorAll('[data-desk="dso"]')
+servico = document.querySelectorAll('[data-desk="srv"]')
+orgao = document.querySelectorAll('[data-desk="org"]')
+ultimaAtualizacao = document.querySelectorAll('[data-desk="uta"]')
+situacao = document.querySelectorAll('[data-desk="sitA"]')
 
 
 
@@ -131,12 +204,39 @@ for (var prop in pop) {
     acardiuta[n].textContent = pop[prop].uta
 
 
+
+
+    linkNumeroDaSolicitacao[n].textContent =  pop[prop].nso
+    dataDaSolicitacao[n].textContent =        pop[prop].dso
+    servico[n].textContent =                  pop[prop].srv
+    orgao[n].textContent =                    pop[prop].org
+    ultimaAtualizacao[n].textContent =        pop[prop].uta
+    situacao[n].textContent =                 pop[prop].sit
+
+let situacaoC = (pop[prop].sit == "Indeferida") ? (situacao[n].classList.add("btn", "btn-outline-danger", "btn-sm", "__botao-sit"), situacao[n].style.pointerEvents="none", situacao[n].setAttribute("disabled", "disabled")) :
+                  (pop[prop].sit == "Deferida") ? (situacao[n].classList.add("btn", "btn-outline-success", "btn-sm", "__botao-sit"), situacao[n].style.pointerEvents="none", situacao[n].setAttribute("disabled", "disabled") ) :
+                     (pop[prop].sit == "Deferida parcialmente") ? (situacao[n].classList.add("btn", "btn-outline-success", "__btn-parcialmente", "btn-sm", "__botao-sit"), situacao[n].style.pointerEvents="none", situacao[n].setAttribute("disabled", "disabled") ) :    
+                        (pop[prop].sit == "Em andamento") ?(situacao[n].classList.add("btn", "btn-outline-primary", "btn-sm", "__botao-sit"), situacao[n].style.pointerEvents="none", situacao[n].setAttribute("disabled", "disabled")) :
+            
+                        (pop[prop].sit == "CUMPRIR EXIGÊNCIA") ? (situacao[n].classList.add("btn", "btn-success", "btn-sm", "__botao-sit")) : 
+                        console.log("nenhum!");
+
+// for (let i = 0; i < 2; i++) {
+//   let sit = (pop[prop].sit == "Indeferida") ? (acardisit[k+i].classList.add("btn", "btn-outline-danger", "btn-sm", "__botao-sit"), acardisit[k+i].style.pointerEvents="none", acardisit[k+i].setAttribute("disabled", "disabled")) :
+//   (pop[prop].sit == "Deferida") ? (acardisit[k+i].classList.add("btn", "btn-outline-success", "btn-sm", "__botao-sit"), acardisit[k+i].style.pointerEvents="none", acardisit[k+i].setAttribute("disabled", "disabled") ) :
+//       (pop[prop].sit == "Deferida parcialmente") ? (acardisit[k+i].classList.add("btn", "btn-outline-success", "__btn-parcialmente", "btn-sm", "__botao-sit"), acardisit[k+i].style.pointerEvents="none", acardisit[k+i].setAttribute("disabled", "disabled") ) :    
+//           (pop[prop].sit == "Em andamento") ?(acardisit[k+i].classList.add("btn", "btn-outline-primary", "btn-sm", "__botao-sit"), acardisit[k+i].style.pointerEvents="none", acardisit[k+i].setAttribute("disabled", "disabled")) :
+              
+//           (pop[prop].sit == "CUMPRIR EXIGÊNCIA") ? (acardisit[k+i].classList.add("btn", "btn-success", "btn-sm", "__botao-sit")) : 
+//           console.log("nenhum!");
+// }
+
     let sit = (pop[prop].sit == "Indeferida") ? (acardisit[k].classList.add("btn", "btn-outline-danger", "btn-sm", "__botao-sit"), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled")) :
                 (pop[prop].sit == "Deferida") ? (acardisit[k].classList.add("btn", "btn-outline-success", "btn-sm", "__botao-sit"), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled") ) :
                     (pop[prop].sit == "Deferida parcialmente") ? (acardisit[k].classList.add("btn", "btn-outline-success", "__btn-parcialmente", "btn-sm", "__botao-sit"), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled") ) :    
-                        (pop[prop].sit == "Em andamento") ?(acardisit[k].classList.add("btn", "btn-outline-primary", "btn-sm", "__botao-sit"), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled")) :
-                            
-                        (pop[prop].sit == "CUMPRIR EXIGÊNCIA") ? (acardisit[k].classList.add("btn", "btn-success", "btn-sm", "__botao-sit")) : 
+                      
+                        (pop[prop].sit == "CUMPRIR EXIGÊNCIA") ? (acardisit[k].classList.add("btn", "btn-success", "btn-sm", "__botao-sit")) :   
+                        
                         console.log("nenhum!");
                 
     let sit2 = (pop[prop].sit == "Indeferida") ? (acardisit[k+1].classList.add("btn", "btn-outline-danger", "btn-sm", "__botao-sit"), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled")) :
@@ -144,9 +244,8 @@ for (var prop in pop) {
                     (pop[prop].sit == "Deferida parcialmente") ? (acardisit[k+1].classList.add("btn", "btn-outline-success", "__btn-parcialmente", "btn-sm", "__botao-sit"), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled") ) :
                         (pop[prop].sit == "Em andamento") ?(acardisit[k+1].classList.add("btn", "btn-outline-primary", "btn-sm", "__botao-sit"), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled")) :
                     
-                        (pop[prop].sit == "CUMPRIR EXIGÊNCIA") ? (acardisit[k+1].classList.add("btn", "btn-success", "btn-sm", "__botao-sit")) : 
+                        (pop[prop].sit == "CUMPRIR EXIGÊNCIA") ? (acardisit[k+1].classList.add("btn", "btn-outline-success", "btn-sm", "__botao-sit"), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled")):  
                     console.log("nenhum Mesmo!");
-
 
     acardisit[k].textContent = pop[prop].sit
     acardisit[k+1].textContent = pop[prop].sit
@@ -156,7 +255,7 @@ for (var prop in pop) {
 }
 
 
-const tbody = document.querySelector('[data-tbody]')
+
 const linha = document.querySelectorAll('[data-linha]')
 
 aflushPOP = document.querySelectorAll('[data-acc="aflush"]')
@@ -178,11 +277,13 @@ linha.forEach((element) => {
   abuttonPOP[m].dataset.bsTarget = '#flush-collapse' + m;
   abuttonPOP[m].setAttribute("aria-controls", 'flush-collapse' + m);
   abuttonPOP[m].dataset.id = m;
+  abuttonPOP[m].dataset.qualacc = m;
   abuttonPOP[m].id = 'accordionbutton' + m;
   aconePOP[m].id = 'flush-collapse' + m;
   aconePOP[m].setAttribute("aria-labelledby", 'flush-heading' + m);
   aconePOP[m].ariaLabelledby = 'flush-heading' + m;
   asit[m].id = m;
+  asit[m].dataset.qualacc = m;
   m++
 
 
@@ -191,6 +292,7 @@ linha.forEach((element) => {
 //Como usei um modelo dentro do próprio html, após adicionar todas informações que preciso nos corretos, é necessário eliminar o modelo. É por isso que o modelo não aparece no html final.
 //usando um framework, isso não seria necessário. Mas, como observado, o resultado é satisfatório.
 linha[tamanho].remove();
+document.querySelectorAll('[data-desk="row"]')[tamanho].remove();
 
 let controle = 0;
 let cont = 0;
@@ -202,10 +304,10 @@ function myFunction(x) {
         console.log("desktop")
         let n = 0
         linha.forEach((elemento) => {
-            
-            aconePOP[n].classList.add("show")
+            elemento.hidden = true;
+            // aconePOP[n].classList.add("show")
             n++
-
+            
         })       
         controle = 1;        
       }
@@ -216,10 +318,12 @@ function myFunction(x) {
         console.log("celular")
         let n = 0
         linha.forEach((element) => {
-          
-          aconePOP[n].classList.remove("show")
+          element.hidden = false;
+          // aconePOP[n].classList.remove("show")
           n++
         
+          document.querySelector("#mostrar").open = false;
+
         })  
         controle = 0;
       }

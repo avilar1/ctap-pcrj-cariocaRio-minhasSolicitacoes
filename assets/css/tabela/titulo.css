@@ -1,12 +1,6 @@
 @import url(../base.css);
 
 
-/*como estava
-grid-template-columns: 2fr 1fr 4fr 1fr 1fr 2fr;
-grid-template-rows: calc(70px - 30px);
-grid-column-gap: 27px;
-*/
-
 .__card-corpo-titulo {
     width: 938px;
     display: grid;
@@ -34,11 +28,9 @@ grid-column-gap: 27px;
     color: var(--branco);
     font-size: 13px;
     font-family: museo700;
-    justify-items: flex-start;
     grid-column-gap: 0px;
-    padding: 15px 14px;
-
-    
+    justify-items: flex-start;
+    padding: 15px 14px; 
 }
 
 .card-body {
@@ -81,8 +73,8 @@ grid-column-gap: 27px;
 #cardT4::after,
 #cardT5::after,
 #cardT6::after {
-    content: "";
     background: url(../../img/caret-down-fill2.webp) no-repeat;
+    content: "";
     display: inline-block;
     flex-grow: 0;
     height: 13px;
@@ -90,7 +82,6 @@ grid-column-gap: 27px;
     position: absolute;
     top: 20px;
     width: 13px;
-
 }
 
 #cardT5::after,
@@ -133,9 +124,15 @@ grid-column-gap: 27px;
 #cardT3.nselected:hover::after,
 #cardT4.nselected:hover::after,
 #cardT5.nselected:hover::after,
-#cardT6.nselected:hover::after {
+#cardT6.nselected:hover::after,
+#cardT1.nrotate:hover::after,
+#cardT2.nrotate:hover::after,
+#cardT3.nrotate:hover::after,
+#cardT4.nrotate:hover::after,
+#cardT5.nrotate:hover::after,
+#cardT6.nrotate:hover::after{
     content: "";
-    transform: rotate(-360deg);
+    transform: rotate(-0deg);
     transition: .5s;
 }
 
@@ -147,6 +144,7 @@ grid-column-gap: 27px;
 #cardT6.nrotate::after {
     transform: rotate(-180deg);
 }
+
 
 @media (min-width: 780px) {
 
@@ -167,11 +165,16 @@ grid-column-gap: 27px;
         display: none;
     }
 
+    #cardTi1,
+    #cardTi2,
+    #cardTi4,
+    #cardTi5 {
+        color: #7B7B7B;
+    }
 
 
     #cardTi1 {
         grid-area: nsoT;
-
     }
 
     #cardTi2 {
@@ -181,14 +184,11 @@ grid-column-gap: 27px;
 
     #cardTi3,
     #cardTi6 {
-
         display: none;
-
     }
 
     #cardTi4 {
         grid-area: orgT;
-
     }
 
     #cardTi5 {
