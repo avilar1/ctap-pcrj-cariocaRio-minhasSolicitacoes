@@ -71,8 +71,9 @@ tbody .btn {
 }
 
 tbody .btn-sm {
-    padding-top: 3.667px;
-    padding-bottom: 3.667px;
+    /* padding-top: 3.667px;
+    padding-bottom: 3.667px; */
+    padding: 3px 12px;
 }
 
 tbody .btn.btn-success {
@@ -124,11 +125,28 @@ td .accordion-button {
     border-radius: 13px;
     font-size: 13px;
     text-align: start;
+    font-weight: 500;
+    min-height: 26px;
+    line-height: 20px;
+}
+
+.btn-outline-primary {
+    color: #4579FB;
+    border-color: #4579FB;
+}
+.btn-outline-primary:hover {
+    background-color:#4579FB;
+    border-color: #4579FB;
 }
 
 .btn-success:hover {
     background-color: #198754;
     border-color: #198754;
+}
+
+.btn-outline-danger {
+    border-color: #F41717;
+    color: #F41717;
 }
 
 .accordion-button:focus {

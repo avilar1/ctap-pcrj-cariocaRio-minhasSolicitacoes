@@ -67,7 +67,7 @@ const pop = {
         "srv": "Denunciar obra irregular",
         "org": "SECONSERVA",
         "uta": "22/6/2022",
-        "sit": "CUMPRIR EXIGÊNCIA"
+        "sit": "Indeferida"
     },
     "4": {
         "nso": "CID-REQ-2022/2014",
@@ -95,10 +95,10 @@ const pop = {
     },
     "7": {
         "nso": "CID-REQ-2022/1258",
-        "dso": "16/5/2022",
+        "dso": "30/4/2022",
         "srv": "Fiscalização de obras",
         "org": "RIOURBE",
-        "uta": "20/5/2022",
+        "uta": "16/5/2022",
         "sit": "Indeferida"
     },
     "8": {
@@ -240,12 +240,12 @@ let situacaoC = (pop[prop].sit == "Indeferida") ? (situacao[n].classList.add("bt
                         
                         console.log("nenhum!");
                 
-    let sit2 = (pop[prop].sit == "Indeferida") ? (acardisit[k+1].classList.add("btn", "btn-outline-danger", "btn-sm", "__botao-sit"), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled")) :
-                (pop[prop].sit == "Deferida") ? (acardisit[k+1].classList.add("btn", "btn-outline-success", "btn-sm", "__botao-sit"), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled") ) :
-                    (pop[prop].sit == "Deferida parcialmente") ? (acardisit[k+1].classList.add("btn", "btn-outline-success", "__btn-parcialmente", "btn-sm", "__botao-sit"), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled") ) :
-                        (pop[prop].sit == "Em andamento") ?(acardisit[k+1].classList.add("btn", "btn-outline-primary", "btn-sm", "__botao-sit"), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled")) :
+    let sit2 = (pop[prop].sit == "Indeferida") ? (acardisit[k+1].classList.add("btn", "btn-outline-danger", "btn-sm", "__botao-sit", "__botao-sit-desk"), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled")) :
+                (pop[prop].sit == "Deferida") ? (acardisit[k+1].classList.add("btn", "btn-outline-success", "btn-sm", "__botao-sit", "__botao-sit-desk"), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled") ) :
+                    (pop[prop].sit == "Deferida parcialmente") ? (acardisit[k+1].classList.add("btn", "btn-outline-success", "__btn-parcialmente", "btn-sm", "__botao-sit", "__botao-sit-desk"), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled") ) :
+                        (pop[prop].sit == "Em andamento") ?(acardisit[k+1].classList.add("btn", "btn-outline-primary", "btn-sm", "__botao-sit", "__botao-sit-desk"), acardisit[k+1].style.pointerEvents="none", acardisit[k+1].setAttribute("disabled", "disabled")) :
                     
-                        (pop[prop].sit == "CUMPRIR EXIGÊNCIA") ? (acardisit[k+1].classList.add("btn", "btn-outline-success", "btn-sm", "__botao-sit"), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled")):  
+                        (pop[prop].sit == "CUMPRIR EXIGÊNCIA") ? (acardisit[k+1].classList.add("btn", "btn-outline-success", "btn-sm", "__botao-sit", "__botao-sit-desk"), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled")):  
                     console.log("nenhum Mesmo!");
 
     acardisit[k].textContent = pop[prop].sit

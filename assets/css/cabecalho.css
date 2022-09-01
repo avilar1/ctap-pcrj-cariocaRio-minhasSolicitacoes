@@ -30,7 +30,7 @@
     padding: 24px 14px;
 }
 
-.__painel-login > p {
+.__painel-login>p {
     font-size: 13.5px;
     height: 20px;
     line-height: 20px;
@@ -48,19 +48,22 @@ summary::-webkit-details-marker {
     display: none;
 }
 
-summary::after {
+summary::after,
+.__painel-login>p::after
+ {
     content: url(../img/seta\ baixo\ login.webp);
 }
 
-summary::after:hover .__informacoes,
-.__mostrar:hover .__informacoes,
-.__informacoes:hover {
+.__painel-login>p::after {
+    margin-left: 10px;
+}
+
+.__painel-login:hover .__informacoes {
     display: block;
 }
 
-summary::after:not(:hover) .__informacoes,
-.__mostrar:not(:hover) .__informacoes,
-.__informacoes:not(:hover) {
+
+.__painel-login:not(:hover) .__informacoes{
   display: none;
 }
 
@@ -74,30 +77,33 @@ summary::after:not(:hover) .__informacoes,
 }
 
 .__mostrar {
-    position: relative;
+    position: absolute;
     display: block;
+    
 }
 
 .__informacoes {
-    /* display: none; */
+    display: none;
     position: absolute;
-    right: 0;
+    right: -107px;
     /* margin-right: 20px; */
-    border-right: solid 20px;
-    border-right-color: transparent;
+    /* border-right: solid 20px;
+    border-right-color: transparent; */
     border-top: solid 37px;
     border-top-color: transparent;
-    width: 231px;
+    min-width: 231px;
     min-height: 121px;
     top: 0;
     z-index: 2;
 }
+
 .__informacoes-dados {
     background-color: #ffffff;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     padding: 22px 24px 14px;
     line-height: normal;
 }
+
 .__informacoes-dados ul {
     margin-left: 0;
     padding-left: 0;
@@ -105,9 +111,9 @@ summary::after:not(:hover) .__informacoes,
 }
 
 .__informacoes-dados p {
-    color: #000;
+    color: #000000;
     font-family: Rawline;
-    font-size: 11.7px;
+    font-size: 14px;
     font-weight: 600;
     font-stretch: normal;
     font-style: normal;
@@ -119,7 +125,7 @@ summary::after:not(:hover) .__informacoes,
 .__informacoes-dados a {
     color: #2670e8;
     font-family: Rawline;
-    font-size: 9.7px;
+    font-size: 13.3px;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
@@ -142,8 +148,25 @@ summary::after:not(:hover) .__informacoes,
     padding: calc(10px - 1px) calc(28px - 1px);
     border-radius: 24px;
     font-family: Rawline, museo;
+    line-height: 16px;
+    font-size: 14px;
+
+}
+
+.__informacoes-logout .btn-outline-primary {
+    border-color: #366BBF;
+    background-color:#FFFFFF;
+    font-weight: 600;
     line-height: 19px;
-    
+}
+
+.__informacoes-logout .btn-outline-primary:hover {
+color:#FFFFFF;
+}
+
+.__informacoes-logout .btn-outline-primary:not(hover){
+
+    color: #366BBF;
 }
 
 .__mostrar:hover .__informacoes {
@@ -194,7 +217,9 @@ header .__area-h1 h1 {
 
 @media screen and (max-width: 768px) {
 
-
+    .__painel-login>p::after {
+        display: none;
+    }
     body header {
         display: flex;
         flex-direction: column;
@@ -231,6 +256,10 @@ header .__area-h1 h1 {
         justify-content: center;
     }
 
+    .__informacoes-logout button {
+        padding: 10px 30px;
+    }
+
     header .__area-h1 {
         border-bottom: solid 1px #c8c6c6;
     }
@@ -249,7 +278,7 @@ header .__area-h1 h1 {
 
     }
 
-    .__painel-login > p {
+    .__painel-login>p {
         height: 20px;
         line-height: 1.48;
         margin: 0px;
@@ -262,20 +291,28 @@ header .__area-h1 h1 {
         margin-left: 0;
     }
 
+    .__mostrar {
+        position: relative;
+    }
+
     .__informacoes {
         border-top: 20px;
         border-right: 0;
         margin-right: 0;
-        width: fit-content;
-        top: auto
+        top: auto;
+        position: absolute;
+        max-width: calc(100% - 30px);
+        right: 0;
+        
     }
+
 
     .__informacoes-dados {
         padding: 22px 11px 12px;
     }
 
     .__informacoes-dados p {
-        font-size: 11.7px;
+        font-size: 14px;
         line-height: normal;
         height: 16px;
         white-space: pre-wrap;
@@ -295,10 +332,34 @@ header .__area-h1 h1 {
     }
 
     .btn-sm.__sair {
-        font-size: 11.67px;
+        font-size: 14px;
         font-weight: 600;
-        color: #1351B4;
-        border-color: #1351B4;
+        color: #366BBF;
+        border-color: #366BBF;
+        background-color:#FFFFFF;
     }
 
 }
+
+@media screen and (max-width: 480px){
+    .__mostrar {
+        position: static;
+    }
+
+    .__informacoes {
+        border-top: 20px;
+        border-right: 0;
+        margin-right: 0;
+        top: auto;
+        position: absolute;
+        margin: 0 15px;
+        width: calc(100% - 30px);
+        width: -webkit-fill-available;
+        width: -moz-avaible;
+        width: fill-available;
+    }
+
+    .__informacoes-dados p{
+        font-size: 14px;
+    }
+} 

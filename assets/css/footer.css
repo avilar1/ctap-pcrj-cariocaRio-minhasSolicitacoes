@@ -29,10 +29,14 @@ footer > div {
   border-color: var(--offwhite-fundo);
   border-radius: 50px;
   color: #fff;
+  font-size: 15px;
   height: 40px;
+  line-height: 20px;
+  margin-right: 10px;
   justify-content: center;
   transition: 0.7s;
   width: 40px;
+
 }
 .__page-selected:hover {
   border-color: #4579fb;
@@ -55,7 +59,11 @@ footer > div {
   border-radius: 50%;
   color: #4579fb;
   display: flex;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
   justify-content: center;
+  margin-left: 10px;
 }
 
 #proxima a {

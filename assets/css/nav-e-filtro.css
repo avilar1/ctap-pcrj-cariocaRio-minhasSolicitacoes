@@ -120,6 +120,7 @@ body fieldset .form-control {
     border-radius: 100%;
     margin-top: 0px;
     padding: 2px 2px 2px 4px;
+    margin-right: -10px;
 }
 
 header .__area-nav {
@@ -135,6 +136,10 @@ header .__area-nav fieldset {
     line-height: 20px;
     padding: 32px 0px 24px;
     display: flex;
+}
+
+li .dropdown-item {
+    font-size: 15px;
 }
 
 .dropdown-item-selecionado::after {
@@ -329,7 +334,7 @@ fieldset label {
         width: 19px;
         padding-left: 4px;
         margin-left: 4px;
-        margin-right: -9px;
+        margin-right: -11px;
         /* margin-left: 4px; */
         /* margin-right: 2px; */
     }
