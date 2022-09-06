@@ -22,7 +22,7 @@ body main div, body main label {
     align-self: center;
     background-color: var(--offwhite-fundo);
     height: auto;
-    min-height: calc(100vmin - 150px);
+    /* min-height: calc(100vmin - 300px); em produção, recomenda a utilização dessa linha*/
     /* padding: 0 0 40px; */
     padding: 0;
     width: 938px;
