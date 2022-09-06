@@ -85,8 +85,10 @@ tbody .btn.btn-success {
     font-family: museo700;
     font-weight: 700;
     font-size: 12px;
-    padding-left: 9.666px;
-    padding-right: 9.666px;
+    padding: 5px 11px;
+    white-space: nowrap;
+    /* padding-left: 9.666px;
+    padding-right: 9.666px; */
 }
 
 tbody .btn-outline-success {
@@ -94,7 +96,7 @@ tbody .btn-outline-success {
     border-color: #09b88a;
     max-width: 107px;
     width: calc(53px + 24px);
-    line-height: 1.54;
+    line-height: 15px;
     text-align: center;
     font-size: 13px;
 }
@@ -128,6 +130,10 @@ td .accordion-button {
     font-weight: 500;
     min-height: 26px;
     line-height: 20px;
+}
+
+.__botao-sit-desk {
+    text-transform: uppercase;
 }
 
 .btn-outline-primary {

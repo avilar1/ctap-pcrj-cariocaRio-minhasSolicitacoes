@@ -4,19 +4,18 @@
     width: 938px;
     display: grid;
     grid-template-columns:
-        calc(138px + 15px)
-        /*nso*/
-        26px calc(66px + 15px)
-        /*dso*/
-        26px calc(46px + 15px)
-        /*srv*/
-        198px calc(39px + 15px)
-        /*org*/
-        57px calc(70px + 15px)
-        /*uta*/
-        26px calc(53px + 15px)
-        /*sit*/
-        calc(89px - 14px);
+    calc(138px + 15px) /*nso*/
+    calc(26px - 15px)
+    calc(66px + 15px) /*dso*/
+    calc(26px - 15px)
+    calc(46px + 15px) /*srv*/
+    calc(198px + 15px + 15px)
+    calc(39px + 15px) /*org*/
+    57px
+    calc(70px + 15px) /*uta*/
+    calc(26px - 15px)
+    calc(53px + 15px) /*sit*/
+    calc(89px - 14px);
     grid-template-rows: minmax(20px, 1fr);
     grid-template-areas:
         "nsoD . dsoD . srvD srvD orgD orgD utaD . sitD sitD";

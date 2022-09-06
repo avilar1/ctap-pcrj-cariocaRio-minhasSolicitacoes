@@ -100,7 +100,7 @@ summary::after,
 .__informacoes-dados {
     background-color: #ffffff;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    padding: 22px 24px 14px;
+    padding: 24px 24px 14px;
     line-height: normal;
 }
 
@@ -145,7 +145,7 @@ summary::after,
 }
 
 .__informacoes-logout button {
-    padding: calc(10px - 1px) calc(28px - 1px);
+    padding: 10px 28px;
     border-radius: 24px;
     font-family: Rawline, museo;
     line-height: 16px;
@@ -307,9 +307,9 @@ header .__area-h1 h1 {
     }
 
 
-    .__informacoes-dados {
+    /* .__informacoes-dados {
         padding: 22px 11px 12px;
-    }
+    } */
 
     .__informacoes-dados p {
         font-size: 14px;
@@ -328,7 +328,7 @@ header .__area-h1 h1 {
     }
 
     .__informacoes-logout {
-        padding-right: 11px;
+        padding-right: 24px;
     }
 
     .btn-sm.__sair {
