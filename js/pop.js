@@ -231,12 +231,12 @@ let situacaoC = (pop[prop].sit == "Indeferida") ? (situacao[n].classList.add("bt
 //           console.log("nenhum!");
 // }
 
-    let sit = (pop[prop].sit == "Indeferida") ? (acardisit[k].classList.add("btn", "btn-outline-danger", "btn-sm", "__botao-sit"), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled")) :
-                (pop[prop].sit == "Deferida") ? (acardisit[k].classList.add("btn", "btn-outline-success", "btn-sm", "__botao-sit"), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled") ) :
-                    (pop[prop].sit == "Deferida parcialmente") ? (acardisit[k].classList.add("btn", "btn-outline-success", "__btn-parcialmente", "btn-sm", "__botao-sit"), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled") ) :    
-                        (pop[prop].sit == "Em andamento") ?(acardisit[k].classList.add("btn", "btn-outline-primary", "btn-sm", "__botao-sit"), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled")) : 
+    let sit = (pop[prop].sit == "Indeferida") ? (acardisit[k].classList.add("btn", "btn-outline-danger", "btn-sm", "__botao-sit", "__botao-sit-interno"), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled")) :
+                (pop[prop].sit == "Deferida") ? (acardisit[k].classList.add("btn", "btn-outline-success", "btn-sm", "__botao-sit", "__botao-sit-interno"), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled") ) :
+                    (pop[prop].sit == "Deferida parcialmente") ? (acardisit[k].classList.add("btn", "btn-outline-success", "__btn-parcialmente", "btn-sm", "__botao-sit", "__botao-sit-interno"), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled") ) :    
+                        (pop[prop].sit == "Em andamento") ?(acardisit[k].classList.add("btn", "btn-outline-primary", "btn-sm", "__botao-sit", "__botao-sit-interno"), acardisit[k].style.pointerEvents="none", acardisit[k].setAttribute("disabled", "disabled")) : 
                         
-                        (pop[prop].sit == "Cumprir Exigência") ? (acardisit[k].classList.add("btn", "btn-success", "btn-sm", "__botao-sit")) :   
+                        (pop[prop].sit == "Cumprir Exigência") ? (acardisit[k].classList.add("btn", "btn-success", "btn-sm", "__botao-sit", "__botao-sit-cumprir", "__botao-sit-interno")) :   
                         
                         console.log("nenhum!");
                 

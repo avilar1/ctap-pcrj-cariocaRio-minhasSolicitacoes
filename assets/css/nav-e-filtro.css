@@ -43,7 +43,7 @@ body nav .btn-group-sm>.btn {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 11px;
+    padding: 8px 9px;
     min-width: 34px;
 }
 
@@ -60,7 +60,7 @@ body nav .btn-group-sm>.btn label {
 }
 
 .btn-toolbar>div div:last-child label {
-    margin-right: 0px;
+    margin-right: -2px;
 }
 
 body nav .btn-sm {
@@ -89,7 +89,7 @@ body nav .btn-sm {
 body nav p {
     align-self: center;
     line-height: 20px;
-    margin-right: 10px;
+    margin-right: 12px;
     margin-bottom: 0;
 }
 
@@ -106,7 +106,7 @@ body fieldset .form-control {
     background: url(../img/xStroke.png);
     background-position: center;
     background-position-y: 5px;
-    background-position-x: 5px;
+    background-position-x: 3px;
     background-repeat: no-repeat;
     border: none;
     color: #000;
@@ -125,7 +125,7 @@ body fieldset .form-control {
     border-radius: 100%;
     margin-top: 0px;
     padding: 2px 2px 2px 4px;
-    margin-right: -10px;
+    margin-right: -8px;
 }
 
 header .__area-nav {
@@ -145,6 +145,7 @@ header .__area-nav fieldset {
 
 li .dropdown-item {
     font-size: 15px;
+    font-weight: 500;
 }
 
 .dropdown-item-selecionado::after {
@@ -154,6 +155,7 @@ li .dropdown-item {
     width: 13px;
     height: 13px;
     margin-left: 5px;
+    transform: translateY(3px);
     /* transform: rotate(-180deg); */
 }
 
@@ -185,6 +187,7 @@ fieldset [type="checkbox"] {
 
 fieldset label {
     line-height: 20px;
+    margin-left: -3px;
     /* margin: 32px 0 24px 5px; */
 }
 
@@ -208,6 +211,8 @@ fieldset label {
         height: 183px;
         justify-content: center;
         padding: 0 15px;
+        width: 100%;
+        max-width: 488px;
     }
 
     body nav>div {
@@ -242,7 +247,9 @@ fieldset label {
         padding-top: 5px;
         padding-bottom: 5px;
         padding-left: 4px;
-        width: 240px;
+        padding-right: 4px;
+        width: 100%;
+        max-width: 458px;
         display: flex;
         justify-content: space-between;
     }
@@ -252,7 +259,7 @@ fieldset label {
     }
 
     body nav .dropdown-menu {
-        width: 240px;
+        width: 100%;
     }
 
     .btn-check:focus+.btn-secondary, .btn-secondary:focus{
@@ -289,11 +296,11 @@ fieldset label {
         background-color: var(--offwhite-fundo);
         margin-top: -2px;
         border-radius: 0;
-        padding: 7.5px 4px 20.5px;
+        padding: 7px 4px 20px;
     }
 
     .dropdown-menu .dropdown-item {
-        padding: 7.5px 0;
+        padding: 7px 0;
     }
 
     .__dropdown-btn .dropdown-menu .dropdown-item {
@@ -326,7 +333,7 @@ fieldset label {
     }
 
     fieldset label {
-        margin: 0;
+        margin: 0 0 0 -3px;
     }
 
     header .__area-nav fieldset {

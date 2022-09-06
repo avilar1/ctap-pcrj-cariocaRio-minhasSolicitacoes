@@ -36,7 +36,7 @@ tbody .accordion-flush .accordion-item .accordion-button,
 
     #cardI6 {
         grid-area: sit;
-        padding: 15px 4px;
+        padding: 15px 4px 10px;
     }
 
     #cardI1, 
@@ -59,17 +59,17 @@ tbody .accordion-flush .accordion-item .accordion-button,
         width: auto;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: auto 20px 35px 20px 35px 20px 35px 20px 40px;
+        grid-template-rows: auto 20px 30px 20px 30px 20px 30px 20px 35px;
         grid-template-areas:
             "sit"
-            "nsoT"
-            "nso"
-            "dsoT"
-            "dso"
-            "orgT"
-            "org"
-            "utaT"
-            "uta";
+            "nsoT" /*20px*/
+            "nso" /*30px*/
+            "dsoT" /*20px*/
+            "dso" /*30px*/
+            "orgT" /*20px*/
+            "org" /*30px*/
+            "utaT" /*20px*/
+            "uta"; /*35px*/
         align-items: start;
         border: none;
         font-size: 13px;
@@ -81,10 +81,12 @@ tbody .accordion-flush .accordion-item .accordion-button,
 
     tbody .accordion-flush .accordion-item .accordion-button {
         display: flex;
-        padding-top: 28px;
+        padding-top: 29px;
         font-size: 15px;
         font-weight: 500;
-        line-height: 20px
+        line-height: 20px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
     }
 
     tbody .accordion-button::after {

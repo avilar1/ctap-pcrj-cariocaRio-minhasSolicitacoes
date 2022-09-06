@@ -4,6 +4,8 @@
 .__card-corpo-titulo {
     width: 938px;
     display: grid;
+    
+    
     grid-template-columns: 
     calc(138px + 15px) /*nso*/
     calc(26px - 15px)
@@ -80,7 +82,7 @@
     display: inline-block;
     flex-grow: 0;
     height: 13px;
-    margin-left: calc(26px / 4);
+    margin-left: 5px;
     position: absolute;
     top: 20px;
     width: 13px;

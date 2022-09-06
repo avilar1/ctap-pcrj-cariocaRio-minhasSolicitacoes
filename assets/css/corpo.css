@@ -62,8 +62,9 @@ tbody>tr,
 tbody>tr.card {
     border: 1px;
     background-clip: none;
-    margin-top: 5px;
+    margin-bottom: 5px;
 }
+
 
 tbody .btn {
     padding-left: 10.666px;
@@ -102,8 +103,7 @@ tbody .btn-outline-success {
 }
 
 tbody .btn-outline-success.__btn-parcialmente{
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 3px 12px;
     width: 103px;
     text-align: start;
 }
@@ -185,7 +185,7 @@ td .accordion-button {
         display: flex;
         
         box-shadow: none;
-        margin: 0px 15px 0px 15px;
+        margin: 0px 15px 35px 15px;
         
         width: calc(100% - 30px);
         width: -webkit-fill-available;
@@ -197,14 +197,22 @@ td .accordion-button {
         width: 100%;
     }
 
-    table tbody>tr.card,
-    table thead.card {
-        border: 0px;
+    table tbody>tr.card {
+        /* border: 0px; */
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+        border: 1px solid rgb(204, 204, 204);
+    }
+
+    table thead.card {
+        border: 0;
     }
 
     table tbody>tr .accordion-item {
         border: none;
+    }
+
+    .accordion-flush .accordion-item:first-child {
+        border-radius: 4px;
     }
 
 
@@ -212,6 +220,8 @@ td .accordion-button {
         max-width: none;
         white-space: nowrap;
         width: auto;
+        line-height: 20px;
+        font-size: 15px;
     }
 
     tbody .btn-outline-success.__btn-parcialmente {
@@ -221,6 +231,8 @@ td .accordion-button {
     tbody .accordion-body {
         padding: 0px 4px 20px;
     }
+
+
 
     thead.card,
     tbody.card,
@@ -238,6 +250,15 @@ td .accordion-button {
         background-color: var(--azul-turquesa-variante);
         padding-bottom: 15px;
         
+    }
+
+    .__botao-sit-cumprir {
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+
+    .__botao-sit-interno {
+        margin-left: -4px;
     }
 
     main tbody .accordion-flush .accordion-item .accordion-button:not(.collapsed) {

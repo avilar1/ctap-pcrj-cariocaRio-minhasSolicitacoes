@@ -252,7 +252,7 @@ header .__area-h1 h1 {
         flex-direction: row;
         align-items: flex-end;
         height: auto;
-        padding: 0px 0px;
+        padding: 0px 15px;
         justify-content: center;
     }
 
