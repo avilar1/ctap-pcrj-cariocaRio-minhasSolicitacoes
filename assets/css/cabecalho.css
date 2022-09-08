@@ -190,8 +190,8 @@ header .__area-h1 h1 {
     font-weight: 500;
     line-height: 20px;
     justify-content: flex-start;
-    padding-left: 36px;
-    width: calc(1010px - 15px);
+    
+    width: 938px;
     margin-bottom: 0px;
 }
 

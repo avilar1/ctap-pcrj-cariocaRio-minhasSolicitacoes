@@ -138,8 +138,8 @@ header .__area-nav {
 
 header .__area-nav fieldset {
     align-items: center;
-    line-height: 20px;
-    padding: 32px 0px 24px;
+    
+    padding: 35px 0px 24px;
     display: flex;
 }
 
