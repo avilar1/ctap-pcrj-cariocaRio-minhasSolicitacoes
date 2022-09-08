@@ -1,7 +1,7 @@
 let itens = document.querySelectorAll('.dropdown-item')
 let selecione = document.querySelector('#selecione')
 
-let mx = 0;
+let mx = 1;
 itens.forEach(element => {
   element.addEventListener('click', (ev) => {
     if (element.dataset.m != mx) {
