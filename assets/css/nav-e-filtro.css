@@ -106,11 +106,11 @@ body fieldset .form-control {
     background: url(../img/xStroke.png);
     background-position: center;
     background-position-y: 5px;
-    background-position-x: 3px;
+    background-position-x: 6px;
     background-repeat: no-repeat;
     border: none;
     color: #000;
-    margin-right: -10px;
+    margin-right: -8px;
     width: 20px;
     padding: 2px 2px 2px 4px;
     margin-left: 4px;
@@ -121,7 +121,7 @@ body fieldset .form-control {
     background: url(../img/x-blue.webp);
     background-position: center;
     background-color: var(--branco);
-    border: 1px solid var(--branco);
+    /* border: 1px solid var(--branco); */
     border-radius: 100%;
     margin-top: 0px;
     padding: 2px 2px 2px 4px;
@@ -139,7 +139,7 @@ header .__area-nav {
 header .__area-nav fieldset {
     align-items: center;
     
-    padding: 35px 0px 24px;
+    padding: 34px 0px 24px;
     display: flex;
 }
 
@@ -299,6 +299,10 @@ fieldset label {
         padding: 7px 4px 20px;
     }
 
+    .__check {
+        margin-top: 20px;
+    }
+
     .dropdown-menu .dropdown-item {
         padding: 7px 0;
     }
@@ -319,6 +323,10 @@ fieldset label {
 
     body nav fieldset {
         width: 100%;
+    }
+
+    body nav .btn-toolbar {
+        align-self: flex-start;
     }
 
     body nav .btn-group-sm>.btn {
@@ -346,7 +354,8 @@ fieldset label {
         width: 19px;
         padding-left: 4px;
         margin-left: 4px;
-        margin-right: -11px;
+        margin-right: -8px;
+        background-position-x: 6px;
         /* margin-left: 4px; */
         /* margin-right: 2px; */
     }

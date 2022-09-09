@@ -7,9 +7,9 @@
     
     
     grid-template-columns: 
-    calc(138px + 15px) /*nso*/
+    calc(136px + 15px) /*nso*/
     calc(26px - 15px)
-    calc(66px + 15px) /*dso*/
+    calc(66px + 17px) /*dso*/
     calc(26px - 15px)
     calc(46px + 15px) /*srv*/
     calc(198px + 15px + 15px)
@@ -33,6 +33,7 @@
     grid-column-gap: 0px;
     justify-items: flex-start;
     padding: 15px 14px; 
+    margin-bottom: 5px;
 }
 
 .card-body {

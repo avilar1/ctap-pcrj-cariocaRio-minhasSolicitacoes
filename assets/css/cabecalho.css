@@ -162,6 +162,7 @@ summary::after,
 
 .__informacoes-logout .btn-outline-primary:hover {
 color:#FFFFFF;
+background-color: #366BBF;
 }
 
 .__informacoes-logout .btn-outline-primary:not(hover){
@@ -179,7 +180,6 @@ header .__area-h1 {
     display: flex;
     justify-content: center;
     height: 54px;
-    width: 100vw;
     align-items: center;
 }
 
@@ -253,7 +253,7 @@ header .__area-h1 h1 {
         align-items: flex-end;
         height: auto;
         padding: 0px 15px;
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .__informacoes-logout button {

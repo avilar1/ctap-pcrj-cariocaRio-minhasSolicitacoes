@@ -53,7 +53,11 @@
         <div class="__area-nav">
           <nav>
             <fieldset>
-
+              <div class="__check">
+                <input type="checkbox" name="arquivadas" id="checkaquirvadas">
+                <label for="checkaquirvadas">Ocultar solicitações arquivadas</label>
+              </div>
+              
               <div class="dropdown" role="menu">
                 <a class="btn btn-secondary dropdown-toggle __dropdown-btn" id="selecione" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                   Ordenar por
@@ -61,7 +65,7 @@
               
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 
-                  <li><a class="dropdown-item dropdown-item-selecionado" href="#" data-m="1">Número da solicitação</a></li>
+                  <li><a class="dropdown-item " href="#" data-m="1">Número da solicitação</a></li>
                   <li><a class="dropdown-item" href="#" data-m="2">Data da solicitação</a></li>
                   <li><a class="dropdown-item" href="#" data-m="3">Serviço</a></li>
                   <li><a class="dropdown-item" href="#" data-m="4">Órgão</a></li>
@@ -70,10 +74,7 @@
                 </ul>
               </div>
 
-              <div class="__check">
-                <input type="checkbox" name="arquivadas" id="checkaquirvadas">
-                <label for="checkaquirvadas">Ocultar solicitações arquivadas</label>
-              </div>   
+              
             </fieldset>
           
             <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
@@ -131,7 +132,7 @@
 
               <th id="cardT1" class="nselected" data-t="1">Número da solicitação</th>
               <th id="cardT2" class="nselected" data-t="2">Data da solicitação</th>
-              <th id="cardT3" class="" data-t="3">Serviço</th> <!--por padrão, fica em serviço. Se mudar o padrão, só mudar onde não tem a classe nselected-->
+              <th id="cardT3" class="nselected" data-t="3">Serviço</th>
               <th id="cardT4" class="nselected" data-t="4">Órgão</th>
               <th id="cardT5" class="nselected" data-t="5">Última atualização</th>
               <th id="cardT6" class="nselected" data-t="6">Situação</th>
